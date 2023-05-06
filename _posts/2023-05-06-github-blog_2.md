@@ -60,7 +60,7 @@ github pages 도메인을 만들어준다.
 
 ## 로컬에선 정상작동하던 블로그가 github에서 오류가??
 
-![스크린샷 2023-05-05 오후 4 43 40](https://user-images.githubusercontent.com/98996860/236639176-9574b2fb-fbaf-4fbb-a503-1a92db74725d.png)
+<img width="1269" alt="github-blog_2-3" src="https://user-images.githubusercontent.com/98996860/236642073-70c984e3-7a71-43ed-b9e4-00ccdab2861d.png">
 
 어째서인지 `chirpy`테마를 적용한뒤 github에 업로드하였을때,
 페이지가 작동을 안한다! 🥲 다른 테마를 적용해봤을때는 이런 문제가 일어난적이 없었는데,
