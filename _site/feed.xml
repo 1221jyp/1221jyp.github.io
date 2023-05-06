@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-05-07T00:33:41+09:00</updated>
+  <updated>2023-05-07T01:57:38+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>github 블로그 만들어보기_2 chirpy테마 github업로드오류</title>
     <link href="http://localhost:4000/posts/github-blog_2/" rel="alternate" type="text/html" title="github 블로그 만들어보기_2 chirpy테마 github업로드오류" />
-    <published>2023-05-05T12:33:00+09:00</published>
+    <published>2023-05-05T11:33:00+09:00</published>
   
-    <updated>2023-05-05T12:33:00+09:00</updated>
+    <updated>2023-05-05T11:33:00+09:00</updated>
   
     <id>http://localhost:4000/posts/github-blog_2/</id>
     <content src="http://localhost:4000/posts/github-blog_2/" />
@@ -37,6 +37,8 @@
     <category term="MacOs" />
     
     <category term="github blog" />
+    
+    <category term="chirpy" />
     
   
 
@@ -57,6 +59,21 @@
 
 github에 블로그 폴더 업로드
 
+github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 github_desktop을 사용하는데,
+필자는 github desktop이 편해 github desktop을 사용중이다.
+
+cmd로 파일 푸시
+
+$ cd '자신의 블로그 로컬 폴더 위치'
+
+
+먼저 자신의 블로그 파일이 있는 폴더를 선택해주고,
+
+$ git init
+$ git add .
+$ git commit -m "아무 커밋 이름"
+$ git remote add origin '자신의 repository 주소'
+$ git push origin mast...
     </summary>
   
 
@@ -66,9 +83,9 @@ github에 블로그 폴더 업로드
   <entry>
     <title>github 블로그 만들어보기_1</title>
     <link href="http://localhost:4000/posts/github-blog_1/" rel="alternate" type="text/html" title="github 블로그 만들어보기_1" />
-    <published>2023-05-05T12:33:00+09:00</published>
+    <published>2023-05-05T11:33:00+09:00</published>
   
-    <updated>2023-05-06T21:49:06+09:00</updated>
+    <updated>2023-05-07T00:52:56+09:00</updated>
   
     <id>http://localhost:4000/posts/github-blog_1/</id>
     <content src="http://localhost:4000/posts/github-blog_1/" />

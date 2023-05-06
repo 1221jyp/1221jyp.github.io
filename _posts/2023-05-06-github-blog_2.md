@@ -32,10 +32,77 @@ $ cd '자신의 블로그 로컬 폴더 위치'
 $ git init
 $ git add .
 $ git commit -m "아무 커밋 이름"
-$ git remote add origin (원격 저장소 github URL)
+$ git remote add origin '자신의 repository 주소'
 $ git push origin master
 ```
 
 위 과정을 통해 git push를 해주자.
 
 ### github desktop으로 파일 푸시
+
+로그인을 하고
+
+![스크린샷 2023-05-07 오전 12 52 47](https://user-images.githubusercontent.com/98996860/236634285-4e8694be-5653-4d2a-9213-102a74f855e7.png)
+
+필자가 써놓은 '블로그 글 게시' 칸에 자신의 commit 이름을 정해 넣고,  
+파란 버튼을 눌러 commit을 진행한다. 그러고 난 뒤에 origin push라는 버튼을 눌러
+깃허브에  
+파일을 업로드하면 된다.
+
+## github pages 만들기
+
+![스크린샷 2023-05-07 오전 1 26 36](https://user-images.githubusercontent.com/98996860/236635841-70a1a96e-f4ea-4499-8690-88c9e25efed4.png)
+
+(테스트용으로 repository를 따로 하나 만들었습니다.)
+
+자신의 블로그 repository에 들어가 setting을 들어간뒤, branch항목에서 main/root를 선택해주어
+github pages 도메인을 만들어준다.
+
+## 로컬에선 정상작동하던 블로그가 github에서 오류가??
+
+어째서인지 `chirpy`테마를 적용한뒤 github에 업로드하였을때,
+페이지가 작동을 안한다! 🥲 다른 테마를 적용해봤을때는 이런 문제가 일어난적이 없었는데,
+유독 chirpy테마가 이렇게 말썽을 일으키는 듯 했다.
+하지만, chirpy테마가 너무 마음에 들었고, 나의 자존심을 건드렸기에 이 문제를 해결하려
+반나절의 시간을 쏟았고, 결국 이 문제를 해결했다.
+
+### deploy from a branch에서 github actions으로 변경
+
+아까 설정창에서 github page를 만들때, `branch`항목 위에 `source`라는 항목이 있었는데,(위 사진 참고)  
+이것을 `deploy from a branch`에서 `github actions`로 바꾸어준다.
+
+![스크린샷 2023-05-07 오전 1 37 32](https://user-images.githubusercontent.com/98996860/236636352-03508495-48eb-42c8-a895-2b8f8e8f6b6b.png)
+
+바꾼 뒤에 이러한 항목이 나온다면, `github pages jekyll` 의 configure버튼을 눌러준뒤 오른쪽 위에
+commit버튼을 눌러준다.
+
+### ruby 버전 다운그레이드
+
+아직 배움이 부족한 필자는 왜 그런건진 모르겠지만 (댓글로 이유좀 알려주세요 🥲) 위 과정을 거치고 ruby 버전까지
+다운그레이드 해주면 해당 문제가 해결되었다. [깃허브 의존성(?)버전](https://pages.github.com/versions/)
+에 써있는 ruby의 버전을 확인해보면 `2.7.4`로 쓰여 있다. 필자는 `3.2.2`의 ruby가 설치되어있으므로 `2.7.4`로
+ruby의 버전을 다운그레이드 해주어야 할듯 하다. 마침 우리는 ruby의 버전을 관리해주는 `rbenv`를 미리 설치해놓았었다!
+
+```
+$ rbenv install 2.7.4
+$ rbnev rehash
+$ rbenv global 2.7.1
+$ ruby --version
+```
+
+ruby를 다운그레이드하였다고 끝이 아니다. bundle update까지 시켜주어야 완전히 끝나는것이다.
+
+```
+$ cd '자신의 블로그 로컬 폴더 위치'
+$ bundle update
+```
+
+## 다시 push해보기
+
+이제 github에 다시 업로드하여 블로그가 잘 작동하는지 확인해보자. `git push`를 하기전에 먼저 `git pull`을 해주고
+(github 웹사이트에서 commit을 한번 진행했기 때문이다.)
+`git push`를 진행해준다. 필자는 이 두개의 해결 방안을 이용해서 chirpy 테마를 적용하는데에 성공했다!
+
+## 마무리
+
+이 해결 방안을 사용하여도 chirpy 테마가 적용이 안되는분은 댓글로 남겨주세요. 제가 뭐 대단한 사람은 아니지만, 같이 머리를 맞대며 해결방법을 찾아보겠습니다.

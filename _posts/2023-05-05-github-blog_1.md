@@ -25,17 +25,38 @@ _저의 모든 글은 MacOs silicon을 기준으로 제작되었습니다._
 <img width="742" alt="create_repository" src="https://user-images.githubusercontent.com/98996860/236457379-f21a6f72-880c-40ac-a872-8bf90882deda.png">
 
 [github](http://github.com)에 접속하여
-`자신의 깃허브 아이디.github.io` 로 리포지토리 이름을 정하고 만든다.  
-만약 이미 다른 이름으로 이름을 지어 놓았다면 설정에서 추후에 바꿔주어야 한다.  
+`자신의 깃허브 아이디.github.io` 로 리포지토리 이름을 정하고 만든다.
+캡처된 이미지에는 readme.md를 켜두지 않았지만, 확인용으로 readme.md를 켜두자.
+만약 이미 다른 이름으로 이름을 지어 놓았다면 설정에서 추후에 바꿔주어야 한다.
+
 생성을 하고 난 후에는 `git clone`으로 작업폴더를 만들어 둔다.
 
-### git clone 하기
+## git clone 하기
 
 깃을 설치하고 터미널이나 cmd를 통해서 clone을 해와도 좋지만,
-[github_desktop](https://desktop.github.com)을 이용하여 `git clone`을 해오는것도  
-좋은 방법이다. 터미널이나 cmd는 하나하나 명령어를 다 쳐줘야하는데, [github_desktop](https://desktop.github.com)은
-별도의 명령어 없이  
-버튼 몇번 딸깍딸깍하면 푸시가 되니 너무 좋았다.
+[github_desktop](https://desktop.github.com)을 이용하여 `git clone`을 해오는것도 좋은 방법이다.
+터미널이나 cmd는 하나하나 명령어를 다 쳐줘야하는데, [github_desktop](https://desktop.github.com)은
+별도의 명령어 없이 버튼 몇번 딸깍딸깍하면 푸시가 되니 너무 좋았다.
+
+### cmd로 git clone
+
+```
+$ cd '자신이 작업할 폴더 주소'
+```
+
+먼저 자신이 블로그를 작업할때 쓸 폴더를 미리 만들어두고, `cmd`에 그 위치를 정해둔다.
+
+```
+$ git clone '자신의 repository 주소'
+```
+
+그런다음 git clone으로 자신의 파일을 가져온다.
+`readme.md`파일이 날아왔다면 성공.
+
+### github desktop으로 git clone
+
+설치와 로그인을 마치고, 자신이 만들어뒀던 repository를 선택하고, 밑에 파란 버튼으로 repository파일을
+clone해준다. 이후 이 폴더에서 생기는 변경점들은 github desktop에서 모두 확인이 가능하다.
 
 ## ruby 설치하기 (MacOs)
 
@@ -73,7 +94,7 @@ eval "$(rbenv init -)"
 해당 명령어를 붙여넣기 한뒤 `esc`를 눌러 편집 모드를 나가고
 `:wq`를 입력하여 vim 편집기를 나가준다.
 
-# jekyll 설치하기
+## jekyll 설치하기
 
 여기까지 잘 따라왔다면, 마지막 작업으로는 `jekyll`설치만이 남아있다.
 
@@ -93,7 +114,7 @@ jekyll 설치 후 `jekyll -v`로 정상적으로 설치되었는지 확인한다
 [chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 주소에 접속하여 zip 파일을 다운로드하고
 
 ![스크린샷 2023-05-05 오후 11 30 09](https://user-images.githubusercontent.com/98996860/236487139-39864e61-ea27-47ca-b279-03298317cbc1.png)
-이처럼 clone해왔던 파일에 싹다 붙여넣기 하였다.
+이처럼 clone해왔던 폴더에 싹다 붙여넣기 하였다.
 
 마지막으로 로컬 블로그 파일을 실행해서 잘 작동하는지 테스트 해본다.
 
