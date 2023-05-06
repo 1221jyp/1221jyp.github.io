@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "github 블로그 만들어보기_2 chirpy테마 github업로드오류",
+    "url": "/posts/github-blog_2/",
+    "categories": "MacOs, github blog",
+    "tags": "github_blog",
+    "date": "2023-05-05 12:33:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "들어가며1편에서 chirpy jekyll 테마를 적용하고 포스팅을 끝냈다.이제 마지막으로 github에 업로드만 하면 블로그 제작은 끝이 난다!github에 블로그 폴더 업로드",
+    "content": "들어가며1편에서 chirpy jekyll 테마를 적용하고 포스팅을 끝냈다.이제 마지막으로 github에 업로드만 하면 블로그 제작은 끝이 난다!github에 블로그 폴더 업로드"
+  },
+  
+  {
     "title": "github 블로그 만들어보기_1",
     "url": "/posts/github-blog_1/",
     "categories": "MacOs, github blog",

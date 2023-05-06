@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-05-07T00:13:19+09:00</updated>
+  <updated>2023-05-07T00:33:41+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,50 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>github 블로그 만들어보기_2 chirpy테마 github업로드오류</title>
+    <link href="http://localhost:4000/posts/github-blog_2/" rel="alternate" type="text/html" title="github 블로그 만들어보기_2 chirpy테마 github업로드오류" />
+    <published>2023-05-05T12:33:00+09:00</published>
+  
+    <updated>2023-05-05T12:33:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/github-blog_2/</id>
+    <content src="http://localhost:4000/posts/github-blog_2/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="MacOs" />
+    
+    <category term="github blog" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+들어가며
+
+1편에서 chirpy jekyll 테마를 적용하고 포스팅을 끝냈다.
+이제 마지막으로 github에 업로드만 하면 블로그 제작은 끝이 난다!
+
+github에 블로그 폴더 업로드
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>

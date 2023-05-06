@@ -1,7 +1,7 @@
 ---
 title: github 블로그 만들어보기_1
 author: jyp
-date: 2023-05-05 11:33:00 +0800
+date: 2023-05-05 11:33:00 +0900
 categories: [MacOs, github blog]
 tags: [github_blog]
 math: true
@@ -10,7 +10,7 @@ mermaid: true
 
 ---
 
-# 들어가며
+## 들어가며
 
 나는 작업을 하다가 모르는게 있으면 당연히 구글링을 통해서 문제를 해결한다.
 구글링을 하면 다양한 개발 블로그의 글들을 볼수 있는데, 블로그들을 보며 나도 개발 블로그나 한번 해볼까 싶은 생각이 들었다.
@@ -20,7 +20,7 @@ mermaid: true
 그래서 무턱대고 github 블로그 만들기를 도전하였고, ~~시험기간엔 뭐든 해보고 싶어진다.~~ 성공하여 이 글을 남기고 있다.  
 _저의 모든 글은 MacOs silicon을 기준으로 제작되었습니다._
 
-# github repository 생성
+## github repository 생성
 
 <img width="742" alt="create_repository" src="https://user-images.githubusercontent.com/98996860/236457379-f21a6f72-880c-40ac-a872-8bf90882deda.png">
 
@@ -29,7 +29,7 @@ _저의 모든 글은 MacOs silicon을 기준으로 제작되었습니다._
 만약 이미 다른 이름으로 이름을 지어 놓았다면 설정에서 추후에 바꿔주어야 한다.  
 생성을 하고 난 후에는 `git clone`으로 작업폴더를 만들어 둔다.
 
-## git clone 하기
+### git clone 하기
 
 깃을 설치하고 터미널이나 cmd를 통해서 clone을 해와도 좋지만,
 [github_desktop](https://desktop.github.com)을 이용하여 `git clone`을 해오는것도  
@@ -37,7 +37,7 @@ _저의 모든 글은 MacOs silicon을 기준으로 제작되었습니다._
 별도의 명령어 없이  
 버튼 몇번 딸깍딸깍하면 푸시가 되니 너무 좋았다.
 
-# ruby 설치하기 (MacOs)
+## ruby 설치하기 (MacOs)
 
 이후 cmd에서 rbenv라는 ruby 버전 관리 툴을 설치한다.
 
@@ -83,7 +83,7 @@ $ gem install jekyll
 
 jekyll 설치 후 `jekyll -v`로 정상적으로 설치되었는지 확인한다.
 
-# jekyll 테마 적용하고 업로드하기
+## jekyll 테마 적용하고 업로드하기
 
 [github](http://github.com)에서 `clone` 해왔던 폴더에 jekyll 테마를 적용할것이다.  
 나는 우선 가장 예쁘다고 느껴졌던 [chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)테마를
