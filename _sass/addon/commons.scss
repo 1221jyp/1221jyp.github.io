@@ -1754,7 +1754,8 @@ $sidebar-display: "sidebar-display";
       }
 
       i {
-        background-color: var(--sidebar-btn-bg);
+        background-color: var(--sidebar-bottom-icon-color);
+        color: var(--sidebar-muted-color);
         font-size: 1rem;
         width: $icon-block-size;
         height: $icon-block-size;
