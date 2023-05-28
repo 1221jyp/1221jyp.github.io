@@ -33,6 +33,7 @@ html {
 
 %code-snippet-bg {
   background: var(--highlight-bg-color);
+  transition: 0.3s;
 }
 
 %code-snippet-padding {
@@ -47,6 +48,7 @@ html {
   color: var(--highlighter-rouge-color);
   margin-top: 0.5rem;
   margin-bottom: 1.2em; /* Override BS Inline-code style */
+  transition: 0.3s;
 }
 
 .highlight {
@@ -68,7 +70,7 @@ html {
     word-wrap: normal; /* Fixed Safari overflow-x */
 
     /* set the dollar sign to non-selectable */
-    >.gp:first-child {
+    > .gp:first-child {
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
@@ -77,7 +79,7 @@ html {
 
   table {
     td pre {
-      overflow: visible;  /* Fixed iOS safari overflow-x */
+      overflow: visible; /* Fixed iOS safari overflow-x */
       word-break: normal; /* Fixed iOS safari linenos code break */
     }
   }
@@ -183,8 +185,7 @@ div {
     height: $dot-size;
     border-radius: 50%;
     background-color: var(--code-header-muted-color);
-    box-shadow:
-      ($dot-size + $dot-margin) 0 0 var(--code-header-muted-color),
+    box-shadow: ($dot-size + $dot-margin) 0 0 var(--code-header-muted-color),
       ($dot-size + $dot-margin) * 2 0 0 var(--code-header-muted-color);
   }
 

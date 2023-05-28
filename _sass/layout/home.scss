@@ -5,6 +5,7 @@
 .pagination {
   color: var(--btn-patinator-text-color);
   font-family: Lato, sans-serif;
+  transition: 0.3s;
 
   a:hover {
     text-decoration: none;
@@ -22,9 +23,11 @@
       border-radius: 50%;
       border: 1px solid var(--btn-paginator-border-color);
       background-color: var(--button-bg);
+      transition: 0.3s;
 
       &:hover {
         background-color: var(--btn-paginator-hover-color);
+        transition: 0.3s;
       }
     }
 
@@ -32,6 +35,7 @@
       .page-link {
         background-color: var(--btn-paginator-hover-color);
         color: var(--btn-text-color);
+        transition: 0.3s;
       }
     }
 
@@ -60,6 +64,7 @@
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--main-border-color);
+    transition: 0.3s;
 
     a:hover {
       @extend %link-hover;

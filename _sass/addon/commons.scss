@@ -34,6 +34,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
   line-height: 1.75;
+  transition: all 0.3s;
 }
 
 /* --- Typography --- */
@@ -191,12 +192,14 @@ kbd {
 footer {
   font-size: 0.8rem;
   background-color: var(--main-bg);
+  transition: 0.3s;
 
   div.d-flex {
     height: $footer-height;
     line-height: 1.2rem;
     padding-bottom: 1rem;
     border-top: 1px solid var(--main-border-color);
+    transition: 0.3s;
 
     > div {
       width: 350px;
@@ -245,6 +248,7 @@ i {
   > div {
     padding-left: 1rem;
     border-left: 1px solid var(--main-border-color);
+    transition: 0.3s;
 
     &:not(:last-child) {
       margin-bottom: 4rem;
@@ -271,6 +275,7 @@ i {
     border-radius: 0.8rem;
     padding: 0.3rem 0.5rem;
     margin: 0 0.35rem 0.5rem 0;
+    transition: 0.3s;
 
     &:hover {
       background-color: #2a408e;
@@ -818,6 +823,7 @@ $sidebar-display: "sidebar-display";
     &.active {
       .nav-link {
         color: var(--sidebar-active-color);
+        transition: 0.3s;
       }
     }
 
@@ -968,6 +974,7 @@ $sidebar-display: "sidebar-display";
   z-index: 50;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
   background-color: var(--topbar-wrapper-bg);
+  transition: 0.3s;
 
   [data-topbar-visible="false"] & {
     top: -$topbar-height; /* same as topbar height. */
@@ -1012,11 +1019,13 @@ $sidebar-display: "sidebar-display";
   border: 1px solid var(--search-wrapper-border-color);
   background: var(--search-wrapper-bg);
   padding: 0 0.5rem;
+  transition: 0.3s;
 
   i {
     z-index: 2;
     font-size: 0.9rem;
     color: var(--search-icon-color);
+    transition: 0.3s;
   }
 }
 
@@ -1171,6 +1180,7 @@ $sidebar-display: "sidebar-display";
   background-color: var(--main-bg);
   position: relative;
   min-height: calc(100vh - #{$footer-height});
+  transition: 0.3s;
 
   @include pl-pr(0);
 }

@@ -3,6 +3,7 @@
  */
 
 @mixin dark-syntax {
+  $transition: all 0.3s ease;
   --highlight-bg-color: #252525;
   --highlighter-rouge-color: #de6b18;
   --highlight-lineno-color: #6c6c6d;
@@ -26,7 +27,7 @@
   /* syntax highlight colors from https://raw.githubusercontent.com/jwarby/pygments-css/master/monokai.css */
 
   .highlight pre {
-    background-color: var(--highlight-bg-color);
+    // background-color: var(--highlight-bg-color);
   }
   .highlight .hll {
     background-color: var(--highlight-bg-color);

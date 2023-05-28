@@ -3,6 +3,7 @@
  */
 
 @mixin light-scheme {
+  $transition: all 0.3s ease;
   /* Framework color */
   --body-bg: #fafafa;
   --mask-bg: #c1c3c5;
@@ -12,7 +13,7 @@
   /* Common color */
   --text-color: #34343c;
   --text-muted-color: gray;
-  --heading-color: black;
+  --heading-color: #2f2f2f;
   --blockquote-border-color: #eeeeee;
   --blockquote-text-color: #9a9a9a;
   --link-color: #2a408e;

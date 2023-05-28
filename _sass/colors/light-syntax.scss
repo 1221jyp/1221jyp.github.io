@@ -3,7 +3,7 @@
  */
 
 @mixin light-syntax {
-  transition: 1s;
+  $transition: all 0.3s ease;
   /* see: <https://raw.githubusercontent.com/jwarby/pygments-css/master/github.css> */
   .highlight .hll {
     background-color: #ffffcc;
