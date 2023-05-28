@@ -16,6 +16,7 @@
 
   pre {
     color: #bfbfbf;
+    transition: 0.3s;
   } /* override Bootstrap */
 
   .highlight {
@@ -26,9 +27,6 @@
 
   /* syntax highlight colors from https://raw.githubusercontent.com/jwarby/pygments-css/master/monokai.css */
 
-  .highlight pre {
-    // background-color: var(--highlight-bg-color);
-  }
   .highlight .hll {
     background-color: var(--highlight-bg-color);
   }

@@ -34,7 +34,6 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
   line-height: 1.75;
-  transition: all 0.3s;
 }
 
 /* --- Typography --- */
@@ -726,10 +725,11 @@ $sidebar-display: "sidebar-display";
   overflow-y: auto;
   width: $sidebar-width;
   z-index: 99;
-  background: url("/assets/img/별.jpg");
+  background: var(--sidebar-bg-img);
   background-size: 150% 100%;
   background-position: center;
-  s
+  transition: 1s;
+  transition-property: floor($number: 0);
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
@@ -785,12 +785,11 @@ $sidebar-display: "sidebar-display";
     margin-top: 0.55rem;
 
     a {
-      @extend %clickable-transition;
-
       font-weight: 900;
       font-size: 1.5rem;
       letter-spacing: 0.5px;
-      color: rgba(134, 133, 133, 0.99);
+      color: var(--title-color);
+      transition: 0.3s;
     }
   }
 
@@ -825,10 +824,6 @@ $sidebar-display: "sidebar-display";
         color: var(--sidebar-active-color);
         transition: 0.3s;
       }
-    }
-
-    &:not(.active) > a {
-      @extend %clickable-transition;
     }
   }
 
@@ -902,12 +897,13 @@ $sidebar-display: "sidebar-display";
 
     a {
       @extend %icon;
-      @extend %clickable-transition;
     }
 
     i {
+      color: var(--sidebar-icon-color);
       font-size: 1.2rem;
       line-height: 1.75rem;
+      transition: 0.3s !important;
     }
 
     .mode-toggle {
@@ -918,10 +914,6 @@ $sidebar-display: "sidebar-display";
 
       @extend %icon;
       @extend %sidebar-links;
-
-      > i {
-        @extend %clickable-transition;
-      }
 
       &:hover > i {
         color: var(--sidebar-active-color);
@@ -1212,10 +1204,7 @@ $sidebar-display: "sidebar-display";
   height: $size;
   border-radius: 50%;
   border: 1px solid var(--btn-backtotop-border-color);
-  transition: -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  -webkit-transition: transform 0.2s ease-out;
+  transition: 0.3s;
 
   i {
     line-height: $size;
@@ -1761,24 +1750,6 @@ $sidebar-display: "sidebar-display";
 
         height: $icon-block-size;
         margin-bottom: 0.5rem; /* wrap line */
-      }
-
-      i {
-        background-color: var(--sidebar-bottom-icon-color);
-        color: var(--sidebar-muted-color);
-        font-size: 1rem;
-        width: $icon-block-size;
-        height: $icon-block-size;
-        border-radius: 50%;
-        position: relative;
-
-        &::before {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-        }
       }
 
       .icon-border {

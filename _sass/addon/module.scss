@@ -63,6 +63,7 @@
 
 %link-color {
   color: var(--link-color);
+  transition: 0.3s;
 }
 
 %link-underline {
@@ -70,7 +71,7 @@
 }
 
 %clickable-transition {
-  transition: color 0.35s ease-in-out;
+  transition: none;
 }
 
 %no-cursor {
@@ -107,10 +108,11 @@
 }
 
 %sidebar-links {
-  color: aliceblue;
+  color: var(--sidebar-icon-color);
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  transition: 1s;
 }
 
 /* ---------- scss mixin --------- */
