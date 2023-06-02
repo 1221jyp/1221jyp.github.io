@@ -13,6 +13,7 @@
     position: relative;
     float: left;
     background-color: var(--timeline-color);
+    transition: 0.3s;
   }
 
   .year {
@@ -37,7 +38,8 @@
       top: 24px;
     }
 
-    &::after { /* Year dot */
+    &::after {
+      /* Year dot */
       content: "";
       display: inline-block;
       position: relative;
@@ -50,6 +52,7 @@
       border-color: var(--timeline-node-bg);
       box-shadow: 0 0 2px 0 #c2c6cc;
       z-index: 1;
+      transition: 0.3s;
     }
   }
 
@@ -62,8 +65,9 @@
       text-overflow: ellipsis;
 
       &:nth-child(odd) {
-        background-color: var(--main-bg, #ffffff);
-        background-image: linear-gradient(to left, #ffffff, #fbfbfb, #fbfbfb, #fbfbfb, #ffffff);
+        background-color: var(--achive-bg-grad2);
+        transition: 0.3s;
+        border-radius: 3px;
       }
 
       &::before {
@@ -121,6 +125,7 @@
       background-color: var(--timeline-node-bg);
       box-shadow: 0 0 3px 0 #c2c6cc;
       z-index: 1;
+      transition: 0.3s;
     }
   }
 } /* #archives */

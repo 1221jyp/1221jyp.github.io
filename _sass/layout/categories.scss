@@ -8,9 +8,12 @@
 
 .categories {
   margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.125) !important;
 
   .card-header {
+    background-color: var(--card-header-bg);
     padding-right: 12px;
+    transition: 0.3s;
   }
 
   i {
@@ -23,6 +26,8 @@
     border-left: none;
     border-right: none;
     padding-left: 2rem;
+    background-color: var(--card-bg);
+    transition: 0.3s;
 
     &:first-child {
       border-top-left-radius: 0;
@@ -54,7 +59,8 @@
   }
 }
 
-@media (hover: hover) { /* only works on desktop */
+@media (hover: hover) {
+  /* only works on desktop */
   .category-trigger:hover {
     background-color: var(--categories-hover-bg);
   }
