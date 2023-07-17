@@ -1,5 +1,5 @@
 ---
-title: github 블로그 만들어보기_1
+title: github 블로그 만들어보기_1 (MacOs)
 author: jyp
 date: 2023-05-05 11:33:00 +0900
 categories: [MacOs, github blog]
@@ -12,13 +12,10 @@ mermaid: true
 
 ## 들어가며
 
-나는 작업을 하다가 모르는게 있으면 당연히 구글링을 통해서 문제를 해결한다.
-구글링을 하면 다양한 개발 블로그의 글들을 볼수 있는데, 블로그들을 보며 나도 개발 블로그나 한번 해볼까 싶은 생각이 들었다.
-그래서 나도 한번 만들어보자 하는 생각에 블로그의 종류들을 살펴보았다.  
-`tistory`, `velog`, `notion` 등등 다양한 종류들이 있었는데, 그중 github 블로그가 너무 멋있어 보였다.  
-매우 어렵다는 특징이 나에게는 매우 매력적으로 다가왔고, 추후 광고로 수익을 낼수도 있다고 해서 마음에 들었다.  
-그래서 무턱대고 github 블로그 만들기를 도전하였고, ~~시험기간엔 뭐든 해보고 싶어진다.~~ 성공하여 이 글을 남기고 있다.  
-_저의 모든 글은 MacOs silicon을 기준으로 제작되었습니다._
+나는 작업을 하다가 모르는게 있으면 당연히 구글링을 통해서 문제를 해결합니다.
+구글링을 하면 다양한 개발 블로그에서 해답을 찾을 수 있는데, 블로그들을 보며 나도 개발 블로그로 다른사람에게 내가 아는것을 전달해줄 수 있다면 좋겠다는 생각이 들었습니다. 그래서 나도 한번 만들어보자 하는 생각에 블로그의 종류들을 살펴보았습니다. `tistory`, `velog`, `notion` 등등 다양한 종류들이 있었는데, 그중 github 블로그가 너무 멋있어 보였다. 처음 만드는게 다른 블로그보다 어렵다는 특징이 나에게는 매우 매력적으로 다가왔고, 추후 광고로 수익을 낼수도 있다고 해서 마음에 들었다.(광고를 붙일 생각은 없습니다.) 그래서 무턱대고 github 블로그 만들기를 도전하였고, ~~시험기간엔 뭐든 해보고 싶어진다~~ 성공하여 이 글을 공유합니다.
+
+## _저의 모든 글은 MacOs silicon을 기준으로 제작되었습니다._
 
 ## github repository 생성
 
@@ -33,7 +30,7 @@ _저의 모든 글은 MacOs silicon을 기준으로 제작되었습니다._
 
 ## git clone 하기
 
-깃을 설치하고 터미널이나 cmd를 통해서 clone을 해와도 좋지만,
+깃을 설치하고 IDE의 터미널이나 cmd를 통해서 clone을 해와도 좋지만,
 [github_desktop](https://desktop.github.com)을 이용하여 `git clone`을 해오는것도 좋은 방법이다.
 터미널이나 cmd는 하나하나 명령어를 다 쳐줘야하는데, [github_desktop](https://desktop.github.com)은
 별도의 명령어 없이 버튼 몇번 딸깍딸깍하면 푸시가 되니 너무 좋았다.
@@ -58,7 +55,7 @@ $ git clone '자신의 repository 주소'
 설치와 로그인을 마치고, 자신이 만들어뒀던 repository를 선택하고, 밑에 파란 버튼으로 repository파일을
 clone해준다. 이후 이 폴더에서 생기는 변경점들은 github desktop에서 모두 확인이 가능하다.
 
-## ruby 설치하기 (MacOs)
+## ruby 설치하기
 
 이후 cmd에서 rbenv라는 ruby 버전 관리 툴을 설치한다.
 
@@ -67,12 +64,12 @@ $ brew update
 $ brew install rbenv
 ```
 
-그리고 rbenv를 통해 작성일 기준 가장 최신 버전인 `3.2.2` ruby를 설치해준다.
+그리고 rbenv를 통해 [github pages](https://pages.github.com/versions/)버전에 맞게 `2.7.4` ruby를 설치해준다.
 
 ```
-$ rbenv install 3.2.2
+$ rbenv install 2.7.4
 $ rbenv rehash
-$ rbenv global 3.2.2
+$ rbenv global 2.7.4
 ```
 
 이후 ruby가 정상적으로 설치되었는지 `ruby -v`를 통해 확인해본다.
