@@ -64,7 +64,7 @@ npx create-next-app@latest
 
 <img width="764" alt="Repository" src="https://github.com/1221jyp/Quiz_project/assets/98996860/26c93a91-0f58-4566-a304-8f334756ee35">
 
-가장 먼저, github에서 새로운 repository를 만들어준 뒤에, 해당 폴더를 push해줍시다.  
+가장 먼저, github에서 새로운 repository를 만들어준 뒤에, 저희가 만든 next.js 프로젝트 폴더를 push해줍시다.  
 만들어진 next.js 프로젝트 폴더에 들어와 터미널을 열어준뒤 해당 명령어를 입력합니다.
 
 ```
@@ -99,8 +99,8 @@ app폴더의 page.js파일을 수정하여 프로젝트를 시작하라고 하�
 <img width="1470" alt="page js" src="https://github.com/1221jyp/Quiz_project/assets/98996860/b25e81b2-4340-4a60-af99-c3d38967e3a5">
 app폴더에 들어와 page.js를 들어와줍니다.
 
-```
-<!-- src/app/page.js -->
+```jsx
+// src/app/page.js
 
 export default function Home() {
   return (
@@ -111,8 +111,8 @@ export default function Home() {
 
 뼈대부분만 남기고 시작해줍시다. return()안에 jsx형식으로 html작성하면 됩니다.
 
-```
-<!-- src/app/page.js -->
+```jsx
+// src/app/page.js
 
 export default function Home() {
   return <h2>안녕하세요</h2>;
@@ -128,8 +128,8 @@ export default function Home() {
 모든 주소에서 레이아웃이 보이게 하려면 layout.js파일에서
 레이아웃을 디자인해주면 됩니다.
 
-```
-<!-- src/app/layout.js -->
+```jsx
+// src/app/layout.js
 
 export const metadata = {
   title: "Quiz time!",
@@ -165,8 +165,8 @@ export default function RootLayout({ children }) {
 위에 title부분을 수정하면 사이트의 title이 바뀝니다.  
 레이아웃을 만들었으니, 이제 디자인은 우리들의 조력자 gpt에게 부탁하여 global.css에 넣어줍시다.
 
-```
-<!-- global.css -->
+```css
+/* global.css */
 
 body {
   font-family: Arial, sans-serif;
@@ -233,3 +233,6 @@ body {
 <img width="1470" alt="layout" src="https://github.com/1221jyp/Quiz_project/assets/98996860/37d5610a-afa7-4561-96c0-37640e94b935">
 색깔을 화려하게 부탁하여 이렇게 만들었습니다. 개인적으로 만족하지만, 이런 디자인이 마음에 들지 않는다면  
 각자 새롭게 만들어보시거나 새로 gpt에게 부탁하는것이 좋겠습니다.
+
+포스팅이 길어지니 여기서 마치고 다음 포스팅에서 계속하겠습니다.
+읽어주셔서 감사합니다.

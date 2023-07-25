@@ -1478,8 +1478,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1604 words">
-  <em>8 min</em> read</span>
+  title="1649 words">
+  <em>9 min</em> read</span>
 
     </div>
   </div>
@@ -1547,7 +1547,7 @@ mongodb는 noSQL계열의 데이터베이스 시스템입니다.
 
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/26c93a91-0f58-4566-a304-8f334756ee35" class="popup img-link "><img width="764" alt="Repository" data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/26c93a91-0f58-4566-a304-8f334756ee35" class="lazyload" data-proofer-ignore></a></p>
 
-<p>가장 먼저, github에서 새로운 repository를 만들어준 뒤에, 해당 폴더를 push해줍시다.<br />
+<p>가장 먼저, github에서 새로운 repository를 만들어준 뒤에, 저희가 만든 next.js 프로젝트 폴더를 push해줍시다.<br />
 만들어진 next.js 프로젝트 폴더에 들어와 터미널을 열어준뒤 해당 명령어를 입력합니다.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
@@ -1590,8 +1590,8 @@ app폴더의 page.js파일을 수정하여 프로젝트를 시작하라고 하�
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/b25e81b2-4340-4a60-af99-c3d38967e3a5" class="popup img-link "><img width="1470" alt="page js" data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/b25e81b2-4340-4a60-af99-c3d38967e3a5" class="lazyload" data-proofer-ignore></a>
 app폴더에 들어와 page.js를 들어와줍니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
+<div class="language-jsx highlighter-rouge"><div class="code-header">
+        <span data-label-text="Jsx"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1599,29 +1599,29 @@ app폴더에 들어와 page.js를 들어와줍니다.</p>
 5
 6
 7
-</pre></td><td class="rouge-code"><pre>&lt;!-- src/app/page.js --&gt;
+</pre></td><td class="rouge-code"><pre><span class="c1">// src/app/page.js</span>
 
-export default function Home() {
-  return (
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nf">Home</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return </span><span class="p">(</span>
 
-  )
-}
+  <span class="p">)</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>뼈대부분만 남기고 시작해줍시다. return()안에 jsx형식으로 html작성하면 됩니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
+<div class="language-jsx highlighter-rouge"><div class="code-header">
+        <span data-label-text="Jsx"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-</pre></td><td class="rouge-code"><pre>&lt;!-- src/app/page.js --&gt;
+</pre></td><td class="rouge-code"><pre><span class="c1">// src/app/page.js</span>
 
-export default function Home() {
-  return &lt;h2&gt;안녕하세요&lt;/h2&gt;;
-}
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nf">Home</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>안녕하세요<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;;</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/11aa15d4-6627-4d2e-b94d-02307bf339c2" class="popup img-link "><img width="1470" alt="hello" data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/11aa15d4-6627-4d2e-b94d-02307bf339c2" class="lazyload" data-proofer-ignore></a>
@@ -1633,8 +1633,8 @@ export default function Home() {
 모든 주소에서 레이아웃이 보이게 하려면 layout.js파일에서
 레이아웃을 디자인해주면 됩니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
+<div class="language-jsx highlighter-rouge"><div class="code-header">
+        <span data-label-text="Jsx"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1666,44 +1666,44 @@ export default function Home() {
 29
 30
 31
-</pre></td><td class="rouge-code"><pre>&lt;!-- src/app/layout.js --&gt;
+</pre></td><td class="rouge-code"><pre><span class="c1">// src/app/layout.js</span>
 
-export const metadata = {
-  title: "Quiz time!",
-  description: "my quiz project",
-};
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Quiz time!</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">description</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my quiz project</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
 
-export default function RootLayout({ children }) {
-  return (
-    &lt;html lang="en"&gt;
-      &lt;body className={inter.className}&gt;
-        &lt;div className="header"&gt;
-          &lt;Link href="" className="title"&gt;
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nf">RootLayout</span><span class="p">({</span> <span class="nx">children</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="k">return </span><span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="p">=</span><span class="s">"en"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">body</span> <span class="na">className</span><span class="p">=</span><span class="si">{</span><span class="nx">inter</span><span class="p">.</span><span class="nx">className</span><span class="si">}</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"header"</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nc">Link</span> <span class="na">href</span><span class="p">=</span><span class="s">""</span> <span class="na">className</span><span class="p">=</span><span class="s">"title"</span><span class="p">&gt;</span>
             Quiz time!
-          &lt;/Link&gt;
-          &lt;Link href="" className="nav_btn"&gt;
+          <span class="p">&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nc">Link</span> <span class="na">href</span><span class="p">=</span><span class="s">""</span> <span class="na">className</span><span class="p">=</span><span class="s">"nav_btn"</span><span class="p">&gt;</span>
             퀴즈 만들기
-          &lt;/Link&gt;
-          &lt;Link href="" className="nav_btn"&gt;
+          <span class="p">&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nc">Link</span> <span class="na">href</span><span class="p">=</span><span class="s">""</span> <span class="na">className</span><span class="p">=</span><span class="s">"nav_btn"</span><span class="p">&gt;</span>
             퀴즈 풀기
-          &lt;/Link&gt;
-          &lt;button onClick="" className="login_btn"&gt;
+          <span class="p">&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="p">=</span><span class="s">""</span> <span class="na">className</span><span class="p">=</span><span class="s">"login_btn"</span><span class="p">&gt;</span>
             로그인
-          &lt;/button&gt;
-        &lt;/div&gt;
-        {children}
-      &lt;/body&gt;
-    &lt;/html&gt;
-  );
-}
+          <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="si">{</span><span class="nx">children</span><span class="si">}</span>
+      <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
 
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>위에 title부분을 수정하면 사이트의 title이 바뀝니다.<br />
 레이아웃을 만들었으니, 이제 디자인은 우리들의 조력자 gpt에게 부탁하여 global.css에 넣어줍시다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
+<div class="language-css highlighter-rouge"><div class="code-header">
+        <span data-label-text="CSS"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1766,73 +1766,76 @@ export default function RootLayout({ children }) {
 60
 61
 62
-</pre></td><td class="rouge-code"><pre>&lt;!-- global.css --&gt;
+</pre></td><td class="rouge-code"><pre><span class="c">/* global.css */</span>
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-}
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#f9f9f9</span><span class="p">;</span>
+<span class="p">}</span>
 
-.header {
-  background-color: #ff6b6b;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-}
+<span class="nc">.header</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#ff6b6b</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
 
-.title {
-  color: #fff;
-  font-size: 28px;
-  text-decoration: none;
-  margin: 0;
-  margin-right: 20px;
-}
+<span class="nc">.title</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">28px</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
 
-.nav_btn {
-  color: #fff;
-  background-color: #5f27cd;
-  border: 2px solid #5f27cd;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 30px;
-  margin-left: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-}
+<span class="nc">.nav_btn</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#5f27cd</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="m">#5f27cd</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">12px</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">4px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.2</span><span class="p">);</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="n">box-shadow</span> <span class="m">0.3s</span> <span class="n">ease</span><span class="p">,</span> <span class="n">background-color</span> <span class="m">0.3s</span> <span class="n">ease</span><span class="p">,</span> <span class="n">color</span> <span class="m">0.3s</span> <span class="n">ease</span><span class="p">;</span>
+<span class="p">}</span>
 
-.nav_btn:first-child {
-  margin-left: 0;
-}
+<span class="nc">.nav_btn</span><span class="nd">:first-child</span> <span class="p">{</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
 
-.nav_btn:hover {
-  background-color: #341f97;
-  border-color: #341f97;
-}
+<span class="nc">.nav_btn</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#341f97</span><span class="p">;</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="m">#341f97</span><span class="p">;</span>
+<span class="p">}</span>
 
-.login_btn {
-  color: #fff;
-  background-color: #2ecc71;
-  border: none;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 30px;
-  margin-left: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
-}
+<span class="nc">.login_btn</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#2ecc71</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">12px</span> <span class="m">24px</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">4px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.2</span><span class="p">);</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="n">box-shadow</span> <span class="m">0.3s</span> <span class="n">ease</span><span class="p">,</span> <span class="n">background-color</span> <span class="m">0.3s</span> <span class="n">ease</span><span class="p">;</span>
+<span class="p">}</span>
 
-.login_btn:hover {
-  background-color: #27ae60;
-}
+<span class="nc">.login_btn</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#27ae60</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/37d5610a-afa7-4561-96c0-37640e94b935" class="popup img-link "><img width="1470" alt="layout" data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/37d5610a-afa7-4561-96c0-37640e94b935" class="lazyload" data-proofer-ignore></a>
 색깔을 화려하게 부탁하여 이렇게 만들었습니다. 개인적으로 만족하지만, 이런 디자인이 마음에 들지 않는다면<br />
 각자 새롭게 만들어보시거나 새로 gpt에게 부탁하는것이 좋겠습니다.</p>
+
+<p>포스팅이 길어지니 여기서 마치고 다음 포스팅에서 계속하겠습니다.
+읽어주셔서 감사합니다.</p>
 </div>
 
 <div class="post-tail-wrapper text-muted">
@@ -1951,12 +1954,12 @@ body {
         
         
         
-      <li><a href="/posts/github-blog_1/">github 블로그 만들어보기_1 (MacOs)</a></li>
+      <li><a href="/posts/github-blog_2/">github 블로그 만들어보기_2 chirpy테마 github업로드오류</a></li>
       
         
         
         
-      <li><a href="/posts/github-blog_2/">github 블로그 만들어보기_2 chirpy테마 github업로드오류</a></li>
+      <li><a href="/posts/github-blog_1/">github 블로그 만들어보기_1 (MacOs)</a></li>
       
     </ul>
   </div> <!-- #access-lastmod -->
