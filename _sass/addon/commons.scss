@@ -14,6 +14,7 @@ html {
     }
   }
 
+
   @media (prefers-color-scheme: dark) {
     &:not([data-mode]),
     &[data-mode="dark"] {
@@ -24,7 +25,7 @@ html {
       @include light-scheme;
     }
   }
-
+  max-width: 100%;
   font-size: 16px;
 }
 

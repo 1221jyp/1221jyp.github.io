@@ -51,7 +51,7 @@
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="twitter:creator" content="@박지율" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"박지율","url":"https://github.com/1221jyp"},"dateModified":"2023-07-25T11:33:00+09:00","datePublished":"2023-07-25T11:33:00+09:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"퀴즈 사이트 만들기_1 (next.js)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Quiz_project_1/"},"url":"http://localhost:4000/posts/Quiz_project_1/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"박지율","url":"https://github.com/1221jyp"},"dateModified":"2023-07-25T22:32:37+09:00","datePublished":"2023-07-25T11:33:00+09:00","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"퀴즈 사이트 만들기_1 (next.js)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Quiz_project_1/"},"url":"http://localhost:4000/posts/Quiz_project_1/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -1282,6 +1282,42 @@
       
 
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
 
     
 
@@ -1289,113 +1325,6 @@
 
   
   
-
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-
-    
 
   
 
@@ -1438,6 +1367,25 @@
   </span>
 
   <!-- lastmod date -->
+  
+  <span>
+    Updated <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1690291957"
+    data-df="ll"
+    data-toggle="tooltip" data-placement="bottom">
+  Jul 25, 2023
+</em>
+
+  </span>
    
 
   <div class="d-flex justify-content-between">
@@ -1478,7 +1426,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1649 words">
+  title="1666 words">
   <em>9 min</em> read</span>
 
     </div>
@@ -1489,14 +1437,18 @@
 
 <div class="post-content"><hr />
 
-<h2 id="시작하며"><span class="mr-2">시작하며</span><a href="#시작하며" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<blockquote>
+  <p>저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.</p>
+</blockquote>
 
-<p>방학이 찾아온 김에 게으르게 놀지 말고 무언가 하나라도 만들어봐야지 하며 시작하게 되었습니다.
+<h1 id="시작하며">시작하며</h1>
+
+<p>방학이 찾아온 김에 게으르게 놀지 말고 무언가 하나라도 만들어봐야지 하며 시작하게 되었다.
 어떤 프로젝트를 만들면 좋을까 생각하다가, 캬훗과 비슷하지만, 다른 느낌의 퀴즈 사이트를 만들어보기로 결정했다.
 카훗은 혼자 퀴즈를 풀 수 없고, 그룹장이 게임을 만들어야만 퀴즈를 풀 수 있다. 나는 혼자서도 퀴즈를 풀 수 있는
 사이트를 제작해보면 좋을것 같다는 생각이 들었다.</p>
 
-<h3 id="퀴즈-사이트에-들어갈-기능"><span class="mr-2">퀴즈 사이트에 들어갈 기능</span><a href="#퀴즈-사이트에-들어갈-기능" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="퀴즈-사이트에-들어갈-기능"><span class="mr-2">퀴즈 사이트에 들어갈 기능</span><a href="#퀴즈-사이트에-들어갈-기능" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <ol>
   <li>퀴즈를 직접 작성하여 올릴수 있어야 한다.</li>
@@ -1504,28 +1456,30 @@
   <li>한번에 풀 수 있는 퀴즈의 수를 20개로 제한해놓고, 다 풀었을 시 순위판이 나오고, 점수가 정산된다.</li>
 </ol>
 
-<h2 id="사용할-라이브러리db"><span class="mr-2">사용할 라이브러리/DB</span><a href="#사용할-라이브러리db" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h1 id="사용할-라이브러리db">사용할 라이브러리/DB</h1>
+<hr />
 
-<h3 id="nextjs"><span class="mr-2">next.js</span><a href="#nextjs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="nextjs"><span class="mr-2">next.js</span><a href="#nextjs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/9a139896-ad27-4a38-9b87-3b425b4c17df" class="popup img-link "><img data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/9a139896-ad27-4a38-9b87-3b425b4c17df" alt="Next.js" class="lazyload" data-proofer-ignore></a>
-vercel에서 제작한 풀스택 기반 SSR렌더링 방식의 프레임워크입니다.
+<p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/9a139896-ad27-4a38-9b87-3b425b4c17df" class="popup img-link "><img data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/9a139896-ad27-4a38-9b87-3b425b4c17df" alt="Next.js" class="lazyload" data-proofer-ignore></a></p>
+
+<p>vercel에서 제작한 풀스택 기반 SSR렌더링 방식의 프레임워크입니다.<br />
 다룰줄 아는 프레임워크가 이거밖에 없어 사용하게 되었습니다.</p>
 
-<h3 id="mongodb"><span class="mr-2">mongodb</span><a href="#mongodb" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="mongodb"><span class="mr-2">mongodb</span><a href="#mongodb" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/41ba3c03-dc05-491a-8c3f-5f391ea73435" class="popup img-link "><img data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/41ba3c03-dc05-491a-8c3f-5f391ea73435" alt="MongoDB" class="lazyload" data-proofer-ignore></a>
-mongodb는 noSQL계열의 데이터베이스 시스템입니다.
+mongodb는 noSQL계열의 데이터베이스 시스템입니다.<br />
 마찬가지로 다룰줄 아는 DB가 mongodb밖에 없어 사용하게 되었습니다.</p>
+<h1 id="시작하기">시작하기</h1>
+<hr />
 
-<h2 id="시작하기"><span class="mr-2">시작하기</span><a href="#시작하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<h3 id="nodejs-설치"><span class="mr-2">node.js 설치</span><a href="#nodejs-설치" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="nodejs-설치"><span class="mr-2">node.js 설치</span><a href="#nodejs-설치" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p><a href="https://nodejs.org">node.js</a>를 설치해줍시다. 최신버전과 추천버전중 아무거나 설치해줍니다.
 저는 이미 설치되어있으므로 설치는 건너뛰겠습니다.</p>
 
-<h3 id="nextjs-설치"><span class="mr-2">next.js 설치</span><a href="#nextjs-설치" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="nextjs-설치"><span class="mr-2">next.js 설치</span><a href="#nextjs-설치" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p>먼저 vscode를 들어온 뒤에 next.js프로젝트 폴더를 생성할 폴더에 들어와 터미널을 열어줍니다. 그 이후 터미널에 해당 명령어를 입력합니다.</p>
 
@@ -1539,11 +1493,12 @@ mongodb는 noSQL계열의 데이터베이스 시스템입니다.
 
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/49a7b1b7-8708-412a-899c-43db7c56ac5d" class="popup img-link "><img width="1129" alt="setting" data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/49a7b1b7-8708-412a-899c-43db7c56ac5d" class="lazyload" data-proofer-ignore></a></p>
 
-<p>그리고 프로젝트의 이름을 지어줍니다. 저는 quiz_project로 이름을 지어주었습니다. 프로젝트 작명에는 대문자가 들어갈수 없다네요.</p>
+<p>그리고 프로젝트의 이름을 지어줍니다. 저는 quiz_project로 이름을 지어주었습니다. 
+<del>프로젝트 작명에는 대문자가 들어갈수 없다네요.</del></p>
 
 <p>그리고 여러가지 설정에 대한 질문이 들어오는데, 저는 딱히 특별한 기능은 사용하지 않을것이기 때문에, src디렉토리 생성과 app router기능만 활성화했습니다. 그냥 app router만 켜두셔도 무방합니다.</p>
 
-<h3 id="github에-업로드"><span class="mr-2">github에 업로드</span><a href="#github에-업로드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="github에-업로드"><span class="mr-2">github에 업로드</span><a href="#github에-업로드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/26c93a91-0f58-4566-a304-8f334756ee35" class="popup img-link "><img width="764" alt="Repository" data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/26c93a91-0f58-4566-a304-8f334756ee35" class="lazyload" data-proofer-ignore></a></p>
 
@@ -1568,10 +1523,10 @@ git push origin main
 
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/56615a59-64fb-4802-8d05-e90d3d9b8850" class="popup img-link "><img data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/56615a59-64fb-4802-8d05-e90d3d9b8850" alt="success" class="lazyload" data-proofer-ignore></a>
 정상적으로 업로드에 성공하셨다면 github에 접속시 이런 창이 뜨게 됩니다.</p>
+<h1 id="nextjs-실행">next.js 실행</h1>
+<hr />
 
-<h2 id="nextjs-실행"><span class="mr-2">next.js 실행</span><a href="#nextjs-실행" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<h3 id="정상적으로-작동되는지-테스트하기"><span class="mr-2">정상적으로 작동되는지 테스트하기</span><a href="#정상적으로-작동되는지-테스트하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="정상적으로-작동되는지-테스트하기"><span class="mr-2">정상적으로 작동되는지 테스트하기</span><a href="#정상적으로-작동되는지-테스트하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
@@ -1585,7 +1540,7 @@ git push origin main
 정상적으로 작동된다면 이러한 창이 뜨게 됩니다.<br />
 app폴더의 page.js파일을 수정하여 프로젝트를 시작하라고 하네요.</p>
 
-<h3 id="새로운-페이지"><span class="mr-2">새로운 페이지</span><a href="#새로운-페이지" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="새로운-페이지"><span class="mr-2">새로운 페이지</span><a href="#새로운-페이지" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/b25e81b2-4340-4a60-af99-c3d38967e3a5" class="popup img-link "><img width="1470" alt="page js" data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/b25e81b2-4340-4a60-af99-c3d38967e3a5" class="lazyload" data-proofer-ignore></a>
 app폴더에 들어와 page.js를 들어와줍니다.</p>
@@ -1627,7 +1582,8 @@ app폴더에 들어와 page.js를 들어와줍니다.</p>
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/11aa15d4-6627-4d2e-b94d-02307bf339c2" class="popup img-link "><img width="1470" alt="hello" data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/11aa15d4-6627-4d2e-b94d-02307bf339c2" class="lazyload" data-proofer-ignore></a>
 성공.</p>
 
-<h2 id="헤더-레이아웃-만들기"><span class="mr-2">헤더 레이아웃 만들기</span><a href="#헤더-레이아웃-만들기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h1 id="헤더-레이아웃-만들기">헤더 레이아웃 만들기</h1>
+<hr />
 
 <p>저는 퀴즈를 작성하는 버튼과 퀴즈를 풀때 누를 버튼, 로그인/로그아웃 버튼만 헤더부분에 놓아주면 좋을 것 같습니다.
 모든 주소에서 레이아웃이 보이게 하려면 layout.js파일에서
@@ -1950,6 +1906,11 @@ app폴더에 들어와 page.js를 들어와줍니다.</p>
   <div id="access-lastmod" class="post">
     <div class="panel-heading">Recently Updated</div>
     <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+      
+        
+        
+        
+      <li><a href="/posts/Quiz_project_1/">퀴즈 사이트 만들기_1 (next.js)</a></li>
       
         
         

@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-07-25T22:32:21+09:00</updated>
+  <updated>2023-07-25T23:19:41+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/Quiz_project_1/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_1 (next.js)" />
     <published>2023-07-25T11:33:00+09:00</published>
   
-    <updated>2023-07-25T11:33:00+09:00</updated>
+    <updated>2023-07-25T22:32:37+09:00</updated>
   
     <id>http://localhost:4000/posts/Quiz_project_1/</id>
     <content src="http://localhost:4000/posts/Quiz_project_1/" />
@@ -52,9 +52,13 @@
 
       
 
+
+  저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
+
+
 시작하며
 
-방학이 찾아온 김에 게으르게 놀지 말고 무언가 하나라도 만들어봐야지 하며 시작하게 되었습니다.
+방학이 찾아온 김에 게으르게 놀지 말고 무언가 하나라도 만들어봐야지 하며 시작하게 되었다.
 어떤 프로젝트를 만들면 좋을까 생각하다가, 캬훗과 비슷하지만, 다른 느낌의 퀴즈 사이트를 만들어보기로 결정했다.
 카훗은 혼자 퀴즈를 풀 수 없고, 그룹장이 게임을 만들어야만 퀴즈를 풀 수 있다. 나는 혼자서도 퀴즈를 풀 수 있는
 사이트를 제작해보면 좋을것 같다는 생각이 들었다.
@@ -64,12 +68,7 @@
 
   퀴즈를 직접 작성하여 올릴수 있어야 한다.
   퀴즈가 만들어지면 DB에 퀴즈가 저장되고, 퀴즈 풀기를 할때 랜덤으로 유저가 작성해놓은 퀴즈가 나온다.
-  한번에 풀 수 있는 퀴즈의 수를 20개로 제한해놓고, 다 풀었을 시 순위판이 나오고, 점수가 정산된다.
-
-
-사용할 라이브러리/DB
-
-...
+  한번에 풀 수 있는 퀴즈의 수를 20개로 제한해놓고, 다 풀었을...
     </summary>
   
 
