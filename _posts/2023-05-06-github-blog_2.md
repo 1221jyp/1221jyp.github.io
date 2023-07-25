@@ -33,7 +33,7 @@ $ git init
 $ git add .
 $ git commit -m "아무 커밋 이름"
 $ git remote add origin '자신의 repository 주소'
-$ git push origin master
+$ git push origin main
 ```
 
 위 과정을 통해 git push를 해주자.
