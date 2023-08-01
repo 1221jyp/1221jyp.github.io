@@ -14,7 +14,6 @@ html {
     }
   }
 
-
   @media (prefers-color-scheme: dark) {
     &:not([data-mode]),
     &[data-mode="dark"] {
@@ -35,7 +34,6 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
   line-height: 1.75;
-  overflow-x: hidden;
 }
 
 /* --- Typography --- */

@@ -15,6 +15,8 @@ mermaid: true
 1편에서 chirpy jekyll 테마를 적용하고 포스팅을 끝냈다.  
 이제 마지막으로 github에 업로드만 하면 블로그 제작은 끝이 난다.
 
+> 저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
+
 ## github에 블로그 폴더 업로드
 
 github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 [github_desktop](https://desktop.github.com)을 사용하는데,

@@ -10,7 +10,7 @@ mermaid: true
 
 ---
 
->저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
+> 저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
 
 # 시작하며
 
@@ -23,10 +23,10 @@ mermaid: true
 
 1. 퀴즈를 직접 작성하여 올릴수 있어야 한다.
 2. 퀴즈가 만들어지면 DB에 퀴즈가 저장되고, 퀴즈 풀기를 할때 랜덤으로 유저가 작성해놓은 퀴즈가 나온다.
-3. 한번에 풀 수 있는 퀴즈의 수를 20개로 제한해놓고, 다 풀었을 시 순위판이 나오고, 점수가 정산된다.  
-
+3. 한번에 풀 수 있는 퀴즈의 수를 20개로 제한해놓고, 다 풀었을 시 순위판이 나오고, 점수가 정산된다.
 
 # 사용할 라이브러리/DB
+
 ---
 
 ## next.js
@@ -40,8 +40,10 @@ vercel에서 제작한 풀스택 기반 SSR렌더링 방식의 프레임워크�
 
 ![MongoDB](https://github.com/1221jyp/Quiz_project/assets/98996860/41ba3c03-dc05-491a-8c3f-5f391ea73435)
 mongodb는 noSQL계열의 데이터베이스 시스템입니다.  
-마찬가지로 다룰줄 아는 DB가 mongodb밖에 없어 사용하게 되었습니다.  
+마찬가지로 다룰줄 아는 DB가 mongodb밖에 없어 사용하게 되었습니다.
+
 # 시작하기
+
 ---
 
 ## node.js 설치
@@ -61,7 +63,7 @@ npx create-next-app@latest
 
 <img width="1129" alt="setting" src="https://github.com/1221jyp/Quiz_project/assets/98996860/49a7b1b7-8708-412a-899c-43db7c56ac5d">
 
-그리고 프로젝트의 이름을 지어줍니다. 저는 quiz_project로 이름을 지어주었습니다. 
+그리고 프로젝트의 이름을 지어줍니다. 저는 quiz_project로 이름을 지어주었습니다.
 ~~프로젝트 작명에는 대문자가 들어갈수 없다네요.~~
 
 그리고 여러가지 설정에 대한 질문이 들어오는데, 저는 딱히 특별한 기능은 사용하지 않을것이기 때문에, src디렉토리 생성과 app router기능만 활성화했습니다. 그냥 app router만 켜두셔도 무방합니다.
@@ -71,8 +73,7 @@ npx create-next-app@latest
 <img width="764" alt="Repository" src="https://github.com/1221jyp/Quiz_project/assets/98996860/26c93a91-0f58-4566-a304-8f334756ee35">
 
 가장 먼저, github에서 새로운 repository를 만들어준 뒤에, 저희가 만든 next.js 프로젝트 폴더를 push해줍시다.  
-만들어진 next.js 프로젝트 폴더에 들어와 터미널을 열어준뒤 해당 명령어를 입력합니다.  
-
+만들어진 next.js 프로젝트 폴더에 들어와 터미널을 열어준뒤 해당 명령어를 입력합니다.
 
 ```
 git init
@@ -85,8 +86,10 @@ git push origin main
 만약 [git](https://git-scm.com)이 설치되어있지 않다면, [git](https://git-scm.com)부터 설치하셔야 합니다.
 
 ![success](https://github.com/1221jyp/Quiz_project/assets/98996860/56615a59-64fb-4802-8d05-e90d3d9b8850)
-정상적으로 업로드에 성공하셨다면 github에 접속시 이런 창이 뜨게 됩니다.  
+정상적으로 업로드에 성공하셨다면 github에 접속시 이런 창이 뜨게 됩니다.
+
 # next.js 실행
+
 ---
 
 ## 정상적으로 작동되는지 테스트하기
@@ -99,12 +102,12 @@ npm run dev
 터미널에 명령어 입력을 마쳤다면 [localhost:3000](http://localhost:3000)에 접속시 자신의 프로젝트가 나옵니다. 가끔 [localhost:3001](http://localhost:3001)에 접속해야 하는 경우도 있습니다.
 <img width="1470" alt="test" src="https://github.com/1221jyp/Quiz_project/assets/98996860/1fd4fd07-4ce9-4db5-a870-7b7bb1bdaf53">
 정상적으로 작동된다면 이러한 창이 뜨게 됩니다.  
-app폴더의 page.js파일을 수정하여 프로젝트를 시작하라고 하네요.
+app폴더의 `page.js`파일을 수정하여 프로젝트를 시작하라고 하네요.
 
 ## 새로운 페이지
 
 <img width="1470" alt="page js" src="https://github.com/1221jyp/Quiz_project/assets/98996860/b25e81b2-4340-4a60-af99-c3d38967e3a5">
-app폴더에 들어와 page.js를 들어와줍니다.
+`app`폴더에 들어와 `page.js`를 들어와줍니다.
 
 ```jsx
 // src/app/page.js
@@ -130,10 +133,11 @@ export default function Home() {
 성공.
 
 # 헤더 레이아웃 만들기
+
 ---
 
 저는 퀴즈를 작성하는 버튼과 퀴즈를 풀때 누를 버튼, 로그인/로그아웃 버튼만 헤더부분에 놓아주면 좋을 것 같습니다.
-모든 주소에서 레이아웃이 보이게 하려면 layout.js파일에서
+모든 주소에서 레이아웃이 보이게 하려면 `layout.js`파일에서
 레이아웃을 디자인해주면 됩니다.
 
 ```jsx
@@ -167,14 +171,13 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
 ```
 
 위에 title부분을 수정하면 사이트의 title이 바뀝니다.  
-레이아웃을 만들었으니, 이제 디자인은 우리들의 조력자 gpt에게 부탁하여 global.css에 넣어줍시다.
+레이아웃을 만들었으니, 이제 디자인은 우리들의 조력자 gpt에게 부탁하여 `global.css`에 넣어줍시다.
 
 ```css
-/* global.css */
+/* globals.css */
 
 body {
   font-family: Arial, sans-serif;

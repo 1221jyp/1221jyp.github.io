@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-07-25T23:25:30+09:00</updated>
+  <updated>2023-08-01T23:22:26+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,73 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>퀴즈 사이트 만들기_2 (next.js)</title>
+    <link href="http://localhost:4000/posts/Quiz_project_2/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_2 (next.js)" />
+    <published>2023-07-25T11:33:00+09:00</published>
+  
+    <updated>2023-07-25T11:33:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Quiz_project_2/</id>
+    <content src="http://localhost:4000/posts/Quiz_project_2/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="MacOs" />
+    
+    <category term="Next.js" />
+    
+    <category term="javascript" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+시작하며
+
+지난 포스팅에서는 next.js를 설치하고, 레이아웃까지 제작하였다. 이번 포스팅에서는
+나머지 페이지들의 내용을 구성해볼것이다.
+
+
+
+
+  저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
+
+
+메인 페이지 구성
+
+
+
+메인 페이지에는 이 웹사이트에 있는 기능들과 사용법을 소개할 것입니다.
+아직 저의 프로젝트는 완성되어있지 않고, 계속 수정될 수 있기 때문에 비워놓고 다른 페이지부터
+제작하겠습니다.
+
+로딩 페이지 구성
+
+
+
+로딩중일때 띄워질 페이지를 구성해 봅시다. app폴더 안에 loading.js파일을 생성하면,
+로딩중일때 loading.js파일의 내용을 띄워 줍니다. chatgpt를 사용해서 레이아웃을 로딩 애니메이션을
+만들어달라 부탁해보았습니다.
+
+//src/app/lo...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -113,6 +180,10 @@
 1편에서 chirpy jekyll 테마를 적용하고 포스팅을 끝냈다.
 이제 마지막으로 github에 업로드만 하면 블로그 제작은 끝이 난다.
 
+
+  저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
+
+
 github에 블로그 폴더 업로드
 
 github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 github_desktop을 사용하는데,
@@ -128,8 +199,7 @@ $ cd '자신의 블로그 로컬 폴더 위치'
 $ git init
 $ git add .
 $ git commit -m "아무 커밋 이름"
-$ git remote add origin '자신의 repository 주소'
-$ git push origin main...
+$ git remote add origin '...
     </summary>
   
 
