@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-08-01T23:22:26+09:00</updated>
+  <updated>2023-08-12T01:25:09+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,68 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>퀴즈 사이트 만들기_3 (next.js)</title>
+    <link href="http://localhost:4000/posts/Quiz_project_3/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_3 (next.js)" />
+    <published>2023-07-25T11:33:00+09:00</published>
+  
+    <updated>2023-07-25T11:33:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Quiz_project_3/</id>
+    <content src="http://localhost:4000/posts/Quiz_project_3/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="MacOs" />
+    
+    <category term="Next.js" />
+    
+    <category term="javascript" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      시작하며
+
+
+
+지난 포스팅에서는 퀴즈 만들기 페이지와, API까지 완성시켰다. 이번 포스팅에서는
+퀴즈 풀기 기능을 완성시켜볼 예정이다.
+
+퀴즈 풀기 페이지 구성하기
+
+
+
+페이지 구성
+
+가장 먼저 퀴즈 풀기 버튼을 누르면, 문제의 카테고리를 선택할 수 있는 창을 만들어주겠습니다.
+아직 한국사 문제밖에 없지만, 새로운 카테고리가 생길수도 있기때문에 만들어놓겠습니다.
+
+//src/app/quiz/page.js
+
+import "./style.css";
+
+export default function Quiz() {
+  return (
+    &amp;lt;div className="container"&amp;gt;
+      &amp;lt;a href={"/quiz_h"} className="button"&amp;gt;
+        한국사...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -54,10 +116,10 @@
 
 시작하며
 
+
+
 지난 포스팅에서는 next.js를 설치하고, 레이아웃까지 제작하였다. 이번 포스팅에서는
 나머지 페이지들의 내용을 구성해볼것이다.
-
-
 
 
   저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
@@ -91,7 +153,7 @@
     <link href="http://localhost:4000/posts/Quiz_project_1/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_1 (next.js)" />
     <published>2023-07-25T11:33:00+09:00</published>
   
-    <updated>2023-07-25T23:20:00+09:00</updated>
+    <updated>2023-08-01T23:22:49+09:00</updated>
   
     <id>http://localhost:4000/posts/Quiz_project_1/</id>
     <content src="http://localhost:4000/posts/Quiz_project_1/" />
@@ -147,7 +209,7 @@
     <link href="http://localhost:4000/posts/github-blog_2/" rel="alternate" type="text/html" title="github 블로그 만들어보기_2 chirpy테마 github업로드오류" />
     <published>2023-05-05T11:33:00+09:00</published>
   
-    <updated>2023-07-25T22:17:27+09:00</updated>
+    <updated>2023-08-01T23:22:49+09:00</updated>
   
     <id>http://localhost:4000/posts/github-blog_2/</id>
     <content src="http://localhost:4000/posts/github-blog_2/" />
@@ -211,7 +273,7 @@ $ git remote add origin '...
     <link href="http://localhost:4000/posts/github-blog_1/" rel="alternate" type="text/html" title="github 블로그 만들어보기_1 (MacOs)" />
     <published>2023-05-05T11:33:00+09:00</published>
   
-    <updated>2023-07-25T18:16:43+09:00</updated>
+    <updated>2023-08-01T23:22:49+09:00</updated>
   
     <id>http://localhost:4000/posts/github-blog_1/</id>
     <content src="http://localhost:4000/posts/github-blog_1/" />
