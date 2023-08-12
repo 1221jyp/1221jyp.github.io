@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-08-12T01:25:09+09:00</updated>
+  <updated>2023-08-12T14:11:47+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,65 @@
 
   
   <entry>
+    <title>퀴즈 사이트 만들기_4 (next.js)</title>
+    <link href="http://localhost:4000/posts/Quiz_project_4/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_4 (next.js)" />
+    <published>2023-08-11T11:33:00+09:00</published>
+  
+    <updated>2023-08-11T11:33:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Quiz_project_4/</id>
+    <content src="http://localhost:4000/posts/Quiz_project_4/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="MacOs" />
+    
+    <category term="Next.js" />
+    
+    <category term="javascript" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      시작하며
+
+지난 시간에는 퀴즈 풀기 페이지, 회원기능 , DB를 이용한 회원아이디 저장 등의 기능을 만들었다.
+이번 시간에는 순위판 페이지를 완성시키고, AWS에 파일을 업로드할 것이다.
+
+순위판 구성
+
+
+
+순위가 높은 순서대로 자료를 출력하기 위해 mongodb에서 데이터를 가져올때, sort()함수를 이용합니다.
+sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차순의 순서대로 가져올 수 있게 해줍니다.
+저는 result값 (점수)가 높은 순서대로 자료를 출력하게 했습니다.
+
+import { connectDB } from "/Users/jyp/Documents/GitHub/quiz_project/src/util/db.js";
+import "./style.css";
+
+export defaul...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>퀴즈 사이트 만들기_3 (next.js)</title>
     <link href="http://localhost:4000/posts/Quiz_project_3/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_3 (next.js)" />
-    <published>2023-07-25T11:33:00+09:00</published>
+    <published>2023-08-02T11:33:00+09:00</published>
   
-    <updated>2023-07-25T11:33:00+09:00</updated>
+    <updated>2023-08-02T11:33:00+09:00</updated>
   
     <id>http://localhost:4000/posts/Quiz_project_3/</id>
     <content src="http://localhost:4000/posts/Quiz_project_3/" />
@@ -84,9 +138,9 @@ export default function Quiz() {
   <entry>
     <title>퀴즈 사이트 만들기_2 (next.js)</title>
     <link href="http://localhost:4000/posts/Quiz_project_2/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_2 (next.js)" />
-    <published>2023-07-25T11:33:00+09:00</published>
+    <published>2023-07-30T11:33:00+09:00</published>
   
-    <updated>2023-07-25T11:33:00+09:00</updated>
+    <updated>2023-08-12T01:25:43+09:00</updated>
   
     <id>http://localhost:4000/posts/Quiz_project_2/</id>
     <content src="http://localhost:4000/posts/Quiz_project_2/" />
@@ -262,47 +316,6 @@ $ git init
 $ git add .
 $ git commit -m "아무 커밋 이름"
 $ git remote add origin '...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>github 블로그 만들어보기_1 (MacOs)</title>
-    <link href="http://localhost:4000/posts/github-blog_1/" rel="alternate" type="text/html" title="github 블로그 만들어보기_1 (MacOs)" />
-    <published>2023-05-05T11:33:00+09:00</published>
-  
-    <updated>2023-08-01T23:22:49+09:00</updated>
-  
-    <id>http://localhost:4000/posts/github-blog_1/</id>
-    <content src="http://localhost:4000/posts/github-blog_1/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="MacOs" />
-    
-    <category term="github blog" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-
-들어가며
-
-나는 작업을 하다가 모르는게 있으면 당연히 구글링을 통해서 문제를 해결합니다.
-구글링을 하면 다양한 개발 블로그에서 해답을 찾을 수 있는데, 블로그들을 보며 나도 개발 블로그로 다른사람에게 내가 아는것을 전달해줄 수 있다면 좋겠다는 생각이 들었습니다. 그래서 나도 한번 만들어보자 하는 생각에 블로그의 종류들을 살펴보았습니다. tistory, velog, notion 등등 다양한 종류들이 있었는데, 그중 github 블로그가 너무 멋있어 보였다. 처음 만드는게 다른 블로그보다 어렵다는 특징이 나에게는 매우 매력적으로 다가왔고, 추후 광고로 수익을 낼수도 있다고 해서 마음에 들었다.(광고를 붙일 생각은 없습니다.) 그래서 무턱대고 github 블로그 만들기를 도전하였고, 시험기간엔 뭐든 해보...
     </summary>
   
 

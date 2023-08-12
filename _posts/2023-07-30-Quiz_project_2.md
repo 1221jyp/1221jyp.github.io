@@ -1,7 +1,7 @@
 ---
 title: 퀴즈 사이트 만들기_2 (next.js)
 author: jyp
-date: 2023-07-25 11:33:00 +0900
+date: 2023-07-30 11:33:00 +0900
 categories: [MacOs, Next.js, javascript]
 tags: [Quiz_project]
 math: true
