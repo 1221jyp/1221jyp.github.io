@@ -119,7 +119,7 @@ IAM 역할설정이 완료되었다면 이제 진짜로 AWS에 파일을 업로�
 ![quiz_project_4-16](https://github.com/1221jyp/Quiz_project/assets/98996860/c3e0e68d-7107-4de8-a2da-14ec45b211d9)
 
 가장 먼저 [호스팅케이알](https://www.hosting.kr)에서 마음에 드는 도메인을 구입하고 해당 주소를 aws에 등록하고
-https 리디렉션까지 끝마쳤습니다. [완성된 사이트의 주소](www.playquizus.com)  
+https 리디렉션까지 끝마쳤습니다. [완성된 사이트의 주소](https://www.playquizus.com)  
 해당 과정을 기록하려고는 했으나, 굉장이 복잡하고, 중간중간 기록을 남기지 못하여
 글에 넣지 못했습니다. 다음부터는 모든 과정을 남기겠습니다.
 
