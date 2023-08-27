@@ -73,3 +73,59 @@ npm run start
 ---
 
 확인해보고 이상이 없으면 AWS에 업로드를 시작해봅시다.
+
+우선 [AWS](https://aws.amazon.com/)에 가입을 해줍니다. 카드 정보까지 입력해주어야 1년 프리티어 무료체험이 가능합니다.
+
+작업했던 폴더에서 node_modules를 제외한 모든 파일을 묶어 압축해줍니다.
+
+<img width="1470" alt="quiz_project_4-2" src="https://github.com/1221jyp/Quiz_project/assets/98996860/40d314bb-347b-40d7-8a32-36a873705491">
+
+우선 AWS로그인을 마치고, 콘솔 홈에 들어와줍니다. 이런 다음에 검색 창에서 IAM을 검색하고 들어가서 대시보드의 역할 버튼을 눌러줍니다.
+
+<img width="1470" alt="quiz_project_4-3" src="https://github.com/1221jyp/Quiz_project/assets/98996860/c4f44a59-33cf-4561-a103-85de7fac2186">
+<img width="1469" alt="quiz_project_4-4" src="https://github.com/1221jyp/Quiz_project/assets/98996860/21aae789-5cb2-4408-8ac4-b68967487bbd">
+<img width="1470" alt="quiz_project_4-5" src="https://github.com/1221jyp/Quiz_project/assets/98996860/2428d97c-f7d7-498f-b1a4-2d0f4f6a5321">
+
+검색창에 `beanstalk`을 검색하여 제일 위에 있는 세개를 선택해 줍니다.
+
+<img width="1469" alt="quiz_project_4-6" src="https://github.com/1221jyp/Quiz_project/assets/98996860/8e48ba10-898e-445c-8a04-aff5e0f66792">
+
+IAM 역할설정이 완료되었다면 이제 진짜로 AWS에 파일을 업로드해줘야 합니다.
+
+<img width="1469" alt="quiz_project_4-7" src="https://github.com/1221jyp/Quiz_project/assets/98996860/da89784e-6059-4937-a3e1-35be0a04f966">
+
+다시 최상단의 검색창에 `elastic beanstalk`을 검색해줍니다.
+<img width="1469" alt="quiz_project_4-8" src="https://github.com/1221jyp/Quiz_project/assets/98996860/e9aeaf89-fd6e-4dde-914f-6682949dd8a6">
+
+애플리케이션 생성을 누르시고 난 다음 아래 사진에 나오는 부분만 수정해 줍니다.(이름짓기 제외)
+<img width="685" alt="quiz_project_4-9" src="https://github.com/1221jyp/Quiz_project/assets/98996860/a80d35ae-3a5e-4f12-8eb4-c14997fd0416">
+<img width="798" alt="quiz_project_4-10" src="https://github.com/1221jyp/Quiz_project/assets/98996860/1e658791-a866-41a2-b588-654a50e4a2bc">
+<img width="803" alt="quiz_project_4-11" src="https://github.com/1221jyp/Quiz_project/assets/98996860/7ee2e6be-2cf7-4a76-9099-c3693bae3eeb">
+<img width="802" alt="quiz_project_4-12" src="https://github.com/1221jyp/Quiz_project/assets/98996860/da4ce31d-640c-4095-ae41-95d79ce5c57e">
+<img width="792" alt="quiz_project_4-13" src="https://github.com/1221jyp/Quiz_project/assets/98996860/886f426b-0d38-4bd1-867f-f3369700703a">
+<img width="1164" alt="quiz_project_4-14" src="https://github.com/1221jyp/Quiz_project/assets/98996860/bbfd0ca6-0284-486e-a5ba-c0c07bbd7530">
+
+여기까지 마쳤다면 사이트 업로드가 성공된 것입니다. 아마존에서 알려주는 도메인에 들어가서 확인해 봅시다.
+
+<img width="1470" alt="quiz_project_4-15" src="https://github.com/1221jyp/Quiz_project/assets/98996860/6c85d9b7-57a2-4b8a-9554-059fcbe04432">
+
+정상적으로 작동되는 모습
+
+하지만 회원가입기능이 정상적으로 작동되지 않는것을 볼 수 있습니다. 이는 우리가 깃허브, 구글에 주소를 `http://localhost:3000`으로 해놓았었는데,
+이것의 주소가 안바뀌었기 때문입니다.
+
+하지만 먼저 이것을 수정하기 전에, 도메인부터 바꾸겠습니다.
+
+![quiz_project_4-16](https://github.com/1221jyp/Quiz_project/assets/98996860/c3e0e68d-7107-4de8-a2da-14ec45b211d9)
+
+가장 먼저 [호스팅케이알](https://www.hosting.kr)에서 마음에 드는 도메인을 구입하고 해당 주소를 aws에 등록하고
+https 리디렉션까지 끝마쳤습니다. [완성된 사이트의 주소](www.playquizus.com)  
+해당 과정을 기록하려고는 했으나, 굉장이 복잡하고, 중간중간 기록을 남기지 못하여
+글에 넣지 못했습니다. 다음부터는 모든 과정을 남기겠습니다.
+
+# 마무리하며
+
+도메인 등록하고 SLL인증서 발급받고 로드벨런서로 HTTPS리디렉션 등등 다양한 과정을 거쳐서 지금의 사이트가 완성되었는데,
+기록으로 남기지 못하여 아쉬웠습니다. 다음시간에는 웹페이지의 전체 디자인과, 모바일 환경에서도 잘 작동되게끔 디자인을 수정하는
+작업을 하겠습니다. 그리고 여태까지 깃으로 한개의 branch에만 commit을 하고, commit마저도 엉망진창으로 해놓아서 git 환경도 새로 만들어볼 예정입니다.  
+읽어주셔서 감사합니다.
