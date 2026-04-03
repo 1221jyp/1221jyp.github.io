@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2026-04-02T17:39:09+09:00</updated>
+  <updated>2026-04-03T13:19:16+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,77 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[Dreamhack] pathtraversal 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_pathtraversal/" rel="alternate" type="text/html" title="[Dreamhack] pathtraversal 해설" />
+    <published>2026-04-03T12:00:00+09:00</published>
+  
+    <updated>2026-04-03T12:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_pathtraversal/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_pathtraversal/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  ~~을 통한 해킹
+
+
+난이도: Lv.beginner
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+└── app.py
+
+
+주요 코드
+
+
+#!/usr/bin/python3
+from flask import Flask, request, render_template, abort
+from functools import wraps
+import requests
+import os, json
+
+users = {
+    '0': {
+        'userid': 'guest',
+        'level': 1,
+        'password': 'guest'
+    },
+    '1': {
+        'userid': 'admin',
+        'level': 9999,
+      ...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -95,7 +166,7 @@ COPY flag.txt /flag.txt
     <link href="http://localhost:4000/posts/Dreamhack_MisconFlag/" rel="alternate" type="text/html" title="[Dreamhack] MisconFlag 해설" />
     <published>2026-03-29T18:20:00+09:00</published>
   
-    <updated>2026-03-29T18:20:00+09:00</updated>
+    <updated>2026-04-03T11:08:27+09:00</updated>
   
     <id>http://localhost:4000/posts/Dreamhack_MisconFlag/</id>
     <content src="http://localhost:4000/posts/Dreamhack_MisconFlag/" />
@@ -271,73 +342,6 @@ export default function Quiz() {
     &amp;lt;div className="container"&amp;gt;
       &amp;lt;a href={"/quiz_h"} className="button"&amp;gt;
         한국사...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>퀴즈 사이트 만들기_2 (next.js)</title>
-    <link href="http://localhost:4000/posts/Quiz_project_2/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_2 (next.js)" />
-    <published>2023-07-30T11:33:00+09:00</published>
-  
-    <updated>2023-08-12T14:22:02+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Quiz_project_2/</id>
-    <content src="http://localhost:4000/posts/Quiz_project_2/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="MacOs" />
-    
-    <category term="Next.js" />
-    
-    <category term="javascript" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-
-시작하며
-
-
-
-지난 포스팅에서는 next.js를 설치하고, 레이아웃까지 제작하였다. 이번 포스팅에서는
-나머지 페이지들의 내용을 구성해볼것이다.
-
-
-  저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
-
-
-메인 페이지 구성
-
-
-
-메인 페이지에는 이 웹사이트에 있는 기능들과 사용법을 소개할 것입니다.
-아직 저의 프로젝트는 완성되어있지 않고, 계속 수정될 수 있기 때문에 비워놓고 다른 페이지부터
-제작하겠습니다.
-
-로딩 페이지 구성
-
-
-
-로딩중일때 띄워질 페이지를 구성해 봅시다. app폴더 안에 loading.js파일을 생성하면,
-로딩중일때 loading.js파일의 내용을 띄워 줍니다. chatgpt를 사용해서 레이아웃을 로딩 애니메이션을
-만들어달라 부탁해보았습니다.
-
-//src/app/lo...
     </summary>
   
 
