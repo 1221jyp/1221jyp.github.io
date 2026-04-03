@@ -44,6 +44,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="jyp_devlog" />
 <meta property="og:type" content="website" />
+<link rel="next" href="http://localhost:4000/page2" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="jyp_devlog" />
 <meta name="twitter:site" content="@twitter_username" />
@@ -489,10 +490,11 @@
         문제 특징
 
 
-  ~~을 통한 해킹
+  Querystring과 request라이브러리를 이용한 해킹
 
 
-난이도: Lv.beginner
+문제 이름: pathtraversal
+난이도: Lv.Beginner
 카테고리: 웹해킹
 
 
@@ -509,9 +511,169 @@
 
 
 #!/usr/bin/python3
-from flask import Flask, request, render_template, abort
-from functools import wraps
-imp...
+from flask import Flask, request, render_te...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1775185200"
+    data-df="ll"
+    >
+  Apr  3, 2026
+</em>
+
+
+        <!-- categories -->
+        
+          <i class="far fa-folder-open fa-fw"></i>
+          <span>
+          
+            Dreamhack
+          </span>
+        
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/Dreamhack_image-storage/">[Dreamhack] image-storage 해설</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        문제 정보
+
+
+  PHP WebShell 설치를 통한 해킹
+
+
+문제 이름: image-storage
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── index.php
+├── list.php
+└── upload.php
+
+
+주요 코드
+
+//upload.php
+
+&amp;lt;?php
+  if ($_SERVER[&#39;REQUEST_MET...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1775185200"
+    data-df="ll"
+    >
+  Apr  3, 2026
+</em>
+
+
+        <!-- categories -->
+        
+          <i class="far fa-folder-open fa-fw"></i>
+          <span>
+          
+            Dreamhack
+          </span>
+        
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/Dreamhack_file-download-1/">[Dreamhack] file-download-1 해설</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        문제 정보
+
+
+  Querystring과 request라이브러리를 이용한 해킹
+
+
+Path Traversal문제와 광장히 유사하여 먼저 Path Traversal문제를 보고 오시는것을 권장드립니다.
+
+문제 이름: file-download-1
+난이도: Lv.Beginner
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+.
+├── __pycache__...
       </p>
     </div>
 
@@ -575,6 +737,7 @@ imp...
   가입시간으로 정해지는 Session 쿠키값
 
 
+문제 이름: What time is it?
 난이도: Lv.1
 카테고리: 웹해킹
 
@@ -591,8 +754,7 @@ imp...
 ├── session.py
 └── templates
     ├── index.html
-    ├── login.html
-    ├── registe...
+    ├── lo...
       </p>
     </div>
 
@@ -656,6 +818,7 @@ imp...
   APACHE 서버의 특징을 이용한 플래그 탈취
 
 
+문제 이름: MisconFlag
 난이도: Lv.1
 카테고리: 웹해킹
 
@@ -672,10 +835,7 @@ imp...
     ├── flag.txt
     ├── index.php
     ├── style.css
-    └── token.php
-
-
-dock...
+    └─...
       </p>
     </div>
 
@@ -1085,70 +1245,6 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/github-blog_1/">github 블로그 만들어보기_1 (MacOs)</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        
-
-들어가며
-
-나는 작업을 하다가 모르는게 있으면 당연히 구글링을 통해서 문제를 해결합니다.
-구글링을 하면 다양한 개발 블로그에서 해답을 찾을 수 있는데, 블로그들을 보며 나도 개발 블로그로 다른사람에게 내가 아는것을 전달해줄 수 있다면 좋겠다는 생각이 들었습니다. 그래서 나도 한번 만들어보자 하는 생각에 블로그의 종류들을 살펴보았습니다. tistor...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex">
-      <div class="mr-auto">
-
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em class=""
-    data-ts="1683253980"
-    data-df="ll"
-    >
-  May  5, 2023
-</em>
-
-
-        <!-- categories -->
-        
-          <i class="far fa-folder-open fa-fw"></i>
-          <span>
-          
-            MacOs,
-            github blog
-          </span>
-        
-
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1189,17 +1285,34 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
 
   
 
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- show number -->
+      <li class="page-item ">
+        <a class="page-link btn-box-shadow" href="/page2">2</a>
+      </li>
+    
+
+  
+
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>1</span>
-    <span class="text-muted">/ 1</span>
+    <span class="text-muted">/ 2</span>
   </li>
 
   <!-- right arrow -->
   
 
-  <li class="page-item disabled">
-    <a class="page-link btn-box-shadow" href="#" aria-label="next-page">
+  <li class="page-item ">
+    <a class="page-link btn-box-shadow" href="/page2" aria-label="next-page">
       <i class="fas fa-angle-right"></i>
     </a>
   </li>
@@ -1242,6 +1355,16 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
         
         
         
+      <li><a href="/posts/Dreamhack_pathtraversal/">[Dreamhack] pathtraversal 해설</a></li>
+      
+        
+        
+        
+      <li><a href="/posts/Dreamhack_What_time_is_it/">[Dreamhack] What time is it? 해설</a></li>
+      
+        
+        
+        
       <li><a href="/posts/Dreamhack_MisconFlag/">[Dreamhack] MisconFlag 해설</a></li>
       
         
@@ -1253,16 +1376,6 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
         
         
       <li><a href="/posts/Quiz_project_2/">퀴즈 사이트 만들기_2 (next.js)</a></li>
-      
-        
-        
-        
-      <li><a href="/posts/Quiz_project_3/">퀴즈 사이트 만들기_3 (next.js)</a></li>
-      
-        
-        
-        
-      <li><a href="/posts/github-blog_1/">github 블로그 만들어보기_1 (MacOs)</a></li>
       
     </ul>
   </div> <!-- #access-lastmod -->
@@ -1290,6 +1403,22 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1304,22 +1433,6 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
         
         
 
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1361,13 +1474,13 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
 
     
       
-      <a class="post-tag" href="/tags/quiz-project/">Quiz_project</a>
-    
-      
       <a class="post-tag" href="/tags/dreamhack/">dreamhack</a>
     
       
       <a class="post-tag" href="/tags/webhacking/">WebHacking</a>
+    
+      
+      <a class="post-tag" href="/tags/quiz-project/">Quiz_project</a>
     
       
       <a class="post-tag" href="/tags/github-blog/">github_blog</a>
@@ -1416,6 +1529,22 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1430,22 +1559,6 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
         
         
 
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1487,13 +1600,13 @@ github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 gith
 
     
       
-      <a class="post-tag" href="/tags/quiz-project/">Quiz_project</a>
-    
-      
       <a class="post-tag" href="/tags/dreamhack/">dreamhack</a>
     
       
       <a class="post-tag" href="/tags/webhacking/">WebHacking</a>
+    
+      
+      <a class="post-tag" href="/tags/quiz-project/">Quiz_project</a>
     
       
       <a class="post-tag" href="/tags/github-blog/">github_blog</a>
