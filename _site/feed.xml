@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-08-12T20:42:15+09:00</updated>
+  <updated>2026-04-02T17:39:09+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -13,10 +13,152 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
-  <rights> © 2023 1221jyp </rights>
+  <rights> © 2026 1221jyp </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[Dreamhack] What time is it? 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_What_time_is_it/" rel="alternate" type="text/html" title="[Dreamhack] What time is it? 해설" />
+    <published>2026-04-02T15:00:00+09:00</published>
+  
+    <updated>2026-04-02T15:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_What_time_is_it/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_What_time_is_it/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  가입시간으로 정해지는 Session 쿠키값
+
+
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── app.py
+├── Dockerfile
+├── flag.txt
+├── session.py
+└── templates
+    ├── index.html
+    ├── login.html
+    ├── register.html
+    └── welcome.html
+
+
+dockerfile
+
+FROM python:3.11-slim
+WORKDIR /app
+
+RUN pip install --no-cache-dir Flask==3.0.3
+
+COPY app.py session.py ./
+COPY templates ./templates
+COPY flag.txt /flag.txt
+...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>[Dreamhack] MisconFlag 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_MisconFlag/" rel="alternate" type="text/html" title="[Dreamhack] MisconFlag 해설" />
+    <published>2026-03-29T18:20:00+09:00</published>
+  
+    <updated>2026-03-29T18:20:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_MisconFlag/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_MisconFlag/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  APACHE 서버의 특징을 이용한 플래그 탈취
+
+
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── Dockerfile
+└── src/
+    ├── check.php
+    ├── flag.txt
+    ├── index.php
+    ├── style.css
+    └── token.php
+
+
+dockerfile
+
+FROM php:8.2-apache
+COPY src/ /var/www/html/
+
+
+dockerfile을 바탕으로 생성된 도커 컨테이너에는 php + apache가 설치 및 실행되어있고, /src폴더의 내용물을 리눅스의 /var/www/html/ 주소로 복사한다.
+
+/
+└── var/
+    └── www/
+        └── html/
+ ...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -24,7 +166,7 @@
     <link href="http://localhost:4000/posts/Quiz_project_4/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_4 (next.js)" />
     <published>2023-08-11T11:33:00+09:00</published>
   
-    <updated>2023-08-11T11:33:00+09:00</updated>
+    <updated>2023-08-27T22:02:03+09:00</updated>
   
     <id>http://localhost:4000/posts/Quiz_project_4/</id>
     <content src="http://localhost:4000/posts/Quiz_project_4/" />
@@ -196,126 +338,6 @@ export default function Quiz() {
 만들어달라 부탁해보았습니다.
 
 //src/app/lo...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>퀴즈 사이트 만들기_1 (next.js)</title>
-    <link href="http://localhost:4000/posts/Quiz_project_1/" rel="alternate" type="text/html" title="퀴즈 사이트 만들기_1 (next.js)" />
-    <published>2023-07-25T11:33:00+09:00</published>
-  
-    <updated>2023-08-01T23:22:49+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Quiz_project_1/</id>
-    <content src="http://localhost:4000/posts/Quiz_project_1/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="MacOs" />
-    
-    <category term="Next.js" />
-    
-    <category term="javascript" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-
-
-  저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
-
-
-시작하며
-
-방학이 찾아온 김에 게으르게 놀지 말고 무언가 하나라도 만들어봐야지 하며 시작하게 되었다.
-어떤 프로젝트를 만들면 좋을까 생각하다가, 캬훗과 비슷하지만, 다른 느낌의 퀴즈 사이트를 만들어보기로 결정했다.
-카훗은 혼자 퀴즈를 풀 수 없고, 그룹장이 게임을 만들어야만 퀴즈를 풀 수 있다. 나는 혼자서도 퀴즈를 풀 수 있는
-사이트를 제작해보면 좋을것 같다는 생각이 들었다.
-
-퀴즈 사이트에 들어갈 기능
-
-
-  퀴즈를 직접 작성하여 올릴수 있어야 한다.
-  퀴즈가 만들어지면 DB에 퀴즈가 저장되고, 퀴즈 풀기를 할때 랜덤으로 유저가 작성해놓은 퀴즈가 나온다.
-  한번에 풀 수 있는 퀴즈의 수를 20개로 제한해놓고, 다 풀었을...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>github 블로그 만들어보기_2 chirpy테마 github업로드오류</title>
-    <link href="http://localhost:4000/posts/github-blog_2/" rel="alternate" type="text/html" title="github 블로그 만들어보기_2 chirpy테마 github업로드오류" />
-    <published>2023-05-05T11:33:00+09:00</published>
-  
-    <updated>2023-08-01T23:22:49+09:00</updated>
-  
-    <id>http://localhost:4000/posts/github-blog_2/</id>
-    <content src="http://localhost:4000/posts/github-blog_2/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="MacOs" />
-    
-    <category term="github blog" />
-    
-    <category term="chirpy" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-
-들어가며
-
-1편에서 chirpy jekyll 테마를 적용하고 포스팅을 끝냈다.
-이제 마지막으로 github에 업로드만 하면 블로그 제작은 끝이 난다.
-
-
-  저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
-
-
-github에 블로그 폴더 업로드
-
-github에 파일을 푸시할때는 보통 터미널,cmd를 이용하거나 github_desktop을 사용하는데,
-필자는 github desktop이 편해 github desktop을 사용중이다.
-
-cmd로 파일 푸시
-
-$ cd '자신의 블로그 로컬 폴더 위치'
-
-
-먼저 자신의 블로그 파일이 있는 폴더를 선택해주고,
-
-$ git init
-$ git add .
-$ git commit -m "아무 커밋 이름"
-$ git remote add origin '...
     </summary>
   
 

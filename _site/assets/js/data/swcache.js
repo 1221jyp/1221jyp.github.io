@@ -17,8 +17,6 @@ const resource = [
     
         '/archives/',
     
-        '/playlist/',
-    
         '/about/',
     
 

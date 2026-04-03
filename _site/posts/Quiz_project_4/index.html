@@ -51,7 +51,7 @@
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="twitter:creator" content="@박지율" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"박지율","url":"https://github.com/1221jyp"},"dateModified":"2023-08-11T11:33:00+09:00","datePublished":"2023-08-11T11:33:00+09:00","description":"시작하며","headline":"퀴즈 사이트 만들기_4 (next.js)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Quiz_project_4/"},"url":"http://localhost:4000/posts/Quiz_project_4/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"박지율","url":"https://github.com/1221jyp"},"dateModified":"2023-08-27T22:02:03+09:00","datePublished":"2023-08-11T11:33:00+09:00","description":"시작하며","headline":"퀴즈 사이트 만들기_4 (next.js)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Quiz_project_4/"},"url":"http://localhost:4000/posts/Quiz_project_4/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -316,15 +316,6 @@
         
 
         <span>ARCHIVES</span>
-      </a>
-    </li> <!-- .nav-item -->
-    
-    <li class="nav-item">
-      <a href="/playlist/" class="nav-link">
-        <i class="fa-fw fas fa-music ml-xl-3 mr-xl-3 unloaded"></i>
-        
-
-        <span>PLAYLIST</span>
       </a>
     </li> <!-- .nav-item -->
     
@@ -1817,6 +1808,25 @@
   </span>
 
   <!-- lastmod date -->
+  
+  <span>
+    Updated <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1693141323"
+    data-df="ll"
+    data-toggle="tooltip" data-placement="bottom">
+  Aug 27, 2023
+</em>
+
+  </span>
    
 
   <div class="d-flex justify-content-between">
@@ -1857,8 +1867,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1106 words">
-  <em>6 min</em> read</span>
+  title="1345 words">
+  <em>7 min</em> read</span>
 
     </div>
   </div>
@@ -2002,8 +2012,17 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
 
 <p><a href="https://github.com/1221jyp/Quiz_project/assets/98996860/c3e0e68d-7107-4de8-a2da-14ec45b211d9" class="popup img-link "><img data-src="https://github.com/1221jyp/Quiz_project/assets/98996860/c3e0e68d-7107-4de8-a2da-14ec45b211d9" alt="quiz_project_4-16" class="lazyload" data-proofer-ignore></a></p>
 
-<p>가장 먼저 <a href="https://www.hosting.kr">호스팅케이알</a>에서 마음에 드는 도메인을 구입해주었습니다.
-그러고 난 다음 다시 AWS 홈페이지로 돌아가 이번에는 상단 검색바에서 <code class="language-plaintext highlighter-rouge">Route53</code>을 검색해줍니다.</p>
+<p>가장 먼저 <a href="https://www.hosting.kr">호스팅케이알</a>에서 마음에 드는 도메인을 구입하고 해당 주소를 aws에 등록하고
+https 리디렉션까지 끝마쳤습니다. <a href="https://playquizus.com">완성된 사이트의 주소</a><br />
+해당 과정을 기록하려고는 했으나, 굉장이 복잡하고, 중간중간 기록을 남기지 못하여
+글에 넣지 못했습니다. 다음부터는 모든 과정을 남기겠습니다.</p>
+
+<h1 id="마무리하며">마무리하며</h1>
+
+<p>도메인 등록하고 SLL인증서 발급받고 로드벨런서로 HTTPS리디렉션 등등 다양한 과정을 거쳐서 지금의 사이트가 완성되었는데,
+기록으로 남기지 못하여 아쉬웠습니다. 다음시간에는 웹페이지의 전체 디자인과, 모바일 환경에서도 잘 작동되게끔 디자인을 수정하는
+작업을 하겠습니다. 그리고 여태까지 깃으로 한개의 branch에만 commit을 하고, commit마저도 엉망진창으로 해놓아서 git 환경도 새로 만들어볼 예정입니다.<br />
+읽어주셔서 감사합니다.</p>
 </div>
 
 <div class="post-tail-wrapper text-muted">
@@ -2122,6 +2141,11 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
         
         
         
+      <li><a href="/posts/Quiz_project_4/">퀴즈 사이트 만들기_4 (next.js)</a></li>
+      
+        
+        
+        
       <li><a href="/posts/Quiz_project_2/">퀴즈 사이트 만들기_2 (next.js)</a></li>
       
         
@@ -2138,11 +2162,6 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
         
         
       <li><a href="/posts/github-blog_2/">github 블로그 만들어보기_2 chirpy테마 github업로드오류</a></li>
-      
-        
-        
-        
-      <li><a href="/posts/Quiz_project_1/">퀴즈 사이트 만들기_1 (next.js)</a></li>
       
     </ul>
   </div> <!-- #access-lastmod -->
@@ -2175,10 +2194,59 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2199,7 +2267,13 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
       <a class="post-tag" href="/tags/quiz-project/">Quiz_project</a>
     
       
+      <a class="post-tag" href="/tags/dreamhack/">dreamhack</a>
+    
+      
       <a class="post-tag" href="/tags/github-blog/">github_blog</a>
+    
+      
+      <a class="post-tag" href="/tags/webhacking/">WebHacking</a>
     
 
     </div>
@@ -2244,6 +2318,32 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -2504,10 +2604,10 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
   
 
   
-  <div class="btn btn-outline-primary disabled"
+  <a href="/posts/Dreamhack_MisconFlag/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>-</p>
-  </div>
+    <p>[Dreamhack] MisconFlag 해설</p>
+  </a>
   
 
 </div>
@@ -2556,10 +2656,59 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2580,7 +2729,13 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
       <a class="post-tag" href="/tags/quiz-project/">Quiz_project</a>
     
       
+      <a class="post-tag" href="/tags/dreamhack/">dreamhack</a>
+    
+      
       <a class="post-tag" href="/tags/github-blog/">github_blog</a>
+    
+      
+      <a class="post-tag" href="/tags/webhacking/">WebHacking</a>
     
 
     </div>
@@ -2604,7 +2759,7 @@ sort함수를 사용하면 특정 자료의 값에 따라 오름차순/내림차
     >
       <div class="footer-left">
         <p class="mb-0">
-          © 2023
+          © 2026
           <a href="https://github.com/1221jyp">1221jyp</a>. 
           <span
             data-toggle="tooltip"
