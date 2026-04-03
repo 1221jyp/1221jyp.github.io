@@ -9,7 +9,7 @@ math: true
 
 ## 문제 특징
 
-> querystring과 request라이브러리를 이용한 해킹
+> 
 
 ### **난이도**: Lv.1
 ### **카테고리**: 웹해킹
@@ -23,7 +23,8 @@ math: true
 ```
 /
 ├── app.py
-├── static(생략)
+├── static
+    └── (생략)
 └── templates
     ├── base.html
     ├── flag.html

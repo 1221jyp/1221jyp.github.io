@@ -9,9 +9,9 @@ math: true
 
 ## 문제 특징
 
-> ~~을 통한 해킹
+> Querystring과 request라이브러리를 이용한 해킹
 
-### **난이도**: Lv.beginner
+### **난이도**: Lv.Beginner
 ### **카테고리**: 웹해킹
 
 ---
