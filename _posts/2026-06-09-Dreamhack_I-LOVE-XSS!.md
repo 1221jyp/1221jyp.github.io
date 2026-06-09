@@ -36,39 +36,6 @@ math: true
 
 banlist = ["`","'","alert(","fetch(","replace(","[","]","javascript","@","!","%","location","href","window","eval"]
 
-
-def read_url(url):
-    driver = None
-    try:
-        service = Service(executable_path="/usr/local/bin/chromedriver")
-        options = webdriver.ChromeOptions()
-        for opt in [
-            "headless",
-            "window-size=1920x1080",
-            "disable-gpu",
-            "no-sandbox",
-            "disable-dev-shm-usage",
-        ]:
-            options.add_argument(opt)
-        driver = webdriver.Chrome(service=service, options=options)
-        driver.implicitly_wait(3)
-        driver.set_page_load_timeout(3)
-        driver.get("http://127.0.0.1:5000/")
-        driver.add_cookie({'name':'flag','value':FLAG, 'domain':'127.0.0.1'})
-        driver.get(url)
-        time.sleep(1)
-    except Exception as e:
-        if driver:
-            driver.quit()
-        return False
-    if driver:
-        driver.quit()
-    return True
-
-@app.route('/')
-def home():
-    return "I LOVE XSS!"
-
 @app.route('/test', methods=['GET'])
 def test():
     payload = request.args.get('payload')
@@ -111,7 +78,7 @@ def sanitize_input(user_input: str) -> str:
     )
 ```
 
-이 문제는 [XSS-2](https://1221jyp.com/posts/Dreamhack_Xss-2/),[XSS_Filtering_Bypass](https://1221jyp.com/posts/Dreamhack_XSS-Filtering-Bypass/)문제와 매우 유사한 문제이고, [XSS_Filtering_Bypass](https://1221jyp.com/posts/Dreamhack_XSS-Filtering-Bypass/) 문제보다 더 다양한 필터가 존재하는것을 확인할 수 있다.
+이 문제는 [xss-2](https://1221jyp.com/posts/Dreamhack_xss-2/),[XSS_Filtering_Bypass](https://1221jyp.com/posts/Dreamhack_XSS-Filtering-Bypass/)문제와 매우 유사한 문제이고, [XSS_Filtering_Bypass](https://1221jyp.com/posts/Dreamhack_XSS-Filtering-Bypass/) 문제보다 더 다양한 필터가 존재하는것을 확인할 수 있다.
 
 또한 이전 문제와는 달리 메모가 존재하지 않아, 다른 방식을 활용해 플래그를 탈취해야 한다.
 

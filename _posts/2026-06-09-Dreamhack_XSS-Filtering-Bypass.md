@@ -66,13 +66,13 @@ def memo():
 
 ```
 
-이 문제는 문제의 제목 그대로 ![XSS-2](https://1221jyp.com/posts/Dreamhack_Xss-2/)문제와 매우 유사한 문제이지만, 특정 명령어를 `/vuln`주소로 이동할 수 없게 막아놓은 코드가 존재한다. 
+이 문제는 문제의 제목 그대로 [xss-2](https://1221jyp.com/posts/Dreamhack_xss-2/)문제와 매우 유사한 문제이지만, 특정 명령어를 `/vuln`주소로 이동할 수 없게 막아놓은 코드가 존재한다. 
 
-`XSS`가 무엇인지 궁금하다면 ![XSS-2](https://1221jyp.com/posts/Dreamhack_Xss-2/)문제를 먼저 확인하자.
+`XSS`가 무엇인지 궁금하다면 [xss-2](https://1221jyp.com/posts/Dreamhack_xss-2/)문제를 먼저 확인하자.
 
 # 풀이
 
-## 필터에 작성되어있는 특정 문자들을 사용하지 않고 페이로드 작성하기
+## 필터에 유의하여 페이로드 작성하기
 ```python
 def xss_filter(text):
     _filter = ["script", "on", "javascript:"]
