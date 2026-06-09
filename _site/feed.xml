@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2026-04-03T14:23:45+09:00</updated>
+  <updated>2026-06-09T16:02:15+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,148 @@
 
   
   <entry>
+    <title>[Dreamhack] Xss-2 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_Xss-2/" rel="alternate" type="text/html" title="[Dreamhack] Xss-2 해설" />
+    <published>2026-06-09T12:00:00+09:00</published>
+  
+    <updated>2026-06-09T12:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_Xss-2/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_Xss-2/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  XSS를 사용한 해킹
+
+
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── app.py
+├── static
+│   #생략
+└── templates
+    #생략
+
+
+주요 코드
+
+
+#app.py
+
+def read_url(url, cookie={"name": "name", "value": "value"}):
+    cookie.update({"domain": "127.0.0.1"})
+    try:
+        service = Service(executable_path="/chromedriver")
+        options = webdriver.ChromeOptions()
+        for _ in [
+            "headless",
+  ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>[Dreamhack] XSS Filtering Bypass 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/" rel="alternate" type="text/html" title="[Dreamhack] XSS Filtering Bypass 해설" />
+    <published>2026-06-09T12:00:00+09:00</published>
+  
+    <updated>2026-06-09T12:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  XSS를 사용한 해킹 &amp;amp; 금지 태그 우회
+
+
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── app.py
+├── static
+│   #생략
+└── templates
+    #생략
+
+
+주요 코드
+
+
+#app.py
+
+def read_url(url, cookie={"name": "name", "value": "value"}):
+    cookie.update({"domain": "127.0.0.1"})
+    try:
+        service = Service(executable_path="/chromedriver")
+        options = webdriver.ChromeOptions()
+        for _ in [
+           ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>[Dreamhack] pathtraversal 해설</title>
     <link href="http://localhost:4000/posts/Dreamhack_pathtraversal/" rel="alternate" type="text/html" title="[Dreamhack] pathtraversal 해설" />
     <published>2026-04-03T12:00:00+09:00</published>
   
-    <updated>2026-04-03T13:49:00+09:00</updated>
+    <updated>2026-04-03T14:25:02+09:00</updated>
   
     <id>http://localhost:4000/posts/Dreamhack_pathtraversal/</id>
     <content src="http://localhost:4000/posts/Dreamhack_pathtraversal/" />
@@ -161,7 +298,7 @@ users = {
     <link href="http://localhost:4000/posts/Dreamhack_file-download-1/" rel="alternate" type="text/html" title="[Dreamhack] file-download-1 해설" />
     <published>2026-04-03T12:00:00+09:00</published>
   
-    <updated>2026-04-03T12:00:00+09:00</updated>
+    <updated>2026-04-03T14:25:02+09:00</updated>
   
     <id>http://localhost:4000/posts/Dreamhack_file-download-1/</id>
     <content src="http://localhost:4000/posts/Dreamhack_file-download-1/" />
@@ -214,148 +351,6 @@ Path Traversal문제와 광장히 유사하여 먼저 Path Traversal문제를 �
 │   ├── read.html
 │   ├── upload_result.html
 │   └── upload.htm...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>[Dreamhack] What time is it? 해설</title>
-    <link href="http://localhost:4000/posts/Dreamhack_What_time_is_it/" rel="alternate" type="text/html" title="[Dreamhack] What time is it? 해설" />
-    <published>2026-04-02T15:00:00+09:00</published>
-  
-    <updated>2026-04-03T13:19:45+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Dreamhack_What_time_is_it/</id>
-    <content src="http://localhost:4000/posts/Dreamhack_What_time_is_it/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="Dreamhack" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      문제 특징
-
-
-  가입시간으로 정해지는 Session 쿠키값
-
-
-문제 이름: What time is it?
-난이도: Lv.1
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-/
-├── app.py
-├── Dockerfile
-├── flag.txt
-├── session.py
-└── templates
-    ├── index.html
-    ├── login.html
-    ├── register.html
-    └── welcome.html
-
-
-dockerfile
-
-FROM python:3.11-slim
-WORKDIR /app
-
-RUN pip install --no-cache-dir Flask==3.0.3
-
-COPY app.py session.py ./
-COPY templates ./templates
-...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>[Dreamhack] MisconFlag 해설</title>
-    <link href="http://localhost:4000/posts/Dreamhack_MisconFlag/" rel="alternate" type="text/html" title="[Dreamhack] MisconFlag 해설" />
-    <published>2026-03-29T18:20:00+09:00</published>
-  
-    <updated>2026-04-03T11:08:27+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Dreamhack_MisconFlag/</id>
-    <content src="http://localhost:4000/posts/Dreamhack_MisconFlag/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="Dreamhack" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      문제 특징
-
-
-  APACHE 서버의 특징을 이용한 플래그 탈취
-
-
-문제 이름: MisconFlag
-난이도: Lv.1
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-/
-├── Dockerfile
-└── src/
-    ├── check.php
-    ├── flag.txt
-    ├── index.php
-    ├── style.css
-    └── token.php
-
-
-dockerfile
-
-FROM php:8.2-apache
-COPY src/ /var/www/html/
-
-
-dockerfile을 바탕으로 생성된 도커 컨테이너에는 php + apache가 설치 및 실행되어있고, /src폴더의 내용물을 리눅스의 /var/www/html/ 주소로 복사한다.
-
-/
-└── var/
-    └── www/
- ...
     </summary>
   
 

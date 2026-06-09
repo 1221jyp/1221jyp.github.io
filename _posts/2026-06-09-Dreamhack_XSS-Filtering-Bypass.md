@@ -1,5 +1,5 @@
 ---
-title: "[Dreamhack] Xss-2 해설"
+title: "[Dreamhack] XSS Filtering Bypass 해설"
 author: jyp
 date: 2026-06-09 12:00:00 +0900
 categories: [Dreamhack]
@@ -9,7 +9,7 @@ math: true
 
 # 문제 특징
 
-> XSS를 사용한 해킹
+> XSS를 사용한 해킹 & 금지 태그 우회
 
 ## **난이도**: Lv.1
 ## **카테고리**: 웹해킹
@@ -100,7 +100,6 @@ def memo():
 
 
 ```
-
 
 
 {% raw %}

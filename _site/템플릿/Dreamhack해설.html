@@ -1,39 +1,171 @@
-<h2 id="문제-특징">문제 특징</h2>
+<h1 id="문제-특징">문제 특징</h1>
 
 <blockquote>
   <p>~~을 통한 해킹</p>
 </blockquote>
 
-<h3 id="난이도-lv"><strong>난이도</strong>: Lv.~</h3>
-<h3 id="카테고리-웹해킹"><strong>카테고리</strong>: 웹해킹</h3>
+<h2 id="난이도-lv"><strong>난이도</strong>: Lv.~</h2>
+<h2 id="카테고리-웹해킹"><strong>카테고리</strong>: 웹해킹</h2>
 
 <hr />
 
-<h2 id="문제-구조">문제 구조</h2>
+<h1 id="문제-구조">문제 구조</h1>
 
-<h3 id="문제파일구성">문제파일구성</h3>
+<h2 id="문제파일구성">문제파일구성</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
+4
+5
+6
 </pre></td><td class="rouge-code"><pre>/
 ├── app.py
-├── Dockerfile
+├── static
+│   #생략
+└── templates
+    #생략
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<h3 id="dockerfile">dockerfile</h3>
+<h2 id="주요-코드">주요 코드</h2>
 
-<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre><span class="k">FROM</span><span class="s"> python:3.11-slim</span>
-~~~
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+</pre></td><td class="rouge-code"><pre>
+<span class="c1">#app.py
+</span>
+<span class="k">def</span> <span class="nf">read_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">cookie</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">value</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">value</span><span class="sh">"</span><span class="p">}):</span>
+    <span class="n">cookie</span><span class="p">.</span><span class="nf">update</span><span class="p">({</span><span class="sh">"</span><span class="s">domain</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">127.0.0.1</span><span class="sh">"</span><span class="p">})</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">service</span> <span class="o">=</span> <span class="nc">Service</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="sh">"</span><span class="s">/chromedriver</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">ChromeOptions</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="p">[</span>
+            <span class="sh">"</span><span class="s">headless</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">window-size=1920x1080</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">disable-gpu</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">no-sandbox</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">disable-dev-shm-usage</span><span class="sh">"</span><span class="p">,</span>
+        <span class="p">]:</span>
+            <span class="n">options</span><span class="p">.</span><span class="nf">add_argument</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+        <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Chrome</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="n">service</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">implicitly_wait</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">set_page_load_timeout</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">http://127.0.0.1:8000/</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">add_cookie</span><span class="p">(</span><span class="n">cookie</span><span class="p">)</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
+        <span class="c1"># return str(e)
+</span>        <span class="k">return</span> <span class="bp">False</span>
+    <span class="n">driver</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="bp">True</span>
+
+
+<span class="k">def</span> <span class="nf">check_xss</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">cookie</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">value</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">value</span><span class="sh">"</span><span class="p">}):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://127.0.0.1:8000/vuln?param=</span><span class="si">{</span><span class="n">urllib</span><span class="p">.</span><span class="n">parse</span><span class="p">.</span><span class="nf">quote</span><span class="p">(</span><span class="n">param</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span>
+    <span class="k">return</span> <span class="nf">read_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">cookie</span><span class="p">)</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="sh">"</span><span class="s">/</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">"</span><span class="s">index.html</span><span class="sh">"</span><span class="p">)</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="sh">"</span><span class="s">/vuln</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">vuln</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">"</span><span class="s">vuln.html</span><span class="sh">"</span><span class="p">)</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="sh">"</span><span class="s">/flag</span><span class="sh">"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">GET</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">POST</span><span class="sh">"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">flag</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">"</span><span class="s">GET</span><span class="sh">"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">"</span><span class="s">flag.html</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">"</span><span class="s">POST</span><span class="sh">"</span><span class="p">:</span>
+        <span class="n">param</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">param</span><span class="sh">"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nf">check_xss</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="p">{</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">flag</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">value</span><span class="sh">"</span><span class="p">:</span> <span class="n">FLAG</span><span class="p">.</span><span class="nf">strip</span><span class="p">()}):</span>
+            <span class="k">return</span> <span class="sh">'</span><span class="s">&lt;script&gt;alert(</span><span class="sh">"</span><span class="s">wrong??</span><span class="sh">"</span><span class="s">);history.go(-1);&lt;/script&gt;</span><span class="sh">'</span>
+
+        <span class="k">return</span> <span class="sh">'</span><span class="s">&lt;script&gt;alert(</span><span class="sh">"</span><span class="s">good</span><span class="sh">"</span><span class="s">);history.go(-1);&lt;/script&gt;</span><span class="sh">'</span>
+
+<span class="n">memo_text</span> <span class="o">=</span> <span class="sh">""</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="sh">"</span><span class="s">/memo</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">memo</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">memo_text</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">memo</span><span class="sh">"</span><span class="p">,</span> <span class="sh">""</span><span class="p">)</span>
+    <span class="n">memo_text</span> <span class="o">+=</span> <span class="n">text</span> <span class="o">+</span> <span class="sh">"</span><span class="se">\n</span><span class="sh">"</span>
+    <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">"</span><span class="s">memo.html</span><span class="sh">"</span><span class="p">,</span> <span class="n">memo</span><span class="o">=</span><span class="n">memo_text</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="풀이">풀이</h2>
+<h1 id="풀이">풀이</h1>
 
-<h3>~~~</h3>
+<h2>~~~</h2>
 
-<h2 id="정답">정답</h2>
+<h1 id="정답">정답</h1>
 
 <p>~~</p>
 
