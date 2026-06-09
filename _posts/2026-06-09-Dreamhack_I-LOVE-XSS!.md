@@ -90,7 +90,6 @@ def report():
     result = read_url(f'http://127.0.0.1:5000/test?payload={uanswer}')
     message = "Success" if result else "Fail"
     return message
-
 ```
 
 ```python
@@ -119,11 +118,11 @@ def sanitize_input(user_input: str) -> str:
 그리고 `bleach` 라이브러리를 사용하여 `sanitize_input()`이라는 함수를 만들고 
 `input = sanitize_input(payload)`이 작성되어 XSS 스크립트를 오로지 `<script>`태그만을 사용하여 문제를 풀도록 되어있다.
 
-`XSS`가 무엇인지 궁금하다면 ![XSS-2](https://1221jyp.com/posts/Dreamhack_Xss-2/)문제를 먼저 확인하자.
+`XSS`가 무엇인지 궁금하다면 [XSS-2](https://1221jyp.com/posts/Dreamhack_Xss-2/)문제를 먼저 확인하자.
 
 # 풀이
 
-## 필터에 작성되어있는 특정 문자들을 사용하지 않고 페이로드 작성하기
+## 필터에 유의하여 페이로드 작성하기
 ```python
 banlist = ["`","'","alert(","fetch(","replace(","[","]","javascript","@","!","%","location","href","window","eval"]
 
@@ -140,8 +139,6 @@ def test():
     input = sanitize_input(payload)
 
     return f"{input}"
-
-
 ```
 이 문제는 `payload.lower()`함수로 인해 입력한 페이로드를 모두 소문자화하기 때문에, 페이로드를 대문자로 작성하여 필터링을 우회하는 방법을 사용하기는 어렵다. 
 
