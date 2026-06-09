@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2026-06-10T02:38:11+09:00</updated>
+  <updated>2026-06-10T04:01:08+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,284 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[Dreamhack] Command Injection Advanced 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_Command-Injection-Advanced/" rel="alternate" type="text/html" title="[Dreamhack] Command Injection Advanced 해설" />
+    <published>2026-06-09T12:00:09+09:00</published>
+  
+    <updated>2026-06-09T12:00:09+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_Command-Injection-Advanced/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_Command-Injection-Advanced/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  웹쉘을 넣는 기법을 활용한 해킹
+
+
+난이도: Lv.2
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── deploy
+│   ├── flag.c
+│   ├── run-lamp.sh
+│   └── src
+└── Dockerfile
+
+
+주요 코드
+
+
+#index.php
+
+&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
+    &amp;lt;link rel="stylesheet" href="/static/bulma.min.css" /&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;div class="container card"&amp;gt;
+        &amp;lt;div class="card-content"&amp;gt;
+        &amp;lt;h1 class="t...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>[Dreamhack] Dream Gallery 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_Dream-Gallery/" rel="alternate" type="text/html" title="[Dreamhack] Dream Gallery 해설" />
+    <published>2026-06-09T12:00:08+09:00</published>
+  
+    <updated>2026-06-09T12:00:08+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_Dream-Gallery/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_Dream-Gallery/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  악성 파일을 업로드하는 해킹 기법
+
+
+난이도: Lv.2
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── app.py
+└── Dockerfile
+
+
+주요 코드
+
+
+#app.py
+
+mini_database = []
+
+@app.route('/')
+def index():
+    return redirect(url_for('view'))
+
+
+@app.route('/request')
+def url_request():
+    url = request.args.get('url', '').lower()
+    title = request.args.get('title', '')
+    if url == '' or url.startswith("file://") or "flag" in url ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>[Dreamhack] simple-ssti 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_simple-ssti/" rel="alternate" type="text/html" title="[Dreamhack] simple-ssti 해설" />
+    <published>2026-06-09T12:00:07+09:00</published>
+  
+    <updated>2026-06-09T12:00:07+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_simple-ssti/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_simple-ssti/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  SSTI 기법을 활용한 해킹
+
+
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+└── app2.py
+
+
+주요 코드
+
+
+#app2.py
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.errorhandler(404)
+def Error404(e):
+    template = '''
+    &amp;lt;div class="center"&amp;gt;
+        &amp;lt;h1&amp;gt;Page Not Found.&amp;lt;/h1&amp;gt;
+        &amp;lt;h3&amp;gt;%s&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+''' % (request.path)
+    return render_tem...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>[Dreamhack] command-injection-1 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_command-injection-1/" rel="alternate" type="text/html" title="[Dreamhack] command-injection-1 해설" />
+    <published>2026-06-09T12:00:06+09:00</published>
+  
+    <updated>2026-06-09T12:00:06+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_command-injection-1/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_command-injection-1/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  Command Injection 기법을 활용한 해킹
+
+
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── deploy
+│   ├── app.py
+│   ├── flag.py
+│   ├── requirements.txt
+│   ├── static
+│   └── templates
+└── Dockerfile
+
+
+주요 코드
+
+
+#app.py
+
+@APP.route('/ping', methods=['GET', 'POST'])
+def ping():
+    if request.method == 'POST':
+        host = request.form.get('host')
+        cmd = f'ping -c 3 "{host}"'
+        try:
+   ...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -83,280 +361,6 @@ def xss_filter(text):
             return "filtered!!!"
 
     advanced_filter = ["window...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>[Dreamhack] CSRF-Advanced 해설</title>
-    <link href="http://localhost:4000/posts/Dreamhack_CSRF-Advanced/" rel="alternate" type="text/html" title="[Dreamhack] CSRF-Advanced 해설" />
-    <published>2026-06-09T12:00:04+09:00</published>
-  
-    <updated>2026-06-09T12:00:04+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Dreamhack_CSRF-Advanced/</id>
-    <content src="http://localhost:4000/posts/Dreamhack_CSRF-Advanced/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="Dreamhack" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      문제 특징
-
-
-  CSRF 해킹 기법을 이용하여 어드민 비밀번호 바꾸기
-
-
-난이도: Lv.1
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-/
-├── deploy
-│   ├── app.py
-│   ├── flag.txt
-│   ├── requirements.txt
-│   ├── static
-│   └── templates
-└── Dockerfile
-
-
-주요 코드
-
-
-#app.py
-
-@app.route("/")
-def index():
-    session_id = request.cookies.get('sessionid', None)
-    try:
-        username = session_storage[session_id]
-    except KeyError:
-        return ren...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>[Dreamhack] csrf-2 해설</title>
-    <link href="http://localhost:4000/posts/Dreamhack_csrf-2/" rel="alternate" type="text/html" title="[Dreamhack] csrf-2 해설" />
-    <published>2026-06-09T12:00:03+09:00</published>
-  
-    <updated>2026-06-09T12:00:03+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Dreamhack_csrf-2/</id>
-    <content src="http://localhost:4000/posts/Dreamhack_csrf-2/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="Dreamhack" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      문제 특징
-
-
-  CSRF 해킹 기법을 이용하여 어드민 비밀번호 바꾸기
-
-
-난이도: Lv.1
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-/
-└─ app.py
-
-
-주요 코드
-
-
-#app2.py
-
-def read_url(url, cookie={"name": "name", "value": "value"}):
-    cookie.update({"domain": "127.0.0.1"})
-    driver = None
-    try:
-        options = webdriver.ChromeOptions()
-        options.binary_location = CHROMIUM_BIN
-        for argument in [
-            "--headless",
-          ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>[Dreamhack] I LOVE XSS! 해설</title>
-    <link href="http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/" rel="alternate" type="text/html" title="[Dreamhack] I LOVE XSS! 해설" />
-    <published>2026-06-09T12:00:02+09:00</published>
-  
-    <updated>2026-06-10T01:41:52+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/</id>
-    <content src="http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="Dreamhack" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      문제 특징
-
-
-  XSS를 사용한 해킹 &amp;amp; 금지 태그 우회
-
-
-난이도: Lv.2
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-/
-├── app.py
-├── Dockerfile
-├── requirements.txt
-└── sanitizer.py
-
-
-주요 코드
-
-
-#app.py
-
-banlist = ["`","'","alert(","fetch(","replace(","[","]","javascript","@","!","%","location","href","window","eval"]
-
-@app.route('/test', methods=['GET'])
-def test():
-    payload = request.args.get('payload')
-    if payload is None:
-   ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>[Dreamhack] XSS Filtering Bypass 해설</title>
-    <link href="http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/" rel="alternate" type="text/html" title="[Dreamhack] XSS Filtering Bypass 해설" />
-    <published>2026-06-09T12:00:01+09:00</published>
-  
-    <updated>2026-06-10T01:41:52+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/</id>
-    <content src="http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="Dreamhack" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      문제 특징
-
-
-  XSS를 사용한 해킹 &amp;amp; 금지 태그 우회
-
-
-난이도: Lv.1
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-/
-├── deploy
-│   ├── app.py
-│   ├── flag.txt
-│   ├── requirements.txt
-│   ├── static
-│   └── templates
-└── Dockerfile
-
-
-주요 코드
-
-
-#app.py
-
-def xss_filter(text):
-    _filter = ["script", "on", "javascript:"]
-    for f in _filter:
-        if f in text.lower():
-            text = text.replace(f, "")
-    return text
-
-@app.ro...
     </summary>
   
 

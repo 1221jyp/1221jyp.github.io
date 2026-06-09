@@ -1123,17 +1123,17 @@
         
         
         
+      <li><a href="/posts/Dreamhack_CSRF-Advanced/">[Dreamhack] CSRF-Advanced 해설</a></li>
+      
+        
+        
+        
+      <li><a href="/posts/Dreamhack_MisconFlag/">[Dreamhack] MisconFlag 해설</a></li>
+      
+        
+        
+        
       <li><a href="/posts/Dreamhack_What_time_is_it/">[Dreamhack] What time is it? 해설</a></li>
-      
-        
-        
-        
-      <li><a href="/posts/Dreamhack_file-download-1/">[Dreamhack] file-download-1 해설</a></li>
-      
-        
-        
-        
-      <li><a href="/posts/Dreamhack_pathtraversal/">[Dreamhack] pathtraversal 해설</a></li>
       
     </ul>
   </div> <!-- #access-lastmod -->
@@ -1403,6 +1403,58 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1528,7 +1580,7 @@
       
       
       <div class="card">
-        <a href="/posts/Dreamhack_What_time_is_it/">
+        <a href="/posts/Dreamhack_xss-2/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1540,13 +1592,13 @@
 
 
 <em class="small"
-    data-ts="1775109600"
+    data-ts="1780974000"
     data-df="ll"
     >
-  Apr  2, 2026
+  Jun  9, 2026
 </em>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>[Dreamhack] What time is it? 해설</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>[Dreamhack] Xss-2 해설</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1558,10 +1610,9 @@
                 문제 특징
 
 
-  가입시간으로 정해지는 Session 쿠키값
+  XSS를 사용한 해킹
 
 
-문제 이름: What time is it?
 난이도: Lv.1
 카테고리: 웹해킹
 
@@ -1570,78 +1621,6 @@
 문제 구조
 
 문제파일구성
-
-/
-├── app.py
-├── Dockerfile
-├── flag.txt
-├── session.py
-└── templates
-    ├── index.html
-    ├── lo...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/Dreamhack_image-storage/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em class="small"
-    data-ts="1775185200"
-    data-df="ll"
-    >
-  Apr  3, 2026
-</em>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>[Dreamhack] image-storage 해설</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                문제 정보
-
-
-  PHP WebShell 설치를 통한 해킹
-
-
-문제 이름: image-storage
-난이도: Lv.1
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-1
-2
-3
-4
-/
-├── index.php
-├── list.php
-└── upload.php
-
-
-주요 코드
 
 1
 2
@@ -1649,74 +1628,12 @@
 4
 5
 6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/Dreamhack_pathtraversal/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em class="small"
-    data-ts="1775185200"
-    data-df="ll"
-    >
-  Apr  3, 2026
-</em>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>[Dreamhack] pathtraversal 해설</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                문제 특징
-
-
-  Querystring과 request라이브러리를 이용한 해킹
-
-
-문제 이름: pathtraversal
-난이도: Lv.Beginner
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-1
-2
 /
-└── app.py
+├── app.py
+├── static
+│   #생략
+└── templates
+    #생략
 
 
 주요 코드
@@ -1743,7 +1660,155 @@
 20
 21
 22
-23...
+23
+...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Dreamhack_XSS-Filtering-Bypass/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class="small"
+    data-ts="1780974001"
+    data-df="ll"
+    >
+  Jun  9, 2026
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>[Dreamhack] XSS Filtering Bypass 해설</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                문제 특징
+
+
+  XSS를 사용한 해킹 &amp;amp; 금지 태그 우회
+
+
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+1
+2
+3
+4
+5
+6
+7
+8
+/
+├── deploy
+│   ├── app.py
+│   ├── flag.txt
+│   ├── requirements.txt
+│   ├── static
+│   └── templates
+└...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Dreamhack_I-LOVE-XSS!/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class="small"
+    data-ts="1780974002"
+    data-df="ll"
+    >
+  Jun  9, 2026
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>[Dreamhack] I LOVE XSS! 해설</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                문제 특징
+
+
+  XSS를 사용한 해킹 &amp;amp; 금지 태그 우회
+
+
+난이도: Lv.2
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+1
+2
+3
+4
+5
+/
+├── app.py
+├── Dockerfile
+├── requirements.txt
+└── sanitizer.py
+
+
+주요 코드
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15...
               </p>
             </div>
           </div>

