@@ -147,11 +147,6 @@ def memo():
 vuln.html의 파일을 보면 Innerhtml이라는 함수가 있는데 해당 함수는
 `<script>`속에서 작성되는 코드만 막혀 있고, 다른 태그들에 존재하는 이벤트 핸들러 속 스크립트를 작동하지 않게 하는 기능은 없다. 따라서 `<img>`태그를 가져오고, 의도적으로 오류가 발생하게 하여 `onerror`라는 이벤트 핸들러를 작동하게 하여 페이로드를 실행시킬 수 있게 만든다.
 
-## 작동 시연
-
-![작동1](https://github.com/user-attachments/assets/0eb5c02e-aa6b-4c4f-8963-9578b5291f8a)
-![작동2](https://github.com/user-attachments/assets/8f8243f0-6b74-4b97-a8e7-77683d789287)
-
 
 
 # 정답

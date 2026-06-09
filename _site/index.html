@@ -476,7 +476,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/Dreamhack_Xss-2/">[Dreamhack] Xss-2 해설</a>
+      <a href="/posts/Dreamhack_I-LOVE-XSS!/">[Dreamhack] I LOVE XSS! 해설</a>
     </h1>
 
     <div class="post-content">
@@ -490,10 +490,10 @@
         문제 특징
 
 
-  XSS를 사용한 해킹
+  XSS를 사용한 해킹 &amp;amp; 금지 태그 우회
 
 
-난이도: Lv.1
+난이도: Lv.2
 카테고리: 웹해킹
 
 
@@ -504,10 +504,9 @@
 
 /
 ├── app.py
-├── static
-│   #생략
-└── templates
-    #생략
+├── Dockerfile
+├── requirements.txt
+└── sanitizer.py
 
 
 주요 코드
@@ -515,8 +514,7 @@
 
 #app.py
 
-def read_url(url, cookie={&quot;name&quot;: &quot;name&quot;, &quot;value&quot;: &quot;value&quot;}):
-...
+banlist = [&quot;`&quot;,&quot;&#39;&quot;,&quot;alert(&quot;,&quot;fetch(...
       </p>
     </div>
 
@@ -535,7 +533,7 @@ def read_url(url, cookie={&quot;name&quot;: &quot;name&quot;, &quot;value&quot;:
 
 
 <em class=""
-    data-ts="1780974000"
+    data-ts="1780974002"
     data-df="ll"
     >
   Jun  9, 2026
@@ -590,6 +588,89 @@ def read_url(url, cookie={&quot;name&quot;: &quot;name&quot;, &quot;value&quot;:
 문제파일구성
 
 /
+├── deploy
+│   ├── app.py
+│   ├── flag.txt
+│   ├── requirements.txt
+│   ├── static
+│   └── templates
+└── Dockerfile
+
+
+...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1780974001"
+    data-df="ll"
+    >
+  Jun  9, 2026
+</em>
+
+
+        <!-- categories -->
+        
+          <i class="far fa-folder-open fa-fw"></i>
+          <span>
+          
+            Dreamhack
+          </span>
+        
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/Dreamhack_Xss-2/">[Dreamhack] Xss-2 해설</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        문제 특징
+
+
+  XSS를 사용한 해킹
+
+
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
 ├── app.py
 ├── static
 │   #생략
@@ -602,7 +683,8 @@ def read_url(url, cookie={&quot;name&quot;: &quot;name&quot;, &quot;value&quot;:
 
 #app.py
 
-def read_url(url, cookie={&quot;name&quot;: &quot;name&quot;, &quot;valu...
+def read_url(url, cookie={&quot;name&quot;: &quot;name&quot;, &quot;value&quot;: &quot;value&quot;}):
+...
       </p>
     </div>
 
@@ -1197,84 +1279,6 @@ sort함수를 사용하면 특정 자료의...
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/Quiz_project_2/">퀴즈 사이트 만들기_2 (next.js)</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        
-
-시작하며
-
-
-
-지난 포스팅에서는 next.js를 설치하고, 레이아웃까지 제작하였다. 이번 포스팅에서는
-나머지 페이지들의 내용을 구성해볼것이다.
-
-
-  저의 모든 글은 MacOs silicon을 기준으로 작성됩니다.
-
-
-메인 페이지 구성
-
-
-
-메인 페이지에는 이 웹사이트에 있는 기능들과 사용법을 소개할 것입니다.
-아직 저의 프로젝트는 완성되어있지 않...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex">
-      <div class="mr-auto">
-
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em class=""
-    data-ts="1690684380"
-    data-df="ll"
-    >
-  Jul 30, 2023
-</em>
-
-
-        <!-- categories -->
-        
-          <i class="far fa-folder-open fa-fw"></i>
-          <span>
-          
-            MacOs,
-            Next.js,
-            javascript
-          </span>
-        
-
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1385,6 +1389,11 @@ sort함수를 사용하면 특정 자료의...
         
         
         
+      <li><a href="/posts/Dreamhack_Xss-2/">[Dreamhack] Xss-2 해설</a></li>
+      
+        
+        
+        
       <li><a href="/posts/Dreamhack_MisconFlag/">[Dreamhack] MisconFlag 해설</a></li>
       
         
@@ -1401,11 +1410,6 @@ sort함수를 사용하면 특정 자료의...
         
         
       <li><a href="/posts/Dreamhack_pathtraversal/">[Dreamhack] pathtraversal 해설</a></li>
-      
-        
-        
-        
-      <li><a href="/posts/Quiz_project_4/">퀴즈 사이트 만들기_4 (next.js)</a></li>
       
     </ul>
   </div> <!-- #access-lastmod -->

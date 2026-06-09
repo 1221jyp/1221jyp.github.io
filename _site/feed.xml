@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>jyp_devlog</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2026-06-09T16:02:15+09:00</updated>
+  <updated>2026-06-10T00:54:10+09:00</updated>
   <author>
     <name>1221jyp</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,146 @@
 
   
   <entry>
+    <title>[Dreamhack] I LOVE XSS! 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/" rel="alternate" type="text/html" title="[Dreamhack] I LOVE XSS! 해설" />
+    <published>2026-06-09T12:00:02+09:00</published>
+  
+    <updated>2026-06-09T12:00:02+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_I-LOVE-XSS!/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  XSS를 사용한 해킹 &amp;amp; 금지 태그 우회
+
+
+난이도: Lv.2
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── app.py
+├── Dockerfile
+├── requirements.txt
+└── sanitizer.py
+
+
+주요 코드
+
+
+#app.py
+
+banlist = ["`","'","alert(","fetch(","replace(","[","]","javascript","@","!","%","location","href","window","eval"]
+
+
+def read_url(url):
+    driver = None
+    try:
+        service = Service(executable_path="/usr/local/bin/chromedriver"...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>[Dreamhack] XSS Filtering Bypass 해설</title>
+    <link href="http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/" rel="alternate" type="text/html" title="[Dreamhack] XSS Filtering Bypass 해설" />
+    <published>2026-06-09T12:00:01+09:00</published>
+  
+    <updated>2026-06-09T12:00:01+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/</id>
+    <content src="http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/" />
+    <author>
+      <name>jyp</name>
+    </author>
+
+  
+    
+    <category term="Dreamhack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      문제 특징
+
+
+  XSS를 사용한 해킹 &amp;amp; 금지 태그 우회
+
+
+난이도: Lv.1
+카테고리: 웹해킹
+
+
+
+문제 구조
+
+문제파일구성
+
+/
+├── deploy
+│   ├── app.py
+│   ├── flag.txt
+│   ├── requirements.txt
+│   ├── static
+│   └── templates
+└── Dockerfile
+
+
+주요 코드
+
+
+#app.py
+
+def read_url(url, cookie={"name": "name", "value": "value"}):
+    cookie.update({"domain": "127.0.0.1"})
+    try:
+        service = Service(executable_path="/chromedriver")
+        op...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>[Dreamhack] Xss-2 해설</title>
     <link href="http://localhost:4000/posts/Dreamhack_Xss-2/" rel="alternate" type="text/html" title="[Dreamhack] Xss-2 해설" />
     <published>2026-06-09T12:00:00+09:00</published>
   
-    <updated>2026-06-09T12:00:00+09:00</updated>
+    <updated>2026-06-09T16:02:31+09:00</updated>
   
     <id>http://localhost:4000/posts/Dreamhack_Xss-2/</id>
     <content src="http://localhost:4000/posts/Dreamhack_Xss-2/" />
@@ -82,74 +217,6 @@ def read_url(url, cookie={"name": "name", "value": "value"}):
         for _ in [
             "headless",
   ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>[Dreamhack] XSS Filtering Bypass 해설</title>
-    <link href="http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/" rel="alternate" type="text/html" title="[Dreamhack] XSS Filtering Bypass 해설" />
-    <published>2026-06-09T12:00:00+09:00</published>
-  
-    <updated>2026-06-09T12:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/</id>
-    <content src="http://localhost:4000/posts/Dreamhack_XSS-Filtering-Bypass/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="Dreamhack" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      문제 특징
-
-
-  XSS를 사용한 해킹 &amp;amp; 금지 태그 우회
-
-
-난이도: Lv.1
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-/
-├── app.py
-├── static
-│   #생략
-└── templates
-    #생략
-
-
-주요 코드
-
-
-#app.py
-
-def read_url(url, cookie={"name": "name", "value": "value"}):
-    cookie.update({"domain": "127.0.0.1"})
-    try:
-        service = Service(executable_path="/chromedriver")
-        options = webdriver.ChromeOptions()
-        for _ in [
-           ...
     </summary>
   
 
@@ -287,70 +354,6 @@ users = {
       $error = $file["error"];
       $name = $file["name"];
       $tmp_name = $file["tmp_n...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>[Dreamhack] file-download-1 해설</title>
-    <link href="http://localhost:4000/posts/Dreamhack_file-download-1/" rel="alternate" type="text/html" title="[Dreamhack] file-download-1 해설" />
-    <published>2026-04-03T12:00:00+09:00</published>
-  
-    <updated>2026-04-03T14:25:02+09:00</updated>
-  
-    <id>http://localhost:4000/posts/Dreamhack_file-download-1/</id>
-    <content src="http://localhost:4000/posts/Dreamhack_file-download-1/" />
-    <author>
-      <name>jyp</name>
-    </author>
-
-  
-    
-    <category term="Dreamhack" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      문제 정보
-
-
-  Querystring과 request라이브러리를 이용한 해킹
-
-
-Path Traversal문제와 광장히 유사하여 먼저 Path Traversal문제를 보고 오시는것을 권장드립니다.
-
-문제 이름: file-download-1
-난이도: Lv.Beginner
-카테고리: 웹해킹
-
-
-
-문제 구조
-
-문제파일구성
-
-.
-├── __pycache__
-│   └── flag.cpython-314.pyc
-├── app.py
-├── requirements.txt
-├── static
-│   ├── (생략)
-├── templates
-│   ├── base.html
-│   ├── index.html
-│   ├── read.html
-│   ├── upload_result.html
-│   └── upload.htm...
     </summary>
   
 
